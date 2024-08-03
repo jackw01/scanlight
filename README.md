@@ -4,13 +4,13 @@
 
 ## tl;dr
 
-Narrowband trichromatic (RGB) light sources are superior to broadband (white) light for scanning color negative film; there are good reasons why all commercial film scanners use RGB. Scanning film with an RGB light source produces high quality results with minimal post-processing, and without any specialized software.
+Narrowband trichromatic (RGB) light sources are superior to broadband (white) light for scanning color negative film; there are very good reasons why all commercial film scanners use RGB. Scanning film with an RGB light source produces high quality results with minimal post-processing, and without any specialized software.
 
 ### the proof
 
 ![](images/comparison.jpg)
 
-From top to bottom, left to right:
+From left to right, top to bottom:
 
 * original white light scan
 * positive image produced from white light scan using leading color negative conversion software
@@ -45,7 +45,7 @@ Because the overall light transmission of C-41 film is heavy biased towards yell
 
 <img src="images/white_light_scan.png" width="360">
 
-So if you scan color negative film with white light, you can't just invert the colors and expect a good result. You need to do some math to try to recover the individual dye layers of the film from ambiguous input data. This can't be done in standard image editing software, which is why dedicated software for negative conversion exists. This process will require tuning for every combination of camera and light source used, and the color depth of the resulting positive image will be relatively low because **much of the information recorded by the camera is effectively useless yellow-orange light that has passed through the film without being significantly attenuated by any of the dyes**.
+So if you scan color negative film with white light, you can't just invert the colors and expect a good result. You need to do some math to try to recover the individual dye layers of the film from ambiguous input data. This can't be done in standard image editing software, which is why dedicated software for negative conversion exists. This process will require extensive tuning for every combination of camera and light source used, and the color depth of the resulting positive image will be relatively low because **much of the information recorded by the camera is effectively useless yellow-orange light that has passed through the film without being significantly attenuated by any of the dyes**.
 
 To avoid these issues, (almost?) all commercial negative film scanners use a trichromatic narrowband light source with red, green, and blue LEDs to minimize overlap between the dye layers in the film. When doing it this way, no software trickery is needed to recover an image and it's really as simple as inverting the color channels and setting the color balance and black/white points.
 
@@ -55,9 +55,9 @@ To avoid these issues, (almost?) all commercial negative film scanners use a tri
 
 When considering the limitations of digital camera sensors, the ideal wavelengths are >650nm for red, 520-550nm for green, and <450nm for blue, as shown in the diagram above. However, to the best of my knowledge, there aren't any commercially available light sources combining LEDs of these wavelengths, so the only way (for now) to get an ideal light source is to build one yourself, which is discussed in the next section of this article.
 
-The next best alternative is to use general purpose RGB LEDs, which use 620-630nm for red and 460-480nm for blue. The results will not be the absolute best possible, but will still be far better than with white light. The Fuji Frontier SP3000, a popular professional scanner, uses 630nm for red and 465nm for blue ([source](https://discuss.pixls.us/t/input-color-profile-to-use-for-negatives/20271/13)), but it does not have to contend with the color channel sensitivity of a typical digital camera - it has a monochrome image sensor and combines three exposures taken with red, green, and blue light.
+The next best alternative is to use general purpose RGB LEDs, which typically use 620-630nm for red and 460-480nm for blue. The results will not be the absolute best possible, but will still be far better than with white light. The Fuji Frontier SP3000, a popular professional scanner, uses 630nm for red and 465nm for blue ([source](https://discuss.pixls.us/t/input-color-profile-to-use-for-negatives/20271/13)), but it does not have to contend with the color channel sensitivity of a typical digital camera - it has a monochrome image sensor and combines three exposures taken with red, green, and blue light.
 
-If going this route, I would recommend placing an array of RGB LED strips or an off-the-shelf RGB video light panel behind a diffuser made from some combination of diffusing film and white or matte clear acrylic sheets.
+If going this route, I would recommend placing an array of RGB LED strips or an off-the-shelf RGB video light panel behind a diffuser made from some combination of diffusing film and white or matte clear acrylic sheets to get the most even illumination possible.
 
 ### what about other light sources?
 
@@ -106,15 +106,14 @@ The light source uses six each of deep red (665nm), green (525nm), and royal blu
 
 The PCB should be fabricated with black soldermask to prevent reflections off the soldermask or fluorescence of the substrate material from affecting the emitted light.
 
-Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply as a power source; if using an AC adapter, J6, U2, R6, R7, R8, and C4 do not need to be installed. At the time of writing, all components can be sourced from DigiKey except for the IP2721 USB Power Delivery IC.
+Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply can be used as a power source; if using an AC adapter, J6, U2, R6, R7, R8, and C4 do not need to be installed. At the time of writing, all components can be sourced from DigiKey except for the IP2721 USB Power Delivery IC.
 
 Be aware that not all 2835 LEDs, even ones from the same manufacturer, have the same polarity. If using other LEDs than the ones specified in the BOM, be sure to check the datasheet before installing.
 
 ### the diffuser
 
-To diffuse the light, I designed a 3D printed enclosure to house a stack of optical films similar to what is found in the backlight of an LCD display or the light source of a SLA 3D printer. I'm sure it's possible to do better, but I'm not an optical engineer. A diagram of the diffuser assembly is shown below.
+To diffuse the light, I designed a 3D printed enclosure to hold a stack of optical films similar to what is found in the backlight of an LCD display. I'm sure it's possible to do better, but I'm not an optical engineer. A diagram of the diffuser assembly is shown below.
 
-[need drawing]
 ![](images/diffuser_stackup.png)
 
 #### build notes
@@ -123,7 +122,7 @@ The diffuser film and microprism brightness enhancing film may be difficult to s
 
 Alternatively, the brightness enhancing film can be omitted and some combination of diffuser film and matte or white acrylic sheets can be used instead. This hasn't been tested, but it should provide satisfactory results.
 
-All 3D printed parts should be printed in ABS, ASA, PETG, or a similarly heat-resistant material in a neutral color. Using white material or painting the inside of the diffuser housing white may improve optical performance.
+All 3D printed parts should be printed in ABS, ASA, PETG, or a similarly heat-resistant material in a neutral color. Using white material or painting the inside of the diffuser housing white may improve optical performance. 4x M2x4mm and 4x M2x10mm socket head cap screws are required for assembly.
 
 ### putting it all together
 
