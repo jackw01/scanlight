@@ -23,19 +23,19 @@ From top to bottom, left to right:
 
 Color negative (C-41) film stores an image using cyan, magenta, and yellow dyes. Dyes appear a certain color because they absorb some wavelengths of light; for example, yellow dye mostly absorbs light in the 400-550nm range (which we perceive as violet through green), while allowing other wavelengths (yellow through red) to pass through the film. **These dyes are not intended to produce a human-viewable image, but rather to attenuate certain wavelengths of light for making prints on photosensitive paper.**
 
-<img src="images/film_spectra.png" height="300">
+<img src="images/film_spectra.png" width="360">
 
 White light sources emit light over a broad spectrum of wavelengths. When white light passes through C-41 film, some of these wavelengths are only slightly absorbed by two or all three of the dyes, which means that these wavelengths aren't useful for recovering the information stored in the individual dye layers - for example, the 580-620nm band (yellow through red-orange light) is mostly transmitted through the film, with a small amount being absorbed by both the magenta and cyan dye layers.
 
-<img src="images/white_light.png" height="300">
+<img src="images/white_light.png" width="360">
 
 With darkroom printing, this is not an issue, as RA-4 color print paper (and motion picture print film) are, by design, most sensitive to specific bands of wavelengths that avoid these 'overlaps' between the dye layers in negative film.
 
-<img src="images/film_and_paper_spectra.png" height="600">
+<img src="images/film_and_paper_spectra.png" width="360">
 
 What about scanning film with a digital camera? Digital camera sensors are designed to capture light in a way that allows for a faithful reproduction of the colors that humans would perceive (this is a gross oversimplification.) C-41 film was *not* designed to be directly viewed by humans.
 
-<img src="images/digital_camera_sensitivity.png" height="300">
+<img src="images/digital_camera_sensitivity.png" width="360">
 
 Not only is the camera sensitive to wavelengths of light that are effectively ignored by RA-4 paper, there is significant overlap between the color channel sensitivities of digital camera sensors: light in the ~580-600nm range is sensed by both the red and green channels, and light in the ~480-500nm range is sensed by both the green and blue channels.
 
@@ -43,13 +43,13 @@ Because the overall light transmission of C-41 film is heavy biased towards yell
 
 <small>note: the orange color of C-41 film is often misunderstood to be part of the film base, or an orange tint evenly applied over the whole image. It is actually a corrective mask made up of yellow and magenta positive images.</small>
 
-<img src="images/white_light_scan.png" height="600">
+<img src="images/white_light_scan.png" width="360">
 
 So if you scan color negative film with white light, you can't just invert the colors and expect a good result. You need to do some math to try to recover the individual dye layers of the film from ambiguous input data. This can't be done in standard image editing software, which is why dedicated software for negative conversion exists. This process will require tuning for every combination of camera and light source used, and the color depth of the resulting positive image will be relatively low because **much of the information recorded by the camera is effectively useless yellow-orange light that has passed through the film without being significantly attenuated by any of the dyes**.
 
 To avoid these issues, (almost?) all commercial negative film scanners use a trichromatic narrowband light source with red, green, and blue LEDs to minimize overlap between the dye layers in the film. When doing it this way, no software trickery is needed to recover an image and it's really as simple as inverting the color channels and setting the color balance and black/white points.
 
-<img src="images/white_vs_rgb_scan.png" height="600">
+<img src="images/white_vs_rgb_scan.png">
 
 ### so what LEDs should I use?
 
@@ -65,15 +65,15 @@ OLED displays do contain separate red, green, and blue emitters, but they typica
 
 LCD displays emit white light that has been filtered through red, green, and blue filters and recombined. The results will depend on the emission spectrum of the exact display used and should be better than a white light source and worse than RGB LEDs.
 
-<img src="images/oled_and_lcd_spectra.png" height="300">
+<img src="images/oled_and_lcd_spectra.png" width="360">
 
 White light is still ideal for scanning positive (slide) film, which is intended to be projected with white light. However, a narrowband light source may still be helpful for recovering colors from faded slide film.
 
-## scanning film with RGB
+### scanning film with RGB
 
 When scanning film with a narrowband light source, it's easy to get good results without using any specialized software. Using software designed for processing white light scans to process RGB scans may give suboptimal results.
 
-### scanning and processing workflow
+#### scanning and processing workflow
 1. Scan all frames using fixed white balance and exposure. Exposure should be set such that none of the color channels are clipping.
 2. Import scans into image editing software and apply lens corrections as if necessary. Optionally, use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source.
 3. Invert the black and white points for all scans using the Levels tool.
@@ -108,13 +108,13 @@ The PCB should be fabricated with black soldermask to prevent reflections off th
 
 Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply as a power source; if using an AC adapter, J6, U2, R6, R7, R8, and C4 do not need to be installed. At the time of writing, all components can be sourced from DigiKey except for the IP2721 USB Power Delivery IC.
 
-Be aware that not all 2835 LEDs, even ones from the same manufacturer, have the same polarity. If using alternative LEDs, be sure to check the datasheet before installing.
+Be aware that not all 2835 LEDs, even ones from the same manufacturer, have the same polarity. If using other LEDs than the ones specified in the BOM, be sure to check the datasheet before installing.
 
 ### the diffuser
 
 To diffuse the light, I designed a 3D printed enclosure to house a stack of optical films similar to what is found in the backlight of an LCD display or the light source of a SLA 3D printer. I'm sure it's possible to do better, but I'm not an optical engineer. A diagram of the diffuser assembly is shown below.
 
-[need image]
+[need drawing]
 ![](images/diffuser_stackup.png)
 
 #### build notes
