@@ -1,7 +1,6 @@
 # A Better Light Source For Scanning Color Negative Film
 
-[need image]
-![](images/light_assembly_hero.png)
+![](images/light_assembly_top.jpg)
 
 ## tl;dr
 
@@ -17,6 +16,8 @@ From top to bottom, left to right:
 * positive image produced from white light scan using leading color negative conversion software
 * original RGB scan
 * positive image produced from RGB scan by inverting colors and setting black/white levels in general purpose photo editing software
+
+<small>White light scan captured using 95+ CRI 5000K light source. RGB scan captured using custom 450nm+525nm+665nm light source.</small>
 
 ## the simplified explanation
 
@@ -34,7 +35,7 @@ With darkroom printing, this is not an issue, as RA-4 color print paper (and mot
 
 What about scanning film with a digital camera? Digital camera sensors are designed to capture light in a way that allows for a faithful reproduction of the colors that humans would perceive (this is a gross oversimplification.) C-41 film was *not* designed to be directly viewed by humans.
 
-![](images/digital_camera_sensitivity.png)
+<img src="images/digital_camera_sensitivity.png" height="300">
 
 Not only is the camera sensitive to wavelengths of light that are effectively ignored by RA-4 paper, there is significant overlap between the color channel sensitivities of digital camera sensors: light in the ~580-600nm range is sensed by both the red and green channels, and light in the ~480-500nm range is sensed by both the green and blue channels.
 
@@ -42,13 +43,13 @@ Because the overall light transmission of C-41 film is heavy biased towards yell
 
 <small>note: the orange color of C-41 film is often misunderstood to be part of the film base, or an orange tint evenly applied over the whole image. It is actually a corrective mask made up of yellow and magenta positive images.</small>
 
-![](images/white_light_scan.png)
+<img src="images/white_light_scan.png" height="600">
 
 So if you scan color negative film with white light, you can't just invert the colors and expect a good result. You need to do some math to try to recover the individual dye layers of the film from ambiguous input data. This can't be done in standard image editing software, which is why dedicated software for negative conversion exists. This process will require tuning for every combination of camera and light source used, and the color depth of the resulting positive image will be relatively low because **much of the information recorded by the camera is effectively useless yellow-orange light that has passed through the film without being significantly attenuated by any of the dyes**.
 
 To avoid these issues, (almost?) all commercial negative film scanners use a trichromatic narrowband light source with red, green, and blue LEDs to minimize overlap between the dye layers in the film. When doing it this way, no software trickery is needed to recover an image and it's really as simple as inverting the color channels and setting the color balance and black/white points.
 
-![](images/white_vs_rgb_scan.png)
+<img src="images/white_vs_rgb_scan.png" height="600">
 
 ### so what LEDs should I use?
 
@@ -64,7 +65,7 @@ OLED displays do contain separate red, green, and blue emitters, but they typica
 
 LCD displays emit white light that has been filtered through red, green, and blue filters and recombined. The results will depend on the emission spectrum of the exact display used and should be better than a white light source and worse than RGB LEDs.
 
-![](images/oled_and_lcd_spectra.png)
+<img src="images/oled_and_lcd_spectra.png" height="300">
 
 White light is still ideal for scanning positive (slide) film, which is intended to be projected with white light. However, a narrowband light source may still be helpful for recovering colors from faded slide film.
 
@@ -87,27 +88,25 @@ When scanning film with a narrowband light source, it's easy to get good results
 
 ## part 2: the hardware
 
-All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight).
+To get the best possible results, I designed my own custom RGB light source. All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight).
 
-### the light source
+### the electronics
 
-The light source uses six each of deep red (660nm), green (525nm), and royal blue (450nm) 2835 package LEDs, with adjustable brightness for each color channel. The LEDs are driven by [Diodes Incorporated AL8860](https://www.diodes.com/assets/Datasheets/AL8860.pdf) constant current buck drivers.
+The light source uses six each of deep red (665nm), green (525nm), and royal blue (450nm) 2835 package LEDs, with adjustable brightness for each color channel. The LEDs are driven by [Diodes Incorporated AL8860](https://www.diodes.com/assets/Datasheets/AL8860.pdf) constant current buck drivers.
 
-[need image]
-![](images/pcb.png)
+![](images/pcb.jpg)
 
-[need image]
 ![](images/pcb_cad.png)
 
-[Schematic as PDF](pcb/schematic%20rev1%2020240802-01.pdf)
+[Schematic (PDF)](pcb/schematic_rev1_20240802-01.pdf)
 
-[Bill of Materials](pcb/bom%20rev1%2020240802-01.pdf)
+[Interactive BOM](pcb/bom/ibom.html)
 
 #### build notes
 
 The PCB should be fabricated with black soldermask to prevent reflections off the soldermask or fluorescence of the substrate material from affecting the emitted light.
 
-Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply as a power source; if using an AC adapter, J2???, U?, R?, C? do not need to be installed. At the time of writing, all components can be sourced from DigiKey except for the IP2721 USB Power Delivery IC.
+Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply as a power source; if using an AC adapter, J6, U2, R6, R7, R8, and C4 do not need to be installed. At the time of writing, all components can be sourced from DigiKey except for the IP2721 USB Power Delivery IC.
 
 Be aware that not all 2835 LEDs, even ones from the same manufacturer, have the same polarity. If using alternative LEDs, be sure to check the datasheet before installing.
 
@@ -117,9 +116,6 @@ To diffuse the light, I designed a 3D printed enclosure to house a stack of opti
 
 [need image]
 ![](images/diffuser_stackup.png)
-
-[need image]
-![](images/light_assembly.png)
 
 #### build notes
 

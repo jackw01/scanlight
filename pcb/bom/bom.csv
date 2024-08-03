@@ -1,0 +1,19 @@
+Reference,Value,Footprint,Qty,DNP,MPN
+"C1,C3,C6",10u,Capacitor_SMD:C_1210_3225Metric,3,,Generic 10uF 50V 1210 X7R
+"C2,C4,C5,C7",1u,Capacitor_SMD:C_0603_1608Metric,4,,Generic 1uF 25V 0603 X7R
+"D1,D2,D3,D4,D5,D6",deep blue,LED_SMD:LED_PLCC_2835_Handsoldering,6,,JE2835ARY-N-0002A0000-N0000001
+"D7,D8,D15",B240A,Diode_SMD:D_SMA,3,,B240A-13-F
+"D9,D10,D11,D12,D13,D14",green,LED_SMD:LED_PLCC_2835_Handsoldering,6,,JE2835AGR-N-0002A0000-N0000001
+"D16,D17,D18,D19,D20,D21",deep red,LED_SMD:LED_PLCC_2835_Handsoldering,6,,67-21S/NDR3C-P5080C1C51827Z15/2T
+"H1,H2,H3,H4,H5,H6",MountingHole,Custom:MountingHole_2.2mm_M2_Mask_5mm,6,,
+J3,PJ-002B,Connector_BarrelJack:BarrelJack_GCT_DCJ200-10-A_Horizontal,1,,PJ-002B
+J6,USB_C_Receptacle_USB2.0,Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,1,,USB4105-GF-A
+"L1,L2,L3",100u,Inductor_SMD:L_Bourns_SRN8040TA,3,,HPC 8040NV-101M 
+"R1,R4,R9,R10,R11,R12",1.4,Resistor_SMD:R_1206_3216Metric,6,,RK73H2ATTD1R40F
+"R2,R3,R5",649k,Resistor_SMD:R_0603_1608Metric,3,,Generic 649KOhm 0603 1%
+R6,100k,Resistor_SMD:R_0603_1608Metric,1,,Generic 100KOhm 0603 5%
+"R7,R8",5.1k,Resistor_SMD:R_0603_1608Metric,2,,Generic 5.1KOhm 0603 5%
+"RV1,RV2,RV3",100k,Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical,3,,PTV09A-4020U-B104
+SYM101,SYM_Hot_Large,Custom:hot-surface_1x,1,,
+"U1,U3,U4",AL8860WT,Package_TO_SOT_SMD:TSOT-23-5,3,,AL8860WT-7
+U2,IP2721,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,1,,IP2721
