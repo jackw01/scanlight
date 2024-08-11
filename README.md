@@ -2,22 +2,31 @@
 
 ![](images/light_assembly_top.jpg)
 
+<small>Originally published 2024-08-05, updated 2024-08-11</small>
+
 ## tl;dr
 
-Narrowband trichromatic (RGB) light sources are superior to broadband (white) light for scanning color negative film; there are very good reasons why all commercial film scanners use RGB. Scanning film with an RGB light source produces high quality results with minimal post-processing, and without any specialized software.
+Narrowband trichromatic (RGB) light sources are superior to broadband (white) light for scanning color negative film; there are very good reasons why all commercial film scanners use RGB. ([film scanners were using blue LEDs at least a decade before they would be widely used in consumer products!](https://patents.google.com/?q=(film+scanner+LED)&oq=film+scanner+LED)) Scanning film with an RGB light source produces high quality results with minimal post-processing, without the need for specialized software.
 
-### the proof
+### the results
 
-![](images/comparison.jpg)
+![](images/comparison4.jpg)
 
-From left to right, top to bottom:
+<small>Both scans captured using Fujifilm X-T30. White light scan captured using 95+ CRI 5000K light source. RGB scan captured using custom 450nm+525nm+665nm light source.</small>
 
-* original white light scan
-* positive image produced from white light scan using leading color negative conversion software
-* original RGB scan
-* positive image produced from RGB scan by inverting colors and setting black/white levels in general purpose photo editing software
+### responses to frequent comments and questions
 
-<small>White light scan captured using 95+ CRI 5000K light source. RGB scan captured using custom 450nm+525nm+665nm light source.</small>
+#### but i can just edit the white light scan to look like the RGB scan
+You can't get the exact same colors as the RGB scan by adjusting the white balance or individual color channels of a white light scan; the comparison image above has been updated to emphasize this. In fact, this is physically impossible because **the light interacted with the film in a fundamentally different way** in the white light scan vs. the RGB scan before it was reduced to three bins of wavelengths approximately representing red, green, and blue by the camera sensor.
+
+#### but the colors in the sample scan(s) still don't look good to me
+Getting the desired colors from C-41 film, whether by darkroom printing or scanning and editing, has always involved some level of manual adjustment. **Photography is art, and as such it has always involved making subjective decisions about how images should look; all photos are interpretations of raw data and it's up to the photographer to decide what interpretation looks best.** The best starting point for editing is a scan that represents the image data stored in the dye layers of the film with minimal crosstalk.
+
+#### but the way you inverted the negatives isn't technically correct
+I think it's safe to say that most photographers shooting film in 2024 are looking for *aesthetically pleasing* colors, not *technically perfect* colors. If you have a more technically accurate way to process your scans, then by all means use it (also, write an article about it or build open-source software to automate the process!); but using a narrowband light source instead of a white light source will still get you closer to the results from a professional scanner.
+
+#### but won't this make all film look the same?
+Scanning film with RGB light does **not** neutralize the differences in the 'look' of different films; actually, it should produce results that are much closer to the intended look of the film when printed on RA-4 paper. The differences in look come from differences in the film's sensitivity to light during exposure and chemical interactions that affect how the dyes are formed during development, not the absorption characteristics of the dyes themselves. It is also worth mentioning that many people have preconceived ideas of what film *should* look like that are based on highly edited or low-quality scans; old, faded prints; or even software emulations.
 
 ## the simplified explanation
 
@@ -63,7 +72,7 @@ If going this route, I would recommend placing an array of RGB LED strips or an 
 
 OLED displays do contain separate red, green, and blue emitters, but they typically have broader emission spectra than inorganic LEDs. They will produce results that are significantly better than a white light source, but not as good as RGB LEDs.
 
-LCD displays emit white light that has been filtered through red, green, and blue filters and recombined. The results will depend on the emission spectrum of the exact display used and should be better than a white light source and worse than RGB LEDs.
+LCD displays emit white light that has been filtered through red, green, and blue filters and recombined. The results will depend on the emission spectrum of the exact display used and should be better than a white light source and worse than RGB LEDs. Newer high-gamut LCDs use special backlight LEDs designed to emit in narrower bands than typical white LEDs, so they will work significantly better than older ones.
 
 <img src="images/oled_and_lcd_spectra.png" width="360">
 
@@ -73,13 +82,17 @@ White light is still ideal for scanning positive (slide) film, which is intended
 
 When scanning film with a narrowband light source, it's easy to get good results without using any specialized software. Using software designed for processing white light scans to process RGB scans may give suboptimal results.
 
-#### scanning and processing workflow
-1. Scan all frames using fixed white balance and exposure. Exposure should be set such that none of the color channels are clipping.
-2. Import scans into image editing software and apply lens corrections as if necessary. Optionally, use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source.
-3. Invert the black and white points for all scans using the Levels tool.
-4. Manually correct the white balance on one scan, then apply to all scans from that roll of film. Check other scans and make adjustments as necessary.
-5. Fine-tune the black and white points and gamma for each scan using the Levels tool.
-6. Make other edits as desired.
+#### my scanning and processing workflow
+##### 1. scan
+Scan all frames as RAW using fixed white balance and exposure. Exposure should be set such that none of the color channels are clipping.
+##### 2. import
+Import scans into image editing software. **Use a linear RAW profile.** Apply lens corrections if necessary. Optionally, use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source.
+##### 3. initial inversion
+Invert the black and white points for all scans using the Levels or Curves tool and apply an appropriate curve to set the brightness of the output image.
+##### 4. white balance correction
+Manually correct the white balance on one scan, and if necessary, adjust the red, green, and blue channel min/max levels to remove color casts in the highlights or shadows. Apply these adjustments to all scans from that roll of film, and check other scans and make adjustments as necessary.
+##### 5. fine tuning
+Fine-tune the black and white points and curve for each scan using the Levels or Curves tool.
 
 ### recommended reading, if you're curious
 
