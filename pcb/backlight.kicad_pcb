@@ -13323,7 +13323,7 @@
 				)
 			)
 		)
-		(property "Value" "PJ-002B"
+		(property "Value" "PJ-002AH"
 			(at 0 15.5 -90)
 			(layer "F.Fab")
 			(uuid "a16d0a1b-af04-40c4-a80a-da992ae4a496")
@@ -13386,7 +13386,7 @@
 				)
 			)
 		)
-		(property "MPN" "PJ-002B"
+		(property "MPN" "PJ-002AH"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17113,7 +17113,7 @@
 		)
 		(fp_arc
 			(start 0.618251 0.501857)
-			(mid 0.523038 0.102216)
+			(mid 0.523039 0.102216)
 			(end 0.620848 -0.296798)
 			(stroke
 				(width 0.25)
@@ -17157,7 +17157,7 @@
 		)
 		(fp_arc
 			(start -0.581749 0.501857)
-			(mid -0.676962 0.102216)
+			(mid -0.676961 0.102216)
 			(end -0.579152 -0.296798)
 			(stroke
 				(width 0.25)

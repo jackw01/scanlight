@@ -16,16 +16,16 @@ Narrowband trichromatic (RGB) light sources are superior to broadband (white) li
 
 ### responses to frequent comments and questions
 
-#### but i can just edit the white light scan to look like the RGB scan
+##### but i can just edit the white light scan to look like the RGB scan
 You can't get the exact same colors as the RGB scan by adjusting the white balance or individual color channels of a white light scan; the comparison image above has been updated to emphasize this. In fact, this is physically impossible because **the light interacted with the film in a fundamentally different way** in the white light scan vs. the RGB scan before it was reduced to three bins of wavelengths approximately representing red, green, and blue by the camera sensor.
 
-#### but the colors in the sample scan(s) still don't look good to me
+##### but the colors in the sample scan(s) still don't look good to me
 Getting the desired colors from C-41 film, whether by darkroom printing or scanning and editing, has always involved some level of manual adjustment. **Photography is art, and as such it has always involved making subjective decisions about how images should look; all photos are interpretations of raw data and it's up to the photographer to decide what interpretation looks best.** The best starting point for editing is a scan that represents the image data stored in the dye layers of the film with minimal crosstalk.
 
-#### but the way you inverted the negatives isn't technically correct
+##### but the way you inverted the negatives isn't technically correct
 I think it's safe to say that most photographers shooting film in 2024 are looking for *aesthetically pleasing* colors, not *technically perfect* colors. If you have a more technically accurate way to process your scans, then by all means use it (also, write an article about it or build open-source software to automate the process!); but using a narrowband light source instead of a white light source will still get you closer to the results from a professional scanner.
 
-#### but won't this make all film look the same?
+##### but won't this make all film look the same?
 Scanning film with RGB light does **not** neutralize the differences in the 'look' of different films; actually, it should produce results that are much closer to the intended look of the film when printed on RA-4 paper. The differences in look come from differences in the film's sensitivity to light during exposure and chemical interactions that affect how the dyes are formed during development, not the absorption characteristics of the dyes themselves. It is also worth mentioning that many people have preconceived ideas of what film *should* look like that are based on highly edited or low-quality scans; old, faded prints; or even software emulations.
 
 ## the simplified explanation
@@ -87,12 +87,12 @@ When scanning film with a narrowband light source, it's easy to get good results
 Scan all frames as RAW using fixed white balance and exposure. Exposure should be set such that none of the color channels are clipping.
 ##### 2. import
 Import scans into image editing software. **Use a linear RAW profile.** Apply lens corrections if necessary. Optionally, use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source.
-##### 3. initial inversion
-Invert the black and white points for all scans using the Levels or Curves tool and apply an appropriate curve to set the brightness of the output image.
-##### 4. white balance correction
-Manually correct the white balance on one scan, and if necessary, adjust the red, green, and blue channel min/max levels to remove color casts in the highlights or shadows. Apply these adjustments to all scans from that roll of film, and check other scans and make adjustments as necessary.
+##### 3. d-min balance
+Neutralize the color of the minimum density (unexposed) areas of one negative, either by adjusting the white balance, adjusting the red, green, and blue channel max levels, or both.
+##### 4. inversion
+Invert the black and white points using the Levels or Curves tool and apply an appropriate curve to set the brightness of the output image.
 ##### 5. fine tuning
-Fine-tune the black and white points and curve for each scan using the Levels or Curves tool.
+Apply these adjustments to all scans from the same roll of film. Manually fine-tune the black and white points, and if necessary, white balance or curves for all scans.
 
 ### recommended reading, if you're curious
 
