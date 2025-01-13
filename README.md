@@ -142,4 +142,5 @@ All 3D printed parts should be printed in ABS, ASA, PETG, or a similarly heat-re
 The light source is suitable to use with a variety of existing film carriers, but was designed with future expansion in mind. More open source 3D printable film scanning gear is coming soon :3
 
 ## license
+
 The PCB schematic, layout, and Gerber files and the 3D CAD files for this project are released under the CERN Open Hardware Licence Version 2 - Weakly Reciprocal (CERN-OHL-W V2). The text and illustrations in this article may not be reproduced without permission.
