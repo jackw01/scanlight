@@ -5,3 +5,7 @@ github.is_project_page: false
 hide_first_h1: true
 plugins:
   - jekyll-seo-tag
+custom_buttons:
+  - 1:
+    url: https://ko-fi.com/jackw01
+    text: Support me on Ko-fi
