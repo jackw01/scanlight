@@ -1,7 +1,9 @@
 remote_theme: jackw01/jackw01.github.io
 title: A Better Light Source For Scanning Color Negative Film
-description: ''
+description: ' '
 hide_first_h1: true
+github:
+  is_project_page: true
 plugins:
   - jekyll-seo-tag
 custom_buttons:
