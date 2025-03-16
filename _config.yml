@@ -1,6 +1,19 @@
 remote_theme: jackw01/jackw01.github.io
+# used by SEO tag
 title: A Better Light Source For Scanning Color Negative Film
 description: ' '
+author:
+  name: Jack Whittaker
+  url: https://jackw01.github.io
+logo: https://jackw01.github.io/logo.png
+image: images/light_assembly_top.jpg
+social:
+  name: Jack Whittaker
+  links:
+    - https://github.com/jackw01
+    - https://www.linkedin.com/in/jack-whittaker-b35961183/
+google_site_verification: WVEP9YX5HRoViEFRMzY6MPy4xwbEH2PgxnJHjcvbFcE
+# end seo
 hide_first_h1: true
 plugins:
   - jekyll-seo-tag
