@@ -101,6 +101,8 @@ Apply these adjustments to all scans from the same roll of film. Manually fine-t
 
 ## part 2: the hardware
 
+<small>Updated 2025-07-01 - added rev. 2 PCB</small>
+
 To get the best possible results, I designed my own custom RGB light source. All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/pcb_r2).
 
 ### the electronics
@@ -112,6 +114,7 @@ The light source uses six each of deep red (660nm), green (520nm), and royal blu
 ![](images/pcb_cad_r2.png)
 
 [Schematic as PDF (Rev. 2)](pcb_r2/scanlight_schematic_r2_20250328.pdf)
+
 [BOM](pcb_r2/scanlight_bom_r2_20250328.csv)
 
 #### build notes
