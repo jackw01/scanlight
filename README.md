@@ -101,25 +101,24 @@ Apply these adjustments to all scans from the same roll of film. Manually fine-t
 
 ## part 2: the hardware
 
-To get the best possible results, I designed my own custom RGB light source. All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight).
+To get the best possible results, I designed my own custom RGB light source. All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/pcb_r2).
 
 ### the electronics
 
-The light source uses six each of deep red (665nm), green (525nm), and royal blue (450nm) 2835 package LEDs, with adjustable brightness for each color channel. The LEDs are driven by [Diodes Incorporated AL8860](https://www.diodes.com/assets/Datasheets/AL8860.pdf) constant current buck drivers.
+The light source uses six each of deep red (660nm), green (520nm), and royal blue (450nm) 2835 package LEDs ([datasheet](https://downloads.cree-led.com/files/ds/j/JSeries-2835-Color.pdf)), with adjustable brightness for each color channel. The LEDs are driven by [Diodes Incorporated AL8860](https://www.diodes.com/assets/Datasheets/AL8860.pdf) constant current buck drivers.
 
-![](images/pcb.jpg)
+![](images/pcb_r2.png)
 
-![](images/pcb_cad.png)
+![](images/pcb_cad_r2.png)
 
-[Schematic (PDF)](pcb/schematic_rev1_20240802-01.pdf)
-
-[Interactive BOM](pcb/bom/ibom.html)
+[Schematic as PDF (Rev. 2)](pcb_r2/scanlight_schematic_r2_20250328.pdf)
+[BOM](pcb_r2/scanlight_bom_r2_20250328.csv)
 
 #### build notes
 
 The PCB should be fabricated with black soldermask to prevent reflections off the soldermask or fluorescence of the substrate material from affecting the emitted light.
 
-Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply can be used as a power source; if using an AC adapter, J6, U2, R6, R7, R8, and C4 do not need to be installed. At the time of writing, all components can be sourced from DigiKey except for the IP2721 USB Power Delivery IC.
+Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply can be used as a power source; if using an AC adapter, J6, U2, R6, R7, R8, and C4 do not need to be installed.
 
 Be aware that not all 2835 LEDs, even ones from the same manufacturer, have the same polarity. If using other LEDs than the ones specified in the BOM, be sure to check the datasheet before installing.
 
