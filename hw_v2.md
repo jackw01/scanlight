@@ -1,8 +1,9 @@
 # scanlight 2
+improved narrowband light source for DSLR color negative film scanning
 
 Comparison: scanlight 2 vs competing white LED light panel vs LCD monitor
 
-Features
+### Features
 * illuminated area dimensions: 100x74mm
 * suitable for use with 35mm and medium format film (sample scans available)
 * six each of deep red (660nm), green (520nm), and deep blue (450nm) 2835 package LEDs
@@ -13,7 +14,9 @@ Features
 * powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
 * open source design released under the CERN OHL-W-V2 license
 
-I will be building a limited quantity of scanlight 2 units for sale - for more details, see my commissions page on Ko-Fi. Estimated shipping date: Early August 2025. Low-cost upgrade kits will be available to v1 buyers: request one [here]().
+I will be building a limited quantity of scanlight 2 units for sale - for more details, see my commissions page on Ko-Fi. Estimated shipping date: Early August 2025.
+
+Low-cost upgrade kits will be available to v1 buyers: request one [here]().
 
 ## optical design
 
@@ -31,21 +34,13 @@ In terms of light uniformity, the new diffuser design is significantly better th
 
 ![](images/scan_comparison_ektar_2.jpg)
 
-<p align="center"><small>Comparison: competing white LED light panel (left) vs scanlight 2 (right)</small></p>
+<p align="center"><small>Comparison: white LED light panel (left) vs scanlight 2 (right)</small></p>
 
-Both of these scans have been inverted and color balanced *without* any calibration for light source luminance or color uniformity. Negatives are 6x6 medium format, Kodak Ektar 100.
+Both of these scans have been inverted and color balanced *without* any calibration for light source luminance or color uniformity. Negatives are 6x6 medium format Kodak Ektar 100.
 
 All this is achieved using a simpler optical design inspired by professional film scanner light sources, using a reflective housing and single high-quality acrylic diffuser to improve both color mixing and luminance uniformity over version 1.
 
 *Note: Using Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom is still highly recommended no matter which light source you use.*
-
-### note on brightness enhancing film
-
-When installed below the main diffuser and a significant distance away from the LEDs, brightness enhancing film appears to create hotspots in the spaces in the center of each group of 4 LED clusters. When installed above the main diffuser, it introduces vignetting around the center of the image. Brightness enhancing film also scratches easily and is difficult to keep free of dust and oils. Because of this, the v2 diffuser does not use brightness enhancing film internally. Separate sheets of BEF (3M BEF3-T-155n; equivalent to Cinestill CS-LiteBrite+) will be available as a low-cost addon for anyone who wants to experiment with it.
-
-![](<data/plots/luminance_plot_scanlight v2 with BEF.png>)
-
-<p align="center"><small>scanlight 2 with two layers of BEF oriented at a 90 degree angle to each other</small></p>
 
 ## film carriers
 
@@ -100,6 +95,14 @@ Each group of four negatives were scanned and processed together in order to dem
 ### note on slide film
 
 Slide film is designed to be viewed directly when illuminated with a broad spectrum light source like an incandescent lamp. Scanning slide film with a narrowband light source and bayer image sensor results in unnaturally saturated colors with especially poor rendering of reds, oranges, and skin tones, so I don't recommend it. Achieving good results when scanning slide film using narrowband illumination would require combining individual scans of each color channel using an image processing pipeline that somehow maps the dye spectral density curves to the RGB color space, and I don't think this exists yet at least for hobbyist use.
+
+### note on brightness enhancing film
+
+When installed below the main diffuser and a significant distance away from the LEDs, brightness enhancing film appears to create hotspots in the spaces in the center of each group of 4 LED clusters. When installed above the main diffuser, it introduces vignetting around the center of the image. Brightness enhancing film also scratches easily and is difficult to keep free of dust and oils. Because of this, the v2 diffuser does not use brightness enhancing film internally. Separate sheets of BEF (3M BEF3-T-155n; equivalent to Cinestill CS-LiteBrite+) will be available as a low-cost addon for anyone who wants to experiment with it.
+
+![](<data/plots/luminance_plot_scanlight v2 with BEF.png>)
+
+<p align="center"><small>scanlight 2 with two layers of BEF oriented at a 90 degree angle to each other</small></p>
 
 ## PCB details
 
