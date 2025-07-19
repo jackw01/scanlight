@@ -17,7 +17,8 @@ social:
     - https://github.com/jackw01
     - https://www.linkedin.com/in/jack-whittaker-b35961183/
 # end seo
-hide_first_h1: false
+hide_first_h1: true
+title_h1_override: A Better Light Source For Scanning Color Negative Film
 plugins:
   - jekyll-seo-tag
 custom_buttons:
