@@ -1,18 +1,19 @@
 # scanlight 2
-improved narrowband light source for DSLR color negative film scanning
 
-Comparison: scanlight 2 vs competing white LED light panel vs LCD monitor
+![](<images/light_with_film_v2.jpg>)
 
-### Features
-* illuminated area dimensions: 100x74mm
-* suitable for use with 35mm and medium format film (sample scans available)
-* six each of deep red (660nm), green (520nm), and deep blue (450nm) 2835 package LEDs
-* front diffuser made from ACRYLITE® Satinice fingerprint- and scratch-resistant light diffusing acrylic
+![](<images/diffuser_v2.jpg>)
+
+### features
+* Illuminated area dimensions: 100x74mm
+* Suitable for use with 35mm and medium format film (sample scans available)
+* Six each of deep red (660nm), green (520nm), and deep blue (450nm) 2835 package LEDs
+* Front diffuser made from ACRYLITE® Satinice fingerprint- and scratch-resistant light diffusing acrylic
 * 3D printed ABS housing with high reflectivity interior achieved using aluminum pigment paint
-* designed for vertical use with a copy stand or horizontal use with optional threaded insert mounting points
-* magnetically-attached 35mm and medium format film holders available
-* powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
-* open source design released under the CERN OHL-W-V2 license
+* Designed for vertical use with a copy stand or horizontal use with optional threaded insert mounting points
+* Magnetically-attached 35mm and medium format film holders available
+* Powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
+* Open source design released under the CERN OHL-W-V2 license
 
 I will be building a limited quantity of scanlight 2 units for sale - for more details, see my commissions page on Ko-Fi. Estimated shipping date: Early August 2025.
 
@@ -40,13 +41,19 @@ Both of these scans have been inverted and color balanced *without* any calibrat
 
 All this is achieved using a simpler optical design inspired by professional film scanner light sources, using a reflective housing and single high-quality acrylic diffuser to improve both color mixing and luminance uniformity over version 1.
 
-*Note: Using Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom is still highly recommended no matter which light source you use.*
+**Note: Using Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom is still highly recommended no matter which light source you use.**
+
+![](<images/scanlight_v2_cad.png>)
 
 ## film carriers
 
-![]()
+![](images/filmcarriers_front.jpg)
 
-The 35mm and medium format film carriers use a double S-curve design to keep the film flat and feature a beveled opening on the light source side and small film-to-light distance to minimize vignetting. The double S-curve design is optimized for scanning full rolls or cut pieces >150mm in length; scanning shorter pieces may be difficult especially if the film is curled across its width.
+![](images/filmcarriers_back.jpg)
+
+![](images/filmcarrier_35_cad.png)
+
+The 35mm and medium format film carriers use a double S-curve design to keep the film flat and have a small film-to-light distance (35mm: 2.8mm, medium format: 3.8mm) to minimize vignetting. Both film carriers feature interchangeable masks that snap into the back of the carrier to block stray light from reaching the camera. The double S-curve design is optimized for scanning full rolls or cut pieces >150mm in length; scanning shorter pieces may be difficult especially if the film is curled across its width.
 
 Design files are available [here](https://github.com/jackw01/scanlight/3d/film_carriers).
 
@@ -91,10 +98,6 @@ Each group of four negatives were scanned and processed together in order to dem
 ![](images/scan_comparison_aerocolor_2.jpg)
 
 <p align="center"><small>Kodak Aerocolor IV 2460 (left: white light, right: narrowband RGB light)</small></p>
-
-### note on slide film
-
-Slide film is designed to be viewed directly when illuminated with a broad spectrum light source like an incandescent lamp. Scanning slide film with a narrowband light source and bayer image sensor results in unnaturally saturated colors with especially poor rendering of reds, oranges, and skin tones, so I don't recommend it. Achieving good results when scanning slide film using narrowband illumination would require combining individual scans of each color channel using an image processing pipeline that somehow maps the dye spectral density curves to the RGB color space, and I don't think this exists yet at least for hobbyist use.
 
 ### note on brightness enhancing film
 

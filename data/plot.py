@@ -65,7 +65,8 @@ def process_images_in_directory():
     os.makedirs(output_dir, exist_ok=True)
 
     plt.rcParams['font.family'] = 'sans-serif'  # or 'sans-serif', 'monospace', or a specific font name
-    plt.rcParams['font.sans-serif'] = ['Barlow']  # Specify a list of fonts to try for 'serif' family
+    plt.rcParams['font.sans-serif'] = ['Barlow']  # Specify a list of fonts to try for 'serif' family\
+    plt.rcParams['font.size'] = 12
 
     image_files = [f for f in os.listdir('.') if f.lower().endswith('.png')]
 
@@ -90,7 +91,7 @@ def process_images_in_directory():
         # Set up figure: 1 row, 3 columns
         fig, axs = plt.subplots(1, 3, figsize=(15, 5))
         base_name = os.path.splitext(os.path.basename(img_file))[0]
-        fig.suptitle(f'{base_name}')
+        fig.suptitle(f'{base_name}', fontsize=20)
 
         # 1. RGB image (100x72mm)
         ax = axs[0]
@@ -105,7 +106,7 @@ def process_images_in_directory():
             rect = patches.Rectangle((start_x, start_y), rect_w, rect_h,
                                      linewidth=2, edgecolor=color, facecolor='none', label=label)
             ax.add_patch(rect)
-            ax.legend(fontsize=8, loc='upper center', bbox_to_anchor=(0.5, -0.05), ncol=2)
+            ax.legend(fontsize=10, loc='upper center', bbox_to_anchor=(0.5, -0.02), ncol=2)
 
         # 2. Luminance (75x56)
         im1 = axs[1].imshow(lum_crop1, cmap='viridis', vmin=luma_limit_lower, vmax=luma_limit_upper)
@@ -131,8 +132,8 @@ def process_images_in_directory():
         # Save figure
         save_path = os.path.join(output_dir, f"luminance_plot_{base_name}.png")
         plt.tight_layout()
-        axs[1].text(s=f'range = {(lum1_max-lum1_min):.2f}, stdev = {lum1_std:.3f}', x=0.5, y=-0.1, fontsize=10, transform=axs[1].transAxes, ha='center', va='bottom')
-        axs[2].text(s=f'range = {(lum2_max-lum2_min):.2f}, stdev = {lum2_std:.3f}', x=0.5, y=-0.1, fontsize=10, transform=axs[2].transAxes, ha='center', va='bottom')
+        axs[1].text(s=f'range = {(lum1_max-lum1_min):.2f}, stdev = {lum1_std:.3f}', x=0.5, y=-0.08, fontsize=10, transform=axs[1].transAxes, ha='center', va='bottom')
+        axs[2].text(s=f'range = {(lum2_max-lum2_min):.2f}, stdev = {lum2_std:.3f}', x=0.5, y=-0.08, fontsize=10, transform=axs[2].transAxes, ha='center', va='bottom')
         plt.savefig(save_path, dpi=150)
         plt.close()
         print(f"Saved analysis to: {save_path}")
