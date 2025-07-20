@@ -2,7 +2,7 @@
 
 ![](images/light_assembly_top.jpg)
 
-<small>Originally published 2024-08-05, updated 2024-08-11</small>
+<small>Originally published 2024-08-05, updated 2025-07-20 (hardware v2)</small>
 
 ## tl;dr
 
@@ -20,7 +20,7 @@ Narrowband trichromatic (RGB) light sources are superior to broadband (white) li
 You can't get the exact same colors as the RGB scan by adjusting the white balance or individual color channels of a white light scan; the comparison image above has been updated to emphasize this. In fact, this is physically impossible because **the light interacted with the film in a fundamentally different way** in the white light scan vs. the RGB scan before it was reduced to three bins of wavelengths approximately representing red, green, and blue by the camera sensor.
 
 ##### but the colors in the sample scan(s) still don't look good to me
-Getting the desired colors from C-41 film, whether by darkroom printing or scanning and editing, has always involved some level of manual adjustment. **Photography is art, and as such it has always involved making subjective decisions about how images should look; all photos are interpretations of raw data and it's up to the photographer to decide what interpretation looks best.** The best starting point for editing is a scan that represents the image data stored in the dye layers of the film with minimal crosstalk.
+Getting the desired colors from C-41 film, whether by darkroom printing or scanning and editing, has always involved some level of manual adjustment. **Photography is art, and as such it has always involved making subjective decisions about how images should look; all photos are interpretations of raw data and it's up to the photographer to decide what interpretation looks best.** The best starting point for editing is a scan that represents the image data stored in the dye layers of the film with maximum dynamic range and minimal crosstalk.
 
 ##### but the way you inverted the negatives isn't technically correct
 I think it's safe to say that most photographers shooting film in 2024 are looking for *aesthetically pleasing* colors, not *technically perfect* colors. If you have a more technically accurate way to process your scans, then by all means use it (also, write an article about it or build open-source software to automate the process!); but using a narrowband light source instead of a white light source will still get you closer to the results from a professional scanner.
@@ -72,11 +72,9 @@ If going this route, I would recommend placing an array of RGB LED strips or an 
 
 OLED displays do contain separate red, green, and blue emitters, but they typically have broader emission spectra than inorganic LEDs. They will produce results that are significantly better than a white light source, but not as good as RGB LEDs.
 
-LCD displays emit white light that has been filtered through red, green, and blue filters and recombined. The results will depend on the emission spectrum of the exact display used and should be better than a white light source and worse than RGB LEDs. Newer high-gamut LCDs use special backlight LEDs designed to emit in narrower bands than typical white LEDs, so they will work significantly better than older ones.
+LCD displays emit white light that has been filtered through red, green, and blue filters and recombined. The results will depend on the emission spectrum of the exact display used and should be better than a white light source and worse than RGB LEDs. Newer high-gamut LCDs use special backlight LEDs designed to emit in narrower bands than typical white LEDs, so they should in theory work significantly better than older ones.
 
-<img src="images/oled_and_lcd_spectra.png" width="360">
-
-White light is still ideal for scanning positive (slide) film, which is intended to be projected with white light. However, a narrowband light source may still be helpful for recovering colors from faded slide film.
+White light is still ideal for scanning positive (slide) film, which is designed to be viewed directly when illuminated with a broad spectrum light source like an incandescent lamp. Scanning slide film with a narrowband light source and bayer image sensor results in unnaturally saturated colors with especially poor rendering of reds, oranges, and skin tones, so I don't recommend it. Achieving good results when scanning slide film using narrowband illumination would require combining individual scans of each color channel using an image processing pipeline that somehow maps the dye spectral density curves to the RGB color space, and I don't think this exists yet at least for hobbyist use.
 
 ### scanning film with RGB
 
@@ -86,7 +84,7 @@ When scanning film with a narrowband light source, it's easy to get good results
 ##### 1. scan
 Scan all frames as RAW using fixed white balance and exposure. Exposure should be set such that none of the color channels are clipping.
 ##### 2. import
-Import scans into image editing software. **Use a linear RAW profile.** Apply lens corrections if necessary. Optionally, use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source.
+Import scans into image editing software. **Use a linear RAW profile.** Apply lens corrections if necessary. Use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source.
 ##### 3. d-min balance
 Neutralize the color of the minimum density (unexposed) areas of one negative, either by adjusting the white balance, adjusting the red, green, and blue channel max levels, or both.
 ##### 4. inversion
@@ -101,47 +99,11 @@ Apply these adjustments to all scans from the same roll of film. Manually fine-t
 
 ## part 2: the hardware
 
-<small>Updated 2025-07-01 - added rev. 2 PCB</small>
+<small>Updated 2025-07-20 - version 2</small>
 
-To get the best possible results, I designed my own custom RGB light source. All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/pcb_r2).
+To get the best possible results, I designed my own custom RGB light source. More information on the design and sample scans can be found [here](./hw_v2.md).
 
-### the electronics
-
-The light source uses six each of deep red (660nm), green (520nm), and royal blue (450nm) 2835 package LEDs ([datasheet](https://downloads.cree-led.com/files/ds/j/JSeries-2835-Color.pdf)), with adjustable brightness for each color channel. The LEDs are driven by [Diodes Incorporated AL8860](https://www.diodes.com/assets/Datasheets/AL8860.pdf) constant current buck drivers.
-
-![](images/pcb_r2.png)
-
-![](images/pcb_cad_r2.png)
-
-[Schematic as PDF (Rev. 2)](pcb_r2/scanlight_schematic_r2_20250328.pdf)
-
-[BOM](pcb_r2/scanlight_bom_r2_20250328.csv)
-
-#### build notes
-
-The PCB should be fabricated with black soldermask to prevent reflections off the soldermask or fluorescence of the substrate material from affecting the emitted light.
-
-Either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply can be used as a power source; if using an AC adapter, J6, U2, R6, R7, R8, and C4 do not need to be installed.
-
-Be aware that not all 2835 LEDs, even ones from the same manufacturer, have the same polarity. If using other LEDs than the ones specified in the BOM, be sure to check the datasheet before installing.
-
-### the diffuser
-
-To diffuse the light, I designed a 3D printed enclosure to hold a stack of optical films similar to what is found in the backlight of an LCD display. I'm sure it's possible to do better, but I'm not an optical engineer. A diagram of the diffuser assembly is shown below.
-
-![](images/diffuser_stackup.png)
-
-#### build notes
-
-The diffuser film and microprism brightness enhancing film may be difficult to source. At the time of writing, they are available at a reasonable price from a variety of sellers in China. Brightness enhancing film is also being sold by CineStill under the name *CS-LITEBRITE*. It is also possible to obtain these materials by disassembling an old LCD display.
-
-Alternatively, the brightness enhancing film can be omitted and some combination of diffuser film and matte or white acrylic sheets can be used instead. This hasn't been tested, but it should provide satisfactory results.
-
-All 3D printed parts should be printed in ABS, ASA, PETG, or a similarly heat-resistant material in a neutral color. Using white material or painting the inside of the diffuser housing white may improve optical performance. 4x M2x4mm and 4x M2x10mm socket head cap screws are required for assembly.
-
-### putting it all together
-
-The light source is suitable to use with a variety of existing film carriers, but was designed with future expansion in mind. More open source 3D printable film scanning gear is coming soon :3
+All design files for the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight).
 
 ## license
 

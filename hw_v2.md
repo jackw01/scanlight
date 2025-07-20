@@ -13,7 +13,7 @@
 * Designed for vertical use with a copy stand or horizontal use with optional threaded insert mounting points
 * Magnetically-attached 35mm and medium format film carriers available
 * Powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
-* Open source design released under the CERN OHL-W-V2 license
+* Open source design released under the CERN OHL-W-V2 license - STEP and Kicad files available
 
 I will be building a limited quantity of scanlight 2 units for sale - for more details, see [my shop on Ko-Fi](https://ko-fi.com/jackw01/shop). Estimated shipping date: Early August 2025.
 
@@ -55,21 +55,9 @@ All this is achieved using a simpler optical design inspired by professional fil
 
 The 35mm and medium format film carriers use a double S-curve design to keep the film flat and have a small film-to-light distance (35mm: 2.8mm, medium format: 3.8mm) to minimize vignetting. Both film carriers feature interchangeable masks that snap into the back of the carrier to block stray light from reaching the camera. The double S-curve design is optimized for scanning full rolls or cut pieces >150mm in length; scanning shorter pieces may be difficult especially if the film is curled across its width.
 
-Design files are available [here](https://github.com/jackw01/scanlight/3d/film_carriers).
-
 ## horizontal mounting
 
-![]()
-
-As an alternative to using a tripod or vertical copy stand, 3D printable parts for mounting the light source and a camera with an Arca-Swiss quick-release plate to a piece of 20x20mm T-slot aluminum extrusion are included. This mounting method will accommodate cameras where the distance between the center of the lens and the bottom plane of the quick-release plate is at least x mm - the included 3D printable spacers can be used to offset the height of the light source to accommodate larger cameras.
-
-Design files are available [here](https://github.com/jackw01/scanlight/3d/horizontal).
-
-Hardware required for assembly:
-* 4x M3 socket head cap screws, length between 16mm and 30mm depending on spacers used
-* 4x M3x5x4 heat-set threaded inserts
-* 6x M5x8 socket head or button head cap screws
-* 6x M5 t-slot nut for 2020 aluminum extrusion
+*coming soon*
 
 ## sample scans
 
