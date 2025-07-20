@@ -1,6 +1,6 @@
 # scanlight 2
 
-![](<images/light_with_film_v2.jpg>)
+![](<images/light_with_film_v2_2.jpg>)
 
 ![](<images/diffuser_v2.jpg>)
 
@@ -11,13 +11,13 @@
 * Front diffuser made from ACRYLITE® Satinice fingerprint- and scratch-resistant light diffusing acrylic
 * 3D printed ABS housing with high reflectivity interior achieved using aluminum pigment paint
 * Designed for vertical use with a copy stand or horizontal use with optional threaded insert mounting points
-* Magnetically-attached 35mm and medium format film holders available
+* Magnetically-attached 35mm and medium format film carriers available
 * Powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
 * Open source design released under the CERN OHL-W-V2 license
 
-I will be building a limited quantity of scanlight 2 units for sale - for more details, see my commissions page on Ko-Fi. Estimated shipping date: Early August 2025.
+I will be building a limited quantity of scanlight 2 units for sale - for more details, see [my shop on Ko-Fi](https://ko-fi.com/jackw01/shop). Estimated shipping date: Early August 2025.
 
-Low-cost upgrade kits will be available to v1 buyers: request one [here]().
+Low-cost upgrade kits will be available to v1 buyers: request one [here](https://ko-fi.com/s/b195e963f8).
 
 ## optical design
 
@@ -104,8 +104,6 @@ Each group of four negatives were scanned and processed together in order to dem
 When installed below the main diffuser and a significant distance away from the LEDs, brightness enhancing film appears to create hotspots in the spaces in the center of each group of 4 LED clusters. When installed above the main diffuser, it introduces vignetting around the center of the image. Brightness enhancing film also scratches easily and is difficult to keep free of dust and oils. Because of this, the v2 diffuser does not use brightness enhancing film internally. Separate sheets of BEF (3M BEF3-T-155n; equivalent to Cinestill CS-LiteBrite+) will be available as a low-cost addon for anyone who wants to experiment with it.
 
 ![](<data/plots/luminance_plot_scanlight v2 with BEF.png>)
-
-<p align="center"><small>scanlight 2 with two layers of BEF oriented at a 90 degree angle to each other</small></p>
 
 ## PCB details
 
