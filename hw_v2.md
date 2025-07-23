@@ -8,12 +8,12 @@
 * Illuminated area dimensions: 100x74mm
 * Suitable for use with 35mm and medium format film (sample scans available)
 * Six each of deep red (660nm), green (520nm), and deep blue (450nm) 2835 package LEDs
-* Front diffuser made from ACRYLITE® Satinice fingerprint- and scratch-resistant light diffusing acrylic
+* Front diffuser made from fingerprint- and scratch-resistant textured acrylic
 * 3D printed ABS housing with high reflectivity interior achieved using aluminum pigment paint
 * Designed for vertical use with a copy stand or horizontal use with optional threaded insert mounting points
 * Magnetically-attached 35mm and medium format film carriers available
 * Powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
-* Open source design released under the CERN OHL-W-V2 license - STEP and Kicad files available
+* Open source design released under the CERN OHL-W-V2 license - STEP and Kicad files available on GitHub
 
 I will be building a limited quantity of scanlight 2 units for sale - for more details, see [my shop on Ko-Fi](https://ko-fi.com/jackw01/shop). Estimated shipping date: Early August 2025.
 
@@ -39,7 +39,7 @@ In terms of light uniformity, the new diffuser design is significantly better th
 
 Both of these scans have been inverted and color balanced *without* any calibration for light source luminance or color uniformity. Negatives are 6x6 medium format Kodak Ektar 100.
 
-All this is achieved using a simpler optical design inspired by professional film scanner light sources, using a reflective housing and single high-quality acrylic diffuser to improve both color mixing and luminance uniformity over version 1.
+All this is achieved using a simpler optical design inspired by professional film scanner light sources, using a reflective housing and single high-quality acrylic diffuser to improve both color mixing and luminance uniformity over version 1. The diffuser is made from ACRYLITE® Satinice light-diffusing acrylic, which has a finely textured surface that hides fingerprints and scratches and is easy to keep clean.
 
 **Note: Using Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom is still highly recommended no matter which light source you use.**
 
@@ -53,7 +53,7 @@ All this is achieved using a simpler optical design inspired by professional fil
 
 ![](images/filmcarrier_35_cad.png)
 
-The 35mm and medium format film carriers use a double S-curve design to keep the film flat and have a small film-to-light distance (35mm: 2.8mm, medium format: 3.8mm) to minimize vignetting. Both film carriers feature interchangeable masks that snap into the back of the carrier to block stray light from reaching the camera. The double S-curve design is optimized for scanning full rolls or cut pieces >150mm in length; scanning shorter pieces may be difficult especially if the film is curled across its width.
+The 35mm and medium format film carriers use a double S-curve design to keep the film flat and have a small film-to-light distance (35mm: 2.8mm, medium format: 3.8mm) to minimize vignetting. Both film carriers feature interchangeable masks that snap into the back of the carrier to block stray light from reaching the camera. Medium format masks are available in all common sizes, and the film carrier exposes enough area to scan 6x9 negatives when no mask is installed. The double S-curve design is optimized for scanning full rolls or cut pieces >150mm in length; scanning shorter pieces may be difficult especially if the film is curled across its width.
 
 ## horizontal mounting
 
