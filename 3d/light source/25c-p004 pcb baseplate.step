@@ -6,8 +6,8 @@ FILE_NAME ('25c-p004 pcb baseplate.step',
     '2025-07-23T05:02:24',
     ( '' ),
     ( '' ),
-    'SwSTEP 2.0',
-    'SolidWorks 2024',
+    '',
+    '',
     '' );
 FILE_SCHEMA (( 'CONFIG_CONTROL_DESIGN' ));
 ENDSEC;
