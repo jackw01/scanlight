@@ -1,11 +1,11 @@
 ## parts list
 
 ### 3d printing note
-Printing orientation for all parts should be obvious based on the design. The "Support on Build Plate Only" or equivalent option should be used since several parts have counterbore holes.
+Printing orientation for all parts should be obvious based on the design. Print all parts in black ABS. The "Support on Build Plate Only" or equivalent option should be used since several parts have counterbore holes.
 
 ### scanlight v2 only
 * assembled PCB
-* front diffuser (4x3x0.118" ACRYLITE® Satinice light-diffusing acrylic, or standard white acrylic with <50% light transmittance)
+* front diffuser (4x3x0.118" ACRYLITE® Satinice WD008 DF light-diffusing acrylic, or standard white acrylic with <50% light transmittance)
 * 3D printed PCB baseplate
 * 3D printed reflector box housing (interior surfaces to be painted with paint containing only extra fine leafing aluminum flake pigment, such as Dupli-Color CS101)
 * 3D printed diffuser bezel
