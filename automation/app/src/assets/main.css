@@ -1,0 +1,11 @@
+td {
+    padding: 0.2rem;
+}
+
+.v-application {
+    font-family: "Barlow", sans-serif !important;
+
+    .title {
+        font-family: "Barlow", sans-serif !important;
+    }
+}
