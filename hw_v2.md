@@ -45,19 +45,33 @@ All this is achieved using a simpler optical design inspired by professional fil
 
 ![](<images/scanlight_v2_cad.png>)
 
+![](<images/scanlight_v2_back.jpg>)
+
+![](<images/scanlight_v2_front.jpg>)
+
 ## film carriers
 
 ![](images/filmcarriers_front.jpg)
 
 ![](images/filmcarriers_back.jpg)
 
+![](images/filmcarrier_35_hood.jpg)
+
+![](images/filmcarrier_mf_parts.jpg)
+
 ![](images/filmcarrier_35_cad.png)
 
-The 35mm and medium format film carriers use a double S-curve design to keep the film flat and have a small film-to-light distance (35mm: 2.8mm, medium format: 3.8mm) to minimize vignetting. Both film carriers feature interchangeable masks that snap into the back of the carrier to block stray light from reaching the camera. Medium format masks are available in all common sizes, and the film carrier exposes enough area to scan 6x9 negatives when no mask is installed. The double S-curve design is optimized for scanning full rolls or cut pieces >150mm in length; scanning shorter pieces may be difficult especially if the film is curled across its width.
+The 35mm and medium format film carriers use a double S-curve design to keep the film flat and have a small film-to-light distance (35mm: 2.8mm, medium format: 3.8mm) to minimize vignetting. Both film carriers feature interchangeable masks that snap into the back of the carrier to block stray light from reaching the camera, and the 35mm carrier has a snap-on hood to prevent external light from reflecting off the film. Medium format masks are available in all common sizes, and the film carrier exposes enough area to scan 6x9 negatives when no mask is installed. The double S-curve design is optimized for scanning full rolls or cut pieces >150mm in length; scanning shorter pieces may be difficult especially if the film is curled across its width.
 
 ## horizontal mounting
 
-*coming soon*
+![](images/horiz_mount_1.jpg)
+
+![](images/horiz_mount_2.jpg)
+
+As an alternative to using a tripod or vertical copy stand, 3D printable parts for mounting the light source and a camera with an Arca-Swiss quick-release plate to a piece of 20x20mm T-slot aluminum extrusion are included. This mounting method will accommodate cameras where the distance between the center of the lens and the bottom plane of the quick-release plate is at least 36 mm - the included 3D printable spacers can be used to offset the height of the light source to accommodate larger cameras.
+
+Design files are available [here](https://github.com/jackw01/scanlight/3d/horizontal).
 
 ## sample scans
 
@@ -99,7 +113,7 @@ The version 2 PCB maintains the same functionality as version 1 and adds a heade
 
 All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/pcb_v2).
 
-![](images/pcb_r2.png)
+![](images/pcb_r2.jpg)
 
 ![](images/pcb_cad_r2.png)
 

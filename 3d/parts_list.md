@@ -26,7 +26,3 @@ Printing orientation for all parts should be obvious based on the design. Print 
 * 3D printed masks (optional)
 * 2x M2x10mm pan head self-tapping screw for plastic (head diameter 4mm or less)
 * 4x 4mm diameter x 2mm thick N52 neodynium magnet
-
-### horizontal mount
-
-*coming soon*
