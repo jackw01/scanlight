@@ -12,7 +12,7 @@ static const uint32_t PinB = 9;
 static const uint32_t PinShutter = 14;
 static const uint32_t RGBPins[] = {PinR, PinG, PinB};
 
-static const uint32_t PWMFreqHz = 500;
+static const uint32_t PWMFreqHz = 40000;
 
 static const uint32_t ShutterPulseDelayMs = 100;
 static const uint32_t TickIntervalUs = 1000;

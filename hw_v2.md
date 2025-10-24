@@ -1,8 +1,9 @@
-# scanlight 2
+# scanlight 3
 
 ![](<images/light_with_film_v2_2.jpg>)
 
 ![](<images/diffuser_v2.jpg>)
+<small>HW v2 shown, v3 similar.</small>
 
 ### features
 * Illuminated area dimensions: 100x74mm
@@ -10,18 +11,19 @@
 * Six each of deep red (660nm), green (520nm), and deep blue (450nm) 2835 package LEDs
 * Front diffuser made from fingerprint- and scratch-resistant textured acrylic
 * 3D printed ABS housing with high reflectivity interior achieved using aluminum pigment paint
+* Capable of per-channel brightness control, and **tethered remote control from a computer** (new in v3)
 * Designed for vertical use with a copy stand or horizontal use with optional threaded insert mounting points
 * Magnetically-attached 35mm and medium format film carriers available
 * Powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
 * Open source design released under the CERN OHL-W-V2 license - STEP and Kicad files available on GitHub
 
-I will be building a limited quantity of scanlight 2 units for sale - for more details, see [my shop on Ko-Fi](https://ko-fi.com/jackw01/shop). Estimated shipping date: Early August 2025.
+I will be building a limited quantity of scanlight units for sale - for more details, see [my shop on Ko-Fi](https://ko-fi.com/jackw01/shop).
 
-Low-cost upgrade kits will be available to v1 buyers: request one [here](https://ko-fi.com/s/b195e963f8).
+Low-cost upgrade kits are available to v1 buyers: request one [here](https://ko-fi.com/s/b195e963f8).
 
 ## optical design
 
-In terms of light uniformity, the new diffuser design is significantly better than version 1 and is generally on par with other uniform light sources. Scanlight 2 performs nearly as well when evaluated for 6x8 medium format film as scanlight 1 does when evaluated for 135 film:
+In terms of light uniformity, the new diffuser design is significantly better than version 1 and is generally on par with other uniform light sources. Scanlight 2 and 3 perform nearly as well when evaluated for 6x8 medium format film as scanlight 1 does when evaluated for 135 film:
 
 ![](<data/plots/luminance_plot_scanlight v2.png>)
 
@@ -43,11 +45,9 @@ All this is achieved using a simpler optical design inspired by professional fil
 
 **Note: Using Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom is still highly recommended no matter which light source you use.**
 
-![](<images/scanlight_v2_cad.png>)
+![](<images/scanlight_v3_back.jpg>)
 
-![](<images/scanlight_v2_back.jpg>)
-
-![](<images/scanlight_v2_front.jpg>)
+![](<images/scanlight_v3_front.jpg>)
 
 ## film carriers
 
@@ -68,6 +68,7 @@ The 35mm and medium format film carriers use a double S-curve design to keep the
 ![](images/horiz_mount_1.jpg)
 
 ![](images/horiz_mount_2.jpg)
+<small>HW v2 shown, v3 similar.</small>
 
 As an alternative to using a tripod or vertical copy stand, 3D printable parts for mounting the light source and a camera with an Arca-Swiss quick-release plate to a piece of 20x20mm T-slot aluminum extrusion are included. This mounting method will accommodate cameras where the distance between the center of the lens and the bottom plane of the quick-release plate is at least 36 mm - the included 3D printable spacers can be used to offset the height of the light source to accommodate larger cameras.
 
@@ -109,16 +110,20 @@ When installed below the main diffuser and a significant distance away from the 
 
 ## PCB details
 
-The version 2 PCB maintains the same functionality as version 1 and adds a header to allow external on/off control of each color channel, in case someone wants to automate the process of capturing individual channel scans using a monochrome camera. The through-hole brightness adjustment potentiometers have been changed to SMD trimmer potentiometers since v1 testing showed that it is generally not necessary to adjust individual channel brightnesses to get good results.
+The version 3 PCB is an incremental improvement over version 2 and allows a Raspberry Pi Pico microcontroller to be attached directly to the main board, which enables full control of the light from a computer using the web app here: https://jackw01.github.io/scanlight/automation/app/dist/index.html. This functionality can also be enabled on v2 by connecting an external Raspberry Pi Pico to the header on the PCB.
 
-All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/pcb_v2).
+All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/pcb_r3).
 
-![](images/pcb_r2.jpg)
+![](images/pcb_r3.jpg)
 
-![](images/pcb_cad_r2.png)
+[PCB Schematic as PDF (Rev. 3)](pcb_r3/scanlight_schematic_r3_20251023.pdf)
 
-[PCB Schematic as PDF (Rev. 2)](pcb_r2/scanlight_schematic_r2_20250328.pdf)
-
-[PCB BOM](pcb_r2/scanlight_bom_r2_20250328.csv)
+[PCB BOM](pcb_r3/scanlight_bom_r3_20251023.csv)
 
 [LED datasheet](https://downloads.cree-led.com/files/ds/j/JSeries-2835-Color.pdf)
+
+## Pi Pico firmware and web app
+
+The web app for controlling scanlight v3 is available [here](https://jackw01.github.io/scanlight/automation/app/dist/index.html). A Chromium-based web browser is required as other browser engines do not support the WebUSB/WebSerial API.
+
+The source code for the Pi Pico firmware, a ready-to-flash firmware binary, and the source code for the remote control web app can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/automation).

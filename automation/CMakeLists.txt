@@ -8,7 +8,7 @@ include(pico_sdk_import.cmake)
 
 set(OUTPUT_NAME "sl2_controller")
 
-set(PICO_BOARD "pico") #pico
+set(PICO_BOARD "adafruit_feather_rp2040") #pico adafruit_feather_rp2040
 
 project(${OUTPUT_NAME} C CXX ASM)
 set(CMAKE_C_STANDARD 11)
