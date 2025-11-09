@@ -122,9 +122,31 @@ int main() {
     pwm_set_clkdiv_int_frac(slice_num, clk_div, 0);
     pwm_set_wrap(slice_num, pwm_wrap);
 
-    pwm_set_chan_level(slice_num, channel, 0);
+    pwm_set_chan_level(slice_num, channel, pwm_wrap);
     pwm_set_enabled(slice_num, true);
   }
+
+  // visual self test at startup
+  busy_wait_ms(100);
+  color[0] = 255;
+  color[1] = 0;
+  color[2] = 0;
+  update_pwm();
+  busy_wait_ms(150);
+  color[0] = 0;
+  color[1] = 255;
+  color[2] = 0;
+  update_pwm();
+  busy_wait_ms(150);
+  color[0] = 0;
+  color[1] = 0;
+  color[2] = 255;
+  update_pwm();
+  busy_wait_ms(150);
+  color[0] = 255;
+  color[1] = 255;
+  color[2] = 255;
+  update_pwm();
 
   uint64_t micros;
   uint32_t dt;
