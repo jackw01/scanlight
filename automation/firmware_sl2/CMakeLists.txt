@@ -1,3 +1,5 @@
+set(OUTPUT_NAME "sl2_controller")
+
 add_executable(${OUTPUT_NAME})
 
 add_compile_options(

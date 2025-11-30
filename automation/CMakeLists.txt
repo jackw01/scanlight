@@ -6,11 +6,10 @@ set(CMAKE_CXX_COMPILER_FORCED TRUE)
 # Pull in SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-set(OUTPUT_NAME "sl2_controller")
+set(PICO_PLATFORM "rp2040")
+set(PICO_BOARD "pico")
 
-set(PICO_BOARD "adafruit_feather_rp2040") #pico adafruit_feather_rp2040
-
-project(${OUTPUT_NAME} C CXX ASM)
+project(scanlight_firmware C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
@@ -21,4 +20,5 @@ endif()
 # Initialize the SDK
 pico_sdk_init()
 
-add_subdirectory(firmware)
+add_subdirectory(firmware_sl2)
+add_subdirectory(firmware_bsl1)

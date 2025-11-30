@@ -1,0 +1,30 @@
+{
+  "name": "big-scanlight-app",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vite preview",
+    "build": "vite build",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "dev": "vite",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@mdi/font": "5.9.55",
+    "apexcharts": "^3.35.5",
+    "roboto-fontface": "*",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vue": "^3.2.38",
+    "vuetify": "^3.9.5",
+    "webfontloader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "vite": "^7.1.2",
+    "vue-cli-plugin-vuetify": "~2.5.8"
+  }
+}

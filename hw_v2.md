@@ -8,7 +8,7 @@
 ### features
 * Illuminated area dimensions: 100x74mm
 * Suitable for use with 35mm and medium format film (sample scans available)
-* Six each of deep red (660nm), green (520nm), and deep blue (450nm) 2835 package LEDs
+* Six each of deep red (665nm), green (525nm), and deep blue (455nm) 2835 package LEDs
 * Front diffuser made from fingerprint- and scratch-resistant textured acrylic
 * 3D printed ABS housing with high reflectivity interior achieved using aluminum pigment paint
 * Capable of per-channel brightness control, and **tethered remote control from a computer** (new in v3)

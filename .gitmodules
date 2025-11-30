@@ -1,0 +1,6 @@
+[submodule "automation/firmware_bsl1/vendor/pico-kvstore"]
+	path = automation/firmware_bsl1/vendor/pico-kvstore
+	url = https://github.com/oyama/pico-kvstore.git
+[submodule "automation/firmware_bsl1/vendor/rp2040-button"]
+	path = automation/firmware_bsl1/vendor/rp2040-button
+	url = https://github.com/TuriSc/RP2040-Button.git
