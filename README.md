@@ -92,6 +92,34 @@ Invert the black and white points using the Levels or Curves tool and apply an a
 ##### 5. fine tuning
 Apply these adjustments to all scans from the same roll of film. Manually fine-tune the black and white points, and if necessary, white balance or curves for all scans.
 
+### more sample scans
+
+Each group of four negatives were scanned and processed together in order to demonstrate how the light source affects the overall look of the scans rather than to show a subjectively ideal edit for each photo. Minimal post-processing was done to all scans (import image with linear raw profile, invert, color balance, apply tone curve). The same tone curve was used for all scans.
+
+![](images/scan_comparison_ektar_1.jpg)
+
+<p align="center"><small>Kodak Ektar 100 (left: white light, right: narrowband RGB light)</small></p>
+
+![](images/scan_comparison_ektar_3.jpg)
+
+<p align="center"><small>Kodak Ektar 100 (left: white light, right: narrowband RGB light)</small></p>
+
+![](images/scan_comparison_fuji200_1.jpg)
+
+<p align="center"><small>Fuji 200 (left: white light, right: narrowband RGB light)</small></p>
+
+![](images/scan_comparison_fuji200_2.jpg)
+
+<p align="center"><small>Fuji 200 (left: white light, right: narrowband RGB light)</small></p>
+
+![](images/scan_comparison_aerocolor_1.jpg)
+
+<p align="center"><small>Kodak Aerocolor IV 2460 (left: white light, right: narrowband RGB light)</small></p>
+
+![](images/scan_comparison_aerocolor_2.jpg)
+
+<p align="center"><small>Kodak Aerocolor IV 2460 (left: white light, right: narrowband RGB light)</small></p>
+
 ### recommended reading, if you're curious
 
 * Edward J Giorgianni and Thomas E Madden, *Digital Color Management: Encoding Solutions, 2nd Edition*
@@ -101,10 +129,12 @@ Apply these adjustments to all scans from the same roll of film. Manually fine-t
 
 <small>Updated 2025-07-20 - version 2</small>
 
-To get the best possible results, I designed my own custom RGB light source. More information on the design and sample scans can be found [here](./hw_v2.md).
+To get the best possible results, I designed my own custom RGB light source. More information on the design can be found [here](./hw_v2.md).
 
-All design files for the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight).
+![](<images/light_with_film_v2_2.jpg>)
+
+All design files for the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d).
 
 ## license
 
-The PCB schematic, layout, and Gerber files and the 3D CAD files for this project are released under the CERN Open Hardware Licence Version 2 - Weakly Reciprocal (CERN-OHL-W V2). The text and illustrations in this article may not be reproduced without permission.
+The PCB schematic, layout, and Gerber files and the 3D CAD files for this project are released under the CERN Open Hardware Licence Version 2 - Weakly Reciprocal (CERN-OHL-W V2). Software and firmware are released under the MIT License. The text and illustrations in this article may not be reproduced without permission.

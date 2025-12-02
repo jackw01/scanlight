@@ -1,10 +1,11 @@
 # big scanlight info & user manual
 
-### features
+## features
 * Illuminated area dimensions: 108x134mm (4.25x5.25in)
 * Suitable for use with 35mm, medium format, and 4x5 film
 * 20 each of deep red (665nm), green (525nm), deep blue (455nm), and 95CRI white, and 16 infrared (850nm) LEDs mounted on aluminum PCB for optimal heat dissipation
 * Up to 15EV brightness (1/500s at f/8 ISO 100) in RGB combined mode, 14EV in white mode
+* Better light uniformity over medium format frame sizes than scanlight v2/v3
 * Diffuser made from fingerprint- and scratch-resistant textured acrylic
 * 3D printed ABS housing
 * Fully controllable via USB with web app
@@ -36,7 +37,7 @@ The **Set as Default** and **Load Default** buttons refer to the default RGB pre
 
 ### remote shutter release usage
 
-The **3.5mm jack** can be connected to a camera so that the shutter can be remotely triggered from the web app. The length of the shutter trigger pulse and the delay after are both configurable. The default settings should work for many use cases. Operation in the **R,G,B** mode is shown in the timing diagram below; the other modes work similarly.
+The **3.5mm jack** can be connected to a camera so that the shutter can be remotely triggered from the web app. The length of the shutter trigger pulse and the delay after are both configurable. The default settings should work for most use cases. Operation in the **R,G,B** mode is shown in the timing diagram below; the other modes work similarly.
 
 ![](<images/shutter_timing_diagram.svg>)
 
@@ -51,3 +52,11 @@ The web app will automatically notify if a firmware update is available and show
 ### cleaning precautions
 
 Cleaning the acrylic diffuser panel with cleaning solutions containing high concentrations of isopropanol, other organic solvents, or ammonia can cause crazing or cracking of the acrylic. If needed, use a cleaner meant for eyeglasses or a diluted household all-purpose cleaner like Simple Green. Do not spray liquids directly on the light source.
+
+## technical details
+
+### optical design
+
+### PCBs
+
+### firmware and web app
