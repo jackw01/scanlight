@@ -17,6 +17,8 @@
 * Powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
 * Open source hardware and software
 
+Original article on scanning film with narrowband light: *[A Better Light Source For Scanning Color Negative Film](./README.md)*.
+
 I will be building a limited quantity of scanlight units for sale - for more details, see [my shop on Ko-Fi](https://ko-fi.com/jackw01/shop).
 
 Low-cost upgrade kits are available to v1 buyers: request one [here](https://ko-fi.com/s/b195e963f8).

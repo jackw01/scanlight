@@ -15,6 +15,8 @@
 * Powered using any USB-C power source (at least 9V at 18W required for full brightness)
 * Open source hardware and software
 
+Original article on scanning film with narrowband light: *[A Better Light Source For Scanning Color Negative Film](./README.md)*.
+
 ## instructions
 
 ![](<images/big_scanlight_diagram.svg>)
