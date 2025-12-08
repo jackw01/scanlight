@@ -1,19 +1,26 @@
 # big scanlight info & user manual
 
+![](<images/big_light.jpg>)
+
 ## features
 * Illuminated area dimensions: 108x134mm (4.25x5.25in)
 * Suitable for use with 35mm, medium format, and 4x5 film
 * 20 each of deep red (665nm), green (525nm), deep blue (455nm), and 95CRI white, and 16 infrared (850nm) LEDs mounted on aluminum PCB for optimal heat dissipation
-* Up to 15EV brightness (1/500s at f/8 ISO 100) in RGB combined mode, 14EV in white mode
+* Up to 15EV brightness<sup>1</sup> in RGB combined mode, 14EV in white mode
 * Better light uniformity over medium format frame sizes than scanlight v2/v3
 * Diffuser made from fingerprint- and scratch-resistant textured acrylic
 * 3D printed ABS housing
 * Fully controllable via USB with web app
 * On/off and mode toggle buttons on light source for standalone usage
-* Compatible with accessories made for Negative Supply 4x5" light sources
+* Compatible with accessories made for Negative Supply 4x5" light sources<sup>2</sup>
 * Simple 35mm and medium format film carriers available
 * Powered using any USB-C power source (at least 9V at 18W required for full brightness)
 * Open source hardware and software
+
+<small>
+<sup>1</sup>1/500s at f/8, ISO 100. Direct measurement of the might source (without film.)<br />
+<sup>2</sup>big scanlight's diffuser panel is inside a 108x134mm, 1.5mm deep recess in the diffuser bezel, designed to accept masks and film carriers for Negative Supply 4x5" light sources. Check dimensions of accessories you plan to use before buying.
+</small><br /><br />
 
 Original article on scanning film with narrowband light: *[A Better Light Source For Scanning Color Negative Film](./README.md)*.
 
@@ -59,6 +66,34 @@ Cleaning the acrylic diffuser panel with cleaning solutions containing high conc
 
 ### optical design
 
+In RGB mode, big scanlight achieves superior lighting uniformity to scanlight v2/v3 over a larger area. In white light mode, lighting uniformity is similar to scanlight v2/v3 over a larger area.
+
+![](<data/plots/luminance_plot_big scanlight RGB combined.png>)
+
+![](<data/plots/luminance_plot_big scanlight white.png>)
+
+![](<data/plots/luminance_plot_scanlight v2.png>)
+
+![](<data/plots/luminance_plot_center of 15 inch LCD display.png>)
+
 ### PCBs
 
+![](images/big_scanlight_pcbs.jpg)
+
+The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1764654827638&ref_url=https%253A%252F%252Fwww.google.com%252F) constant-current boost converters configured for 80mA output current at up to 38V, and a [CH233K](https://www.wch-ic.com/products/CH233.html) USB-PD protocol controller on a 86x34mm four-layer PCB.
+
+![](images/big_scanlight_pcb_cad.png)
+
+All design files for the [driver pcb](https://github.com/jackw01/scanlight/bsl_driver_pcb_r1) and [LED PCB](https://github.com/jackw01/scanlight/bsl_array_pcb_r1) can be downloaded from the GitHub repository.
+
+[Driver PCB Schematic as PDF](bsl_driver_pcb_r1/scanlight_schematic_r3_20251023.pdf)
+
+[Driver PCB BOM](bsl_driver_pcb_r1/a.csv)
+
+[LED PCB Schematic as PDF](bsl_array_pcb_r1/scanlight_schematic_r3_20251023.pdf)
+
+[LED PCB BOM](bsl_array_pcb_r1/a.csv)
+
 ### firmware and web app
+
+The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/automation/build/firmware_sl2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
