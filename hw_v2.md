@@ -98,10 +98,13 @@ All design files can be downloaded from the [GitHub repository](https://github.c
 
 [LED datasheet](https://downloads.cree-led.com/files/ds/j/JSeries-2835-Color.pdf)
 
+### mechanical design
+
+STEP files for all parts of the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d).
+
 ### firmware and web app
 
 The web app for controlling scanlight v3 is available [here](https://jackw01.github.io/scanlight/automation/app/dist/index.html). A Chromium-based web browser is required as other browser engines do not support the WebUSB/WebSerial API.
 
 The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/automation/build/firmware_sl2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
-
 

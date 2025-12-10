@@ -1,9 +1,9 @@
-# big scanlight info & user manual
+# big scanlight info & instructions
 
-![](<images/big_light.jpg>)
+![](<images/big_scanlight_top.jpg>)
 
 ## features
-* Illuminated area dimensions: 108x134mm (4.25x5.25in)
+* Illuminated area dimensions: 108x134mm (approx. 4.25x5.25in)
 * Suitable for use with 35mm, medium format, and 4x5 film
 * 20 each of deep red (665nm), green (525nm), deep blue (455nm), and 95CRI white, and 16 infrared (850nm) LEDs mounted on aluminum PCB for optimal heat dissipation
 * Up to 15EV brightness<sup>1</sup> in RGB combined mode, 14EV in white mode
@@ -18,7 +18,7 @@
 * Open source hardware and software
 
 <small>
-<sup>1</sup>1/500s at f/8, ISO 100. Direct measurement of the might source (without film.)<br />
+<sup>1</sup>1/500s at f/8, ISO 100. Direct measurement of the light source (without film.)<br />
 <sup>2</sup>big scanlight's diffuser panel is inside a 108x134mm, 1.5mm deep recess in the diffuser bezel, designed to accept masks and film carriers for Negative Supply 4x5" light sources. Check dimensions of accessories you plan to use before buying.
 </small><br /><br />
 
@@ -62,11 +62,21 @@ The web app will automatically notify if a firmware update is available and show
 
 Cleaning the acrylic diffuser panel with cleaning solutions containing high concentrations of isopropanol, other organic solvents, or ammonia can cause crazing or cracking of the acrylic. If needed, use a cleaner meant for eyeglasses or a diluted household all-purpose cleaner like Simple Green. Do not spray liquids directly on the light source.
 
+### brightness trimming
+
+In order to simplify the electrical design of the light source, the red, green, blue, and white color channels are split into two independently driven sides as shown below. The components used are very well matched, so the difference in brightness between the two sides should be a few percent at most and will generally not be noticed unless working with very low-contrast negatives. If there is a noticeable "split" in brightness or color across the centerline of the light source, the relative brightness of the two halves can be fine-tuned in the **Brightness Trimming** menu in the web app. Setting the trim values to a positive number increases the relative brightness of side 2; setting them to a negative number increases the relative brightness of side 1.
+
+![](<images/big_scanlight_led_zones.svg>)
+
 ## technical details
+
+### dimensions
+
+![](<images/big_scanlight_dimension_drawing.svg>)
 
 ### optical design
 
-In RGB mode, big scanlight achieves superior lighting uniformity to scanlight v2/v3 over a larger area. In white light mode, lighting uniformity is similar to scanlight v2/v3 over a larger area.
+Big scanlight uses a very simple optical design consisting of a matte white acrylic diffuser panel, an LED array which spans the entire illuminated area of the diffuser, and a housing with diffusely reflective sidewalls perpenicular to the PCB and chamfered corners to reduce brightness falloff. In RGB mode, big scanlight achieves superior lighting uniformity to scanlight v2/v3 over a larger area. In white light mode, lighting uniformity is similar to scanlight v2/v3 over a larger area.
 
 ![](<data/plots/luminance_plot_big scanlight RGB combined.png>)
 
@@ -86,13 +96,19 @@ The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [
 
 All design files for the [driver pcb](https://github.com/jackw01/scanlight/bsl_driver_pcb_r1) and [LED PCB](https://github.com/jackw01/scanlight/bsl_array_pcb_r1) can be downloaded from the GitHub repository.
 
-[Driver PCB Schematic as PDF](bsl_driver_pcb_r1/scanlight_schematic_r3_20251023.pdf)
+[Driver PCB Schematic as PDF](bsl_driver_pcb_r1/bsl_drv_v1_20251109.pdf)
 
-[Driver PCB BOM](bsl_driver_pcb_r1/a.csv)
+[Driver PCB BOM](bsl_driver_pcb_r1/bsl_drv_v1_20251109.csv)
 
-[LED PCB Schematic as PDF](bsl_array_pcb_r1/scanlight_schematic_r3_20251023.pdf)
+[LED PCB Schematic as PDF](bsl_array_pcb_r1/bsl_array_v1_20251109.pdf)
 
-[LED PCB BOM](bsl_array_pcb_r1/a.csv)
+[LED PCB BOM](bsl_array_pcb_r1/bsl_array_v1_20251109.csv)
+
+### mechanical design
+
+STEP files for all parts of the light source can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d/big%20scanlight%20v1).
+
+![](<images/big_scanlight_top_bottom.jpg>)
 
 ### firmware and web app
 
