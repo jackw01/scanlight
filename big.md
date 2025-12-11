@@ -1,6 +1,6 @@
 # big scanlight info & instructions
 
-![](<images/big_scanlight_top.jpg>)
+![](<images/big_scanlight_lit.jpg>)
 
 ## features
 * Illuminated area dimensions: 108x134mm (approx. 4.25x5.25in)

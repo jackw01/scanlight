@@ -1,6 +1,6 @@
 # A Better Light Source For Scanning Color Negative Film
 
-![](images/light_assembly_top.jpg)
+![](images/scanlight_header.jpg)
 
 <small>Originally published 2024-08-05, updated 2025-07-20 (hardware v2)</small>
 

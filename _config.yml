@@ -21,6 +21,16 @@ hide_first_h1: true
 #title_h1_override: A Better Light Source For Scanning Color Negative Film
 plugins:
   - jekyll-seo-tag
+nav_items:
+  - 1:
+    url: index
+    text: original article
+  - 2:
+    url: hw_v2
+    text: scanlight v2/v3 info
+  - 3:
+    url: big
+    text: big scanlight info & instructions
 custom_buttons:
   - 1:
     url: https://github.com/jackw01/scanlight
