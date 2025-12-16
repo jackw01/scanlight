@@ -6,6 +6,10 @@ static const char PACKET_START = 254;
 static const char PKT_H2D_SET_COLOR = 0;
 static const char PKT_H2D_GET_DEFAULT_RGB = 1;
 static const char PKT_H2D_GET_FW_VERSION = 2;
+static const char PKT_H2D_SHUTTER_PULSE = 3;
+static const char PKT_H2D_DFU_MODE = 4;
+static const char PKT_H2D_SET_TRIM = 5;
+static const char PKT_H2D_GET_TRIM = 6;
 
 // Device-to-host packets
 static const char PKT_D2H_ACK = 0;
@@ -13,6 +17,7 @@ static const char PKT_D2H_LED_TEMP = 1;
 static const char PKT_D2H_VBUS = 2;
 static const char PKT_D2H_FW_VERSION = 3;
 static const char PKT_D2H_DEFAULT_RGB = 4;
+static const char PKT_D2H_TRIM = 5;
 
 #define PACKET_MAX_LENGTH 128
 

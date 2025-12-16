@@ -48,9 +48,9 @@ static const uint32_t USBVBUSThreshold9V = 8000;
 static const uint8_t ReducedPowerLevelRGB = 153;
 static const uint8_t ReducedPowerLevelSingle = 204;
 
-static const uint32_t ShutterPulseDelayMs = 100;
-
-static const uint32_t TickIntervalUs = 1000;
+static const uint32_t TickIntervalUs = 10000;
 static const uint32_t ADCReportingIntervalMs = 200;
 
 #define FLASH_PERSIST_OFFSET (PICO_FLASH_SIZE_BYTES - FLASH_SECTOR_SIZE)
+#define FLASH_PERSIST_ADDR_RGB_PRESET 0
+#define FLASH_PERSIST_ADDR_TRIM 8

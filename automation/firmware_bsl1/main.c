@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "pico/stdlib.h"
+#include "pico/bootrom.h"
 #include "hardware/pwm.h"
 #include "hardware/clocks.h"
 #include "hardware/gpio.h"
@@ -16,7 +17,7 @@
 
 // R, G, B, W, IR
 uint8_t color[5] = {0, 0, 0, 0, 0};
-int8_t trim[4] = {0, 0, 0, 0};
+int8_t trim[5] = {0, 0, 0, 0, 0}; // 5th byte is used as flag for flash memory initialization
 uint8_t rgb_preset[3] = {255, 255, 255};
 
 uint32_t pwm_wrap;
@@ -25,17 +26,9 @@ OperatingMode operating_mode = OperatingModeOff;
 uint32_t led_enable = 0;
 
 uint32_t adc_reporting_timer = 1;
+int32_t shutter_pulse_timer = -1;
 int32_t led_temp_mdegc = 0;
 int32_t vbus_mv = 0;
-
-// Camera
-
-void camera_activate_shutter()
-{
-  gpio_put(PinShutter, true);
-  sleep_ms(ShutterPulseDelayMs);
-  gpio_put(PinShutter, false);
-}
 
 // PWM
 
@@ -68,6 +61,7 @@ void update_pwm()
 
   // reduced power operating mode allows one channel at a time, or multichannel RGB at reduced power
   uint8_t scale = 255;
+  uint8_t scaleIR = 255;
 
   if (operating_mode == OperatingModeReducedPower)
   {
@@ -85,7 +79,10 @@ void update_pwm()
 
   // led_enable overrides all other settings
   if (led_enable == 0)
+  {
     scale = 0;
+    scaleIR = 0;
+  }
 
   update_pwm_pin(PinR1, color[0], (uint32_t)(trim[0] > 0 ? 255 - trim[0] : 255), scale);
   update_pwm_pin(PinG1, color[1], (uint32_t)(trim[1] > 0 ? 255 - trim[1] : 255), scale);
@@ -155,7 +152,8 @@ void write_preset_to_flash()
 
   uint8_t page_buffer[FLASH_PAGE_SIZE];
   memset(page_buffer, 0xFF, sizeof(page_buffer));
-  memcpy(page_buffer, rgb_preset, 3);
+  memcpy(&page_buffer[FLASH_PERSIST_ADDR_RGB_PRESET], rgb_preset, 3);
+  memcpy(&page_buffer[FLASH_PERSIST_ADDR_TRIM], trim, 5);
 
   flash_range_erase(FLASH_PERSIST_OFFSET, FLASH_SECTOR_SIZE);
   flash_range_program(FLASH_PERSIST_OFFSET, page_buffer, FLASH_PAGE_SIZE);
@@ -165,14 +163,27 @@ void write_preset_to_flash()
 
 void read_preset_from_flash()
 {
-  const uint8_t *flash_ptr = (const uint8_t *)(XIP_BASE + FLASH_PERSIST_OFFSET);
-  memcpy(rgb_preset, flash_ptr, 3);
+  uint32_t flash_ptr = XIP_BASE + FLASH_PERSIST_OFFSET + FLASH_PERSIST_ADDR_RGB_PRESET;
+  memcpy(rgb_preset, (const uint8_t *)flash_ptr, 3);
 
   if (rgb_preset[0] == 0 && rgb_preset[1] == 0 && rgb_preset[2] == 0)
   {
     rgb_preset[0] = 255;
     rgb_preset[1] = 255;
     rgb_preset[2] = 255;
+  }
+
+  flash_ptr = XIP_BASE + FLASH_PERSIST_OFFSET + FLASH_PERSIST_ADDR_TRIM;
+  memcpy(trim, (const uint8_t *)flash_ptr, 5);
+
+  // First read of flash memory?
+  if (trim[4] == -1)
+  {
+    trim[0] = 0;
+    trim[1] = 0;
+    trim[2] = 0;
+    trim[3] = 0;
+    trim[4] = 0;
   }
 }
 
@@ -240,7 +251,29 @@ void tick(uint32_t millis, uint32_t dt_micros)
       case PKT_H2D_GET_FW_VERSION:
         protocol_send_packet_int32(PKT_D2H_FW_VERSION, FirmwareVersionID);
         break;
+      case PKT_H2D_SHUTTER_PULSE:
+        shutter_pulse_timer = millis + protocol_data.incoming_packet_data[0] * 10; // stored as 10s of ms
+        gpio_put(PinShutter, 1);
+        break;
+      case PKT_H2D_DFU_MODE:
+        // enter DFU mode by resetting into USB mass storage bootloader
+        reset_usb_boot(0, 0);
+        break;
+      case PKT_H2D_GET_TRIM:
+        protocol_send_packet(PKT_D2H_TRIM, (char *)trim, 4);
+        break;
+      case PKT_H2D_SET_TRIM:
+        memcpy(trim, protocol_data.incoming_packet_data, 4);
+        write_preset_to_flash();
+        update_pwm();
+        break;
     }
+  }
+
+  if (shutter_pulse_timer > 0 && millis >= shutter_pulse_timer)
+  {
+    gpio_put(PinShutter, 0);
+    shutter_pulse_timer = -1;
   }
 
   if (millis >= adc_reporting_timer)
@@ -325,7 +358,7 @@ int main()
 
   gpio_init(PinShutter);
   gpio_set_dir(PinShutter, GPIO_OUT);
-  gpio_put(PinShutter, false);
+  gpio_put(PinShutter, 0);
 
   button_system_init();
 

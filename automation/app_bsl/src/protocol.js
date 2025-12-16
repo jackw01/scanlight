@@ -7,6 +7,10 @@ class Protocol {
     this.PKT_H2D_SET_COLOR = 0;
     this.PKT_H2D_GET_DEFAULT_RGB = 1;
     this.PKT_H2D_GET_FW_VERSION = 2;
+    this.PKT_H2D_SHUTTER_PULSE = 3;
+    this.PKT_H2D_DFU_MODE = 4;
+    this.PKT_H2D_SET_TRIM = 5;
+    this.PKT_H2D_GET_TRIM = 6;
 
     // Device-to-host packets
     this.PKT_D2H_ACK = 0;
@@ -14,6 +18,7 @@ class Protocol {
     this.PKT_D2H_VBUS = 2;
     this.PKT_D2H_FW_VERSION = 3;
     this.PKT_D2H_DEFAULT_RGB = 4;
+    this.PKT_D2H_TRIM = 5;
 
     this.PACKET_MAX_LENGTH = 128;
 

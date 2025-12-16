@@ -21,6 +21,7 @@ target_sources(${OUTPUT_NAME}
 
 target_link_libraries(${OUTPUT_NAME}
     pico_stdlib
+    pico_bootrom
     pico_multicore
     hardware_pwm
     hardware_adc
