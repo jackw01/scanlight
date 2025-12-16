@@ -2,7 +2,9 @@
 
 ![](images/scanlight_header.jpg)
 
-<small>Originally published 2024-08-05, updated 2025-07-20 (hardware v2)</small>
+Left: [scanlight v3](./hw_v2.md), right: [big scanlight](./big.md)
+
+<small>Originally published 2024-08-05, last updated 2025-12-11 (big scanlight)</small>
 
 ## tl;dr
 
@@ -127,13 +129,13 @@ Each group of four negatives were scanned and processed together in order to dem
 
 ## part 2: the hardware
 
-<small>Updated 2025-07-20 - version 2</small>
+<small>Updated 2025-12-11</small>
 
-To get the best possible results, I designed my own custom RGB light source. More information on the design can be found [here](./hw_v2.md).
+To get the best possible results, I designed my own custom RGB light sources. More information on the designs can be found [here (scanlight v3)](./hw_v2.md) and [here (big scanlight)](./big.md).
 
-![](<images/light_with_film_v2_2.jpg>)
+![](<images/scanlight_header.jpg>)
 
-All design files for the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d).
+All design files for the light sources and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/).
 
 ## license
 

@@ -10,10 +10,11 @@
 * Better light uniformity over medium format frame sizes than scanlight v2/v3
 * Diffuser made from fingerprint- and scratch-resistant textured acrylic
 * 3D printed ABS housing
-* Fully controllable via USB with web app
+* Fully controllable via USB with [web app](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html)
 * On/off and mode toggle buttons on light source for standalone usage
 * Compatible with accessories made for Negative Supply 4x5" light sources<sup>2</sup>
 * Simple 35mm and medium format film carriers available
+* Automated camera shutter control for capturing separate red/green/blue images
 * Powered using any USB-C power source (at least 9V at 18W required for full brightness)
 * Open source hardware and software
 
@@ -22,7 +23,7 @@
 <sup>2</sup>big scanlight's diffuser panel is inside a 108x134mm, 1.5mm deep recess in the diffuser bezel, designed to accept masks and film carriers for Negative Supply 4x5" light sources. Check dimensions of accessories you plan to use before buying.
 </small><br /><br />
 
-Original article on scanning film with narrowband light: *[A Better Light Source For Scanning Color Negative Film](./README.md)*.
+Original article on scanning film with narrowband light (with sample scans): *[A Better Light Source For Scanning Color Negative Film](./README.md)*.
 
 ## instructions
 
@@ -46,11 +47,11 @@ The **Set as Default** and **Load Default** buttons refer to the default RGB pre
 
 ### remote shutter release usage
 
-The **3.5mm jack** can be connected to a camera so that the shutter can be remotely triggered from the web app. The length of the shutter trigger pulse and the delay after are both configurable. The default settings should work for most use cases. Operation in the **R,G,B** mode is shown in the timing diagram below; the other modes work similarly.
+The **3.5mm jack** can be connected to a camera so that the shutter can be remotely triggered from the web app to automatically capture images for each color channel. The length of the shutter trigger pulse and the delay after are both configurable. The default settings should work for most use cases. Operation in the **R,G,B** mode is shown in the timing diagram below; the other modes work similarly.
 
 ![](<images/shutter_timing_diagram.svg>)
 
-A cable with a male 3.5mm plug (otherwise known as a headphone connector) on one end and a camera-specific connector on the other end is required to use this functionality. A wide variety of these cables are available from online retailers; I cannot vouch for the quality of any of them or verify that a specific cable will work, as wiring diagrams are almost never published by the manufacturers.
+A cable with a male 3.5mm plug (otherwise known as a headphone connector) on one end and a camera-specific connector on the other end is required to use this functionality. A wide variety of these cables are available from online retailers; I cannot vouch for the quality of any of them or verify that a specific cable will work, as wiring diagrams are almost never published by the manufacturers. The design has been tested and works with several Fujifilm and Canon cameras that use the 2.5mm microphone jack as the remote shutter release input, with a 3.5mm to 2.5mm cable as well as a standard 3.5mm audio cable and 3.5mm to 2.5mm adapter.
 
 Because the 3.5mm jack is not electrically isolated from the USB ports, it is recommended out of an abundance of caution that the camera should not be connected to the same USB power supply or computer as the light source when using the remote shutter control function. For most cameras, doing so will not cause any issues, but because there is no formal standard for how remote shutter cables or connectors are wired, some cameras may exist that could be damaged by such a setup.
 
@@ -64,7 +65,7 @@ Cleaning the acrylic diffuser panel with cleaning solutions containing high conc
 
 ### brightness trimming
 
-In order to simplify the electrical design of the light source, the red, green, blue, and white color channels are split into two independently driven sides as shown below. The components used are very well matched, so the difference in brightness between the two sides should be a few percent at most and will generally not be noticed unless working with very low-contrast negatives. If there is a noticeable "split" in brightness or color across the centerline of the light source, the relative brightness of the two halves can be fine-tuned in the **Brightness Trimming** menu in the web app. Setting the trim values to a positive number increases the relative brightness of side 2; setting them to a negative number increases the relative brightness of side 1.
+In order to simplify the electrical design of the light source, the red, green, blue, and white color channels are split into two independently driven sides as shown below. The components used are very well matched, so the difference in brightness between the two sides should be a few percent at most and will generally not be noticed unless working with very low-contrast negatives. If there is a noticeable and consistent "split" in brightness or color across the centerline of the light source, the relative brightness of the two halves can be fine-tuned in the **Brightness Trimming** menu in the web app. Setting the trim values to a positive number increases the relative brightness of side 2; setting them to a negative number increases the relative brightness of side 1.
 
 ![](<images/big_scanlight_led_zones.svg>)
 
@@ -94,7 +95,7 @@ The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [
 
 ![](images/big_scanlight_pcb_cad.png)
 
-All design files for the [driver pcb](https://github.com/jackw01/scanlight/bsl_driver_pcb_r1) and [LED PCB](https://github.com/jackw01/scanlight/bsl_array_pcb_r1) can be downloaded from the GitHub repository.
+All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/bsl_driver_pcb_r1) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/bsl_array_pcb_r1) can be downloaded from the GitHub repository.
 
 [Driver PCB Schematic as PDF](bsl_driver_pcb_r1/bsl_drv_v1_20251109.pdf)
 
@@ -106,10 +107,10 @@ All design files for the [driver pcb](https://github.com/jackw01/scanlight/bsl_d
 
 ### mechanical design
 
-STEP files for all parts of the light source can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d/big%20scanlight%20v1).
+STEP files for all parts of the light source will be made available by the end of 2025 on the [GitHub repository](https://github.com/jackw01/scanlight/3d/big%20scanlight%20v1). Some minor tweaks are still being made to the designs to improve printability and ease of assembly.
 
 ![](<images/big_scanlight_top_bottom.jpg>)
 
 ### firmware and web app
 
-The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/automation/build/firmware_sl2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
+The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).

@@ -1,6 +1,6 @@
 # scanlight v3 info
 
-![](<images/light_with_film_v2_2.jpg>)
+![](<images/light_with_film_v2_3.jpg>)
 
 ![](<images/diffuser_v2.jpg>)
 <small>HW v2 shown, v3 similar.</small>
@@ -17,7 +17,7 @@
 * Powered using either a 19-24V barrel jack AC adapter or a 20V-capable USB PD supply
 * Open source hardware and software
 
-Original article on scanning film with narrowband light: *[A Better Light Source For Scanning Color Negative Film](./README.md)*.
+Original article on scanning film with narrowband light (with sample scans): *[A Better Light Source For Scanning Color Negative Film](./README.md)*.
 
 I will be building a limited quantity of scanlight units for sale - for more details, see [my shop on Ko-Fi](https://ko-fi.com/jackw01/shop).
 
@@ -88,7 +88,7 @@ When installed below the main diffuser and a significant distance away from the 
 
 The version 3 PCB is an incremental improvement over version 2 and allows a Raspberry Pi Pico microcontroller to be attached directly to the main board, which enables full control of the light from a computer using the web app here: https://jackw01.github.io/scanlight/automation/app/dist/index.html. This functionality can also be enabled on v2 by connecting an external Raspberry Pi Pico to the header on the PCB.
 
-All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/pcb_r3).
+All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/tree/main/pcb_r3).
 
 ![](images/pcb_r3.jpg)
 
@@ -106,5 +106,5 @@ STEP files for all parts of the light source and film carriers can be downloaded
 
 The web app for controlling scanlight v3 is available [here](https://jackw01.github.io/scanlight/automation/app/dist/index.html). A Chromium-based web browser is required as other browser engines do not support the WebUSB/WebSerial API.
 
-The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/automation/build/firmware_sl2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
+The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/sl2_controller_v1.3.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
 
