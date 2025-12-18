@@ -15,6 +15,8 @@ Printing orientation for all parts should be obvious based on the design. Print 
 * 8x M2x6mm pan head self-tapping screw for plastic (head diameter 4mm or less)
 * 4x 8mm diameter adhesive-backed rubber bumper (3M SJ5370 or equivalent)
 
+Note: the reflector box housing and diffuser bezel are available in two variants, screw-together and snap-fit. The snap-fit versions are designed specifically to print in ABS on a very well-tuned printer with a heated chamber; good results are not guaranteed otherwise.
+
 ### 35mm film carrier
 
 * 2x 3D printed 35mm film carrier half
