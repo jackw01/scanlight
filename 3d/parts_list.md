@@ -1,6 +1,6 @@
-## parts list
+# parts list
 
-### 3d printing note
+## 3d printing note
 Printing orientation for all parts should be obvious based on the design. Print all parts in black ABS. The "Support on Build Plate Only" or equivalent option should be used since several parts have counterbore holes.
 
 ## scanlight v2/v3
