@@ -53,6 +53,8 @@ Note: the reflector box housing and diffuser bezel are available in two variants
 
 ## big scanlight
 
+[assembly instructions](./big%20scanlight%20v1/assembly_instructions.md)
+
 ### big scanlight only
 * assembled driver PCB
 * assembled LED PCB

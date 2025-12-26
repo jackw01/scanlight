@@ -108,3 +108,6 @@ The web app for controlling scanlight v3 is available [here](https://jackw01.git
 
 The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/sl2_controller_v1.3.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
 
+### license
+
+The PCB schematic, layout, and Gerber files and the 3D CAD files for this project are released under the [CERN Open Hardware Licence Version 2 - Weakly Reciprocal](https://choosealicense.com/licenses/cern-ohl-w-2.0/) (CERN-OHL-W V2). Software and firmware are released under the MIT License.
