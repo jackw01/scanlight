@@ -5,7 +5,7 @@
 ## features
 * Illuminated area dimensions: 108x134mm (approx. 4.25x5.25in)
 * Suitable for use with 35mm, medium format, and 4x5 film
-* 20 each of deep red (665nm), green (525nm), deep blue (455nm), and 95CRI white, and 16 infrared (850nm) LEDs mounted on aluminum PCB for optimal heat dissipation
+* 20 each of deep red (665nm), green (525nm), deep blue (455nm), and 5000K 95CRI white, and 16 infrared (850nm) LEDs mounted on aluminum PCB for optimal heat dissipation
 * Up to 15EV brightness<sup>1</sup> in RGB combined mode, 14EV in white mode
 * Better light uniformity over medium format frame sizes than scanlight v2/v3
 * Diffuser made from fingerprint- and scratch-resistant textured acrylic
@@ -91,7 +91,7 @@ Big scanlight uses a very simple optical design consisting of a matte white acry
 
 ![](images/big_scanlight_pcbs.jpg)
 
-The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1764654827638&ref_url=https%253A%252F%252Fwww.google.com%252F) constant-current boost converters configured for 80mA output current at up to 38V, and a [CH233K](https://www.wch-ic.com/products/CH233.html) USB-PD protocol controller on a 86x34mm four-layer PCB.
+The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1764654827638&ref_url=https%253A%252F%252Fwww.google.com%252F) constant-current boost converters configured for 80mA output current at up to 38V, and a [CH221K](https://www.wch.cn/products/CH224.html) USB-PD protocol controller on a 86x34mm four-layer PCB.
 
 ![](images/big_scanlight_pcb_cad.png)
 
@@ -107,7 +107,7 @@ All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/
 
 ### mechanical design
 
-STEP files for all parts of the light source will be made available by the end of 2025 on the [GitHub repository](https://github.com/jackw01/scanlight/3d/big%20scanlight%20v1). Some minor tweaks are still being made to the designs to improve printability and ease of assembly.
+STEP files for all parts of the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d).
 
 ![](<images/big_scanlight_top_bottom.jpg>)
 

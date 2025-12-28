@@ -62,7 +62,7 @@ Note: the reflector box housing and diffuser bezel are available in two variants
 * 3D printed baseplate
 * 3D printed reflector box housing (interior surfaces to be painted with paint containing only extra fine leafing aluminum flake pigment, such as Dupli-Color CS101)
 * 3D printed diffuser bezel
-* 2x 3D printed button
+* 2x 3D printed button (may be printed in other materials than ABS)
 * 3D printed PCB cover
 * 2x M2x10mm pan head self-tapping screw for plastic (head diameter 4mm or less)
 * 4x M3x8mm pan head self-tapping screw for plastic (head diameter 6.5mm or less)
