@@ -76,7 +76,7 @@ The 35mm and medium format film carriers use a double S-curve design to keep the
 
 As an alternative to using a tripod or vertical copy stand, 3D printable parts for mounting the light source and a camera with an Arca-Swiss quick-release plate to a piece of 20x20mm T-slot aluminum extrusion are included. This mounting method will accommodate cameras where the distance between the center of the lens and the bottom plane of the quick-release plate is at least 36 mm - the included 3D printable spacers can be used to offset the height of the light source to accommodate larger cameras.
 
-Design files are available [here](https://github.com/jackw01/scanlight/3d/horizontal).
+Design files are available [here](https://github.com/jackw01/scanlight/tree/main/3d/horizontal).
 
 ### note on brightness enhancing film
 
@@ -100,7 +100,7 @@ All design files can be downloaded from the [GitHub repository](https://github.c
 
 ### mechanical design
 
-STEP files for all parts of the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d).
+STEP files for all parts of the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/tree/main/3d).
 
 ### firmware and web app
 

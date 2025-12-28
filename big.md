@@ -107,7 +107,7 @@ All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/
 
 ### mechanical design
 
-STEP files for all parts of the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/3d).
+STEP files for all parts of the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/tree/main/3d).
 
 ![](<images/big_scanlight_top_bottom.jpg>)
 
