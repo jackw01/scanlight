@@ -13,6 +13,7 @@
 * Fully controllable via USB with [web app](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html)
 * On/off and mode toggle buttons on light source for standalone usage
 * Compatible with accessories made for Negative Supply 4x5" light sources<sup>2</sup>
+* Adapter available for compatibility with [ToneCarrier](#tonecarrier-adapter)
 * Simple 35mm and medium format film carriers available
 * Automated camera shutter control for capturing separate red/green/blue images
 * Powered using any USB-C power source (at least 9V at 18W required for full brightness)
@@ -75,6 +76,15 @@ In order to simplify the electrical design of the light source, the red, green, 
 
 ![](<images/big_scanlight_dimension_drawing.svg>)
 
+### film carrier compatibility
+
+Adapters are available for improved usability with [toneCarrier](https://tonephotographic.com/) and Valoi 360 Advancer [coming soon] film carriers. Drawings of the adapters with critical dimensions are included below for reference; the dimensions of these third-party film carriers are not published by the manufacturers and are subject to change, so please use these drawings to verify compatibility with your film carriers before buying.
+
+#### toneCarrier 35mm/120 adapter
+
+![](<images/big_scanlight_tonecarrier_adapter.svg>)
+<small>All dimensions in millimeters.</small>
+
 ### optical design
 
 Big scanlight uses a very simple optical design consisting of a matte white acrylic diffuser panel, an LED array which spans the entire illuminated area of the diffuser, and a housing with diffusely reflective sidewalls perpenicular to the PCB and chamfered corners to reduce brightness falloff. In RGB mode, big scanlight achieves superior lighting uniformity to scanlight v2/v3 over a larger area. In white light mode, lighting uniformity is similar to scanlight v2/v3 over a larger area.
@@ -107,7 +117,7 @@ All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/
 
 ### mechanical design
 
-STEP files for all parts of the light source and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/tree/main/3d).
+STEP files for all parts of the light source, film carrier adapters, and film carriers can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/tree/main/3d).
 
 ![](<images/big_scanlight_top_bottom.jpg>)
 
