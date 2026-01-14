@@ -13,7 +13,7 @@
 * Fully controllable via USB with [web app](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html)
 * On/off and mode toggle buttons on light source for standalone usage
 * Compatible with accessories made for Negative Supply 4x5" light sources<sup>2</sup>
-* Adapter available for compatibility with [ToneCarrier](#tonecarrier-adapter)
+* Adapters available for compatibility with [ToneCarrier](#tonecarrier-adapter) and [Valoi 360 Advancer](https://cinestillfilm.com/products/valoi360-advancer)
 * Simple 35mm and medium format film carriers available
 * Automated camera shutter control for capturing separate red/green/blue images
 * Powered using any USB-C power source (at least 9V at 18W required for full brightness)
@@ -78,12 +78,17 @@ In order to simplify the electrical design of the light source, the red, green, 
 
 ### film carrier compatibility
 
-Adapters are available for improved usability with [toneCarrier](https://tonephotographic.com/) and Valoi 360 Advancer [coming soon] film carriers. Drawings of the adapters with critical dimensions are included below for reference; the dimensions of these third-party film carriers are not published by the manufacturers and are subject to change, so please use these drawings to verify compatibility with your film carriers before buying.
+Adapters are available for improved usability with [toneCarrier](https://tonephotographic.com/) and [Valoi 360 Advancer](https://cinestillfilm.com/products/valoi360-advancer) film carriers. Drawings of the adapters with critical dimensions are included below for reference; the dimensions of these third-party film carriers are not published by the manufacturers and are subject to change, so please use these drawings to verify compatibility with your film carriers before buying.
 
 #### toneCarrier 35mm/120 adapter
 
 ![](<images/big_scanlight_tonecarrier_adapter.svg>)
 <small>All dimensions in millimeters.</small>
+
+#### Valoi 360 Advancer adapter
+
+![](<images/big_scanlight_valoi360_adapter.svg>)
+<small>All dimensions in millimeters. Mounting holes are sized for M4 socket head cap screws.</small>
 
 ### optical design
 
