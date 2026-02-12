@@ -1,1 +1,4 @@
-Red, green, and blue channel control signals connect to Pi Pico pins 7, 8, and 9 respectively.
+# scanlight firmware and web app
+
+* [big scanlight control interface documentation](./bsl_control_interface.md)
+* [scanlight v2/v3 Pi Pico electrical connections](./firmware_sl2/README.md)
