@@ -32,3 +32,4 @@ extern protocol_data_t protocol_data;
 void protocol_tick();
 void protocol_send_packet(char header, char *data, uint8_t length);
 void protocol_send_packet_int32(char header, int32_t value);
+void protocol_send_packet_uint32(char header, uint32_t value);

@@ -1,4 +1,4 @@
-# big scanlight control interface documentation
+# big scanlight / scanlight v4 control interface documentation
 
 ## USB connection
 
@@ -6,7 +6,11 @@ Scanlight enumerates as a USB Serial CDC device, which can be accessed by, for e
 
 ## communication protocol overview
 
-This information is current as of firmware version 1.0.0 (ID 0 as reported by `PKT_D2H_FW_VERSION`.)
+This information is current as of firmware version 1.1.0 (ID 0 as reported by `PKT_D2H_FW_VERSION`.)
+
+| firmware ID | version number | notes |
+| 1 | 1.1.0 | scanlight v4 hardware support |
+| 0 | 1.0.0 | initial release |
 
 Both host-to-device and device-to-host communications use the same packet format. The data length byte may be zero, in which case it is the last byte in the packet.
 
@@ -66,7 +70,7 @@ PKT_D2H_TRIM = 5
 | 4 | IR channel value (0 to 255) |
 | 5 | save preset flag (0 to 1) |
 
-Requests the device to update the LED driver state. The device firmware performs input validation, ensuring that maximum power is reduced if operating more than one channel at a time with an insufficient power supply and preventing the white and IR channels from being operated at the same time as the RGB channels. If the 'save preset flag' byte is set to 1, the red, green, and blue channel settings will be saved to nonvolatile memory as the default RGB setting which is used at power-on. The application software should only set this byte to 1 when absolutely needed, as the nonvolatile memory has a finite write cycle lifespan.
+Requests the device to update the LED driver state. The device firmware performs input validation, ensuring that maximum power is reduced if operating more than one channel at a time with an insufficient power supply and preventing the white and IR channels from being operated at the same time as the RGB channels. If the 'save preset flag' byte is set to 1, the red, green, and blue channel settings will be saved to nonvolatile memory as the default RGB setting which is used at power-on. The application software should only set this byte to 1 when absolutely needed, as the nonvolatile memory has a finite write cycle lifespan. *Note: IR channel value is ignored by the scanlight v4 firmware variant.*
 
 #### PKT_H2D_GET_DEFAULT_RGB
 
@@ -123,7 +127,7 @@ Requests the device to enter device firmware upgrade (DFU) mode. USB serial conn
 | 2 | blue channel value (-127 to 127 - two's complement format) |
 | 3 | white channel value (-127 to 127 - two's complement format) |
 
-Requests the device to set the red, green, blue, and white channel trimming settings (the difference between the left and right side LED driver PWM levels). New trimming settings are automatically saved to nonvolatile memory when received.
+Requests the device to set the red, green, blue, and white channel trimming settings (the difference between the left and right side LED driver PWM levels). New trimming settings are automatically saved to nonvolatile memory when received. *Note: this packet is ignored by the scanlight v4 firmware variant.*
 
 #### PKT_H2D_GET_TRIM
 
@@ -132,7 +136,7 @@ Requests the device to set the red, green, blue, and white channel trimming sett
 | header | 6 |
 | data length | 0 |
 
-Requests the device to respond with `PKT_D2H_TRIM`.
+Requests the device to respond with `PKT_D2H_TRIM`. *Note: this packet is ignored by the scanlight v4 firmware variant.*
 
 ### device-to-host
 
@@ -145,9 +149,9 @@ Requests the device to respond with `PKT_D2H_TRIM`.
 
 | data byte index | description |
 |---|---|
-| 0-4 | LED temperature in millidegrees Celsius (32-bit signed integer in two's complement format) |
+| 0-3 | LED temperature in millidegrees Celsius (32-bit signed integer in two's complement format) |
 
-Telemetry packet sent automatically by the device every 200ms. *Note: not supported on rev1 hardware (driver PCB PN 25d902a)*
+Telemetry packet sent automatically by the device every 200ms. *Note: not supported on big scanlight rev1 hardware (driver PCB PN 25d902a)*
 
 #### PKT_D2H_VBUS
 
@@ -158,7 +162,7 @@ Telemetry packet sent automatically by the device every 200ms. *Note: not suppor
 
 | data byte index | description |
 |---|---|
-| 0-4 | power USB port VBUS voltage in millivolts (32-bit signed integer in two's complement format) |
+| 0-3 | power USB port VBUS voltage in millivolts (32-bit signed integer in two's complement format) |
 
 Telemetry packet sent automatically by the device every 200ms. *Note: there is no need for the application software to do anything in response to this packet. USB port voltage changes are handled by the device firmware.*
 
@@ -171,9 +175,10 @@ Telemetry packet sent automatically by the device every 200ms. *Note: there is n
 
 | data byte index | description |
 |---|---|
-| 0-4 | device firmware version ID (32-bit signed integer in two's complement format) |
+| 0-1 | device firmware version ID (16-bit unsigned integer) |
+| 2-3 | device hardware version ID (16-bit unsigned integer) |
 
-Reports the device firmware version ID.
+Reports the device firmware and hardware version IDs.
 
 #### PKT_D2H_DEFAULT_RGB
 
@@ -204,4 +209,4 @@ Reports the default RGB settings (used at power-on) stored in nonvolatile memory
 | 2 | blue channel value (-127 to 127 - two's complement format) |
 | 3 | white channel value (-127 to 127 - two's complement format) |
 
-Reports the current channel trimming settings stored in nonvolatile memory.
+Reports the current channel trimming settings stored in nonvolatile memory. *Note: only supported by the big scanlight firmware variant.*

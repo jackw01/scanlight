@@ -122,10 +122,12 @@
                   color="pink-darken-4"
                   elevation="2"
                   x-large
-                  @click="setEnabledChannels([0, 0, 0, 0, 1])">IR</v-btn>
+                  @click="setEnabledChannels([0, 0, 0, 0, 1])"
+                  v-if="!isSmallHW">IR</v-btn>
               </v-col>
             </v-row>
             <v-alert v-if="showReducedPowerWarning" class="mt-4" text="Operating at reduced brightness. Use a USB-C power source with 9V 18W or higher output for full brightness." type="info" variant="tonal"></v-alert>
+            <v-alert v-if="showTemperatureWarning" class="mt-4" text="LED temperature high. Light will turn off automatically at 80°C." type="warning" variant="tonal"></v-alert>
           </v-card-text>
         </v-card>
       </v-col>
@@ -166,7 +168,7 @@
             <v-btn :disabled="controlsDisabled" class="mr-2 mb-2" color="primary" @click="loadDefault">Load default</v-btn>
             <v-dialog v-model="trimDialog" max-width="400" persistent>
               <template v-slot:activator="{ props: activatorProps }">
-                <v-btn :disabled="controlsDisabled" class="mr-2 mb-2" color="primary" v-bind="activatorProps">Brightness Trimming</v-btn>
+                <v-btn :disabled="controlsDisabled" class="mr-2 mb-2" color="primary" v-bind="activatorProps" v-if="!isSmallHW">Brightness Trimming</v-btn>
               </template>
               <v-card
                 title="Brightness Trimming"
@@ -240,9 +242,9 @@
               variant="outlined"
             ></v-number-input>
             <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGB')">Auto R,G,B</v-btn>
-            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGBIR')">Auto R,G,B,IR</v-btn>
-            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceNWIR')">Auto RGB,IR</v-btn>
-            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceBWIR')">Auto W,IR</v-btn>
+            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGBIR')" v-if="!isSmallHW">Auto R,G,B,IR</v-btn>
+            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceNWIR')" v-if="!isSmallHW">Auto RGB,IR</v-btn>
+            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceBWIR')" v-if="!isSmallHW">Auto W,IR</v-btn>
             <v-btn class="mr-2 mb-2" color="primary" @click="shutterTest">Test Shutter</v-btn>
           </v-card-text>
         </v-card>
@@ -251,11 +253,11 @@
           <v-card-title>Info</v-card-title>
           <v-card-text>
             <div class="text-grey-darken-1 text-caption">
-              <span class="mr-4">Input voltage: {{ inputVoltageV }}V</span><span v-if="false" class="mr-4">LED temperature: {{ ledTemperatureC }}C</span><span class="mr-4">Current firmware version: {{ fwVersionString }}</span>
+             <span class="mr-4">Input voltage: {{ inputVoltageV }}V</span><span v-if="ledTemperatureC > 5" class="mr-4">LED temperature: {{ ledTemperatureC }}C</span><span>{{ hwVersionString }}</span><span> firmware {{ fwVersionString }}</span>
               <br />
               <a class="text-accent" href="https://jackw01.github.io/scanlight/big">big scanlight info & instructions</a>
               <br />
-              big scanlight control app v1.0 by jackw01
+              scanlight control app v2.0 by jackw01
             </div>
           </v-card-text>
         </v-card>
@@ -291,6 +293,7 @@ export default {
       ledTemperatureMdegc: 0,
       fwUpdateAvailable: false,
       fwVersionString: "",
+      hwVersionString: "",
       defaultsDialog: false,
       trimDialog: false,
     };
@@ -303,10 +306,23 @@ export default {
       return (this.inputVoltageMv / 1000).toFixed(2);
     },
     ledTemperatureC: function() {
-      return (this.ledTemperatureMdegc / 1000).toFixed(2);
+      return (this.ledTemperatureMdegc / 1000).toFixed(1);
     },
     showReducedPowerWarning: function() {
-      return (this.inputVoltageMv > config.USBVBUSThreshold5V && this.inputVoltageMv < config.USBVBUSThreshold9V);
+      if (this.hwVersionString === "big scanlight") {
+        return (this.inputVoltageMv > config.USBVBUSThreshold5V && this.inputVoltageMv < config.USBVBUSThreshold9V);
+      } else if (this.hwVersionString === "scanlight v4") {
+        // Decided not to limit power for 500mA/1.5A USB modes, since it may be too confusing for users
+        return false;
+      } else {
+        return false;
+      }
+    },
+    showTemperatureWarning: function() {
+      return this.ledTemperatureMdegc > config.OverTemperatureThresholdMdegc;
+    },
+    isSmallHW: function() {
+      return this.hwVersionString === "scanlight v4";
     },
   },
   mounted() {
@@ -332,9 +348,12 @@ export default {
       }
     },
     checkFWVersion(header, rawData, dataView) {
-      const versionId = dataView.getInt32(0);
-      this.fwVersionString = config.FWVersionStrings[versionId];
-      if (versionId < config.LatestFWVersionID) this.fwUpdateAvailable = true;
+      const versionIdWord = dataView.getUint32(0);
+      const fwVersion = versionIdWord & 0xFFFF;
+      const hwVersion = (versionIdWord >> 16) & 0xFFFF;
+      this.fwVersionString = config.FWVersionStrings[fwVersion] || "Unknown firmware version";
+      this.hwVersionString = config.HWVersionStrings[hwVersion] || "Unknown hardware version";
+      if (fwVersion < config.LatestFWVersionID) this.fwUpdateAvailable = true;
       protocol.sendPacket(protocol.PKT_H2D_GET_DEFAULT_RGB, []);
       protocol.sendPacket(protocol.PKT_H2D_GET_TRIM, []);
     },

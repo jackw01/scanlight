@@ -29,6 +29,7 @@ uint32_t adc_reporting_timer = 1;
 int32_t shutter_pulse_timer = -1;
 int32_t led_temp_mdegc = 0;
 int32_t vbus_mv = 0;
+int32_t cc_mv = 0;
 
 // PWM
 
@@ -63,19 +64,16 @@ void update_pwm()
   uint8_t scale = 255;
   uint8_t scaleIR = 255;
 
-  if (operating_mode == OperatingModeReducedPower)
+  uint32_t n_channels = 0;
+  for (uint32_t i = 0; i < 5; i++)
   {
-    uint32_t n_channels = 0;
-    for (uint32_t i = 0; i < 5; i++)
-    {
-      if (color[i] > 0)
-        n_channels++;
-    }
-    if (n_channels > 1)
-      scale = ReducedPowerLevelRGB;
-    else
-      scale = ReducedPowerLevelSingle;
+    if (color[i] > 0)
+      n_channels++;
   }
+  if (n_channels > 1)
+    scale = PowerLimitRGB[operating_mode];
+  else
+    scale = PowerLimitSingleChannel[operating_mode];
 
   // led_enable overrides all other settings
   if (led_enable == 0)
@@ -88,11 +86,13 @@ void update_pwm()
   update_pwm_pin(PinG1, color[1], (uint32_t)(trim[1] > 0 ? 255 - trim[1] : 255), scale);
   update_pwm_pin(PinB1, color[2], (uint32_t)(trim[2] > 0 ? 255 - trim[2] : 255), scale);
   update_pwm_pin(PinW1, color[3], (uint32_t)(trim[3] > 0 ? 255 - trim[3] : 255), scale);
+#ifdef HW_VERSION_BSL1
   update_pwm_pin(PinR2, color[0], (uint32_t)(trim[0] < 0 ? 255 + trim[0] : 255), scale);
   update_pwm_pin(PinG2, color[1], (uint32_t)(trim[1] < 0 ? 255 + trim[1] : 255), scale);
   update_pwm_pin(PinB2, color[2], (uint32_t)(trim[2] < 0 ? 255 + trim[2] : 255), scale);
   update_pwm_pin(PinW2, color[3], (uint32_t)(trim[3] < 0 ? 255 + trim[3] : 255), scale);
   update_pwm_pin(PinIR, color[4], 255, 255);
+#endif
 }
 
 // ADC
@@ -145,7 +145,26 @@ int32_t adc_get_vbus_mv()
   return (int32_t)(raw_v * ADCVBUSSenseScale * 1e3);
 }
 
+
+int32_t adc_get_cc_mv()
+{
+#ifdef HW_VERSION_SL4
+  adc_select_input(PinADCUSBCC1);
+  float raw_v1 = (float)adc_read() * ADCVPerCount;
+  adc_select_input(PinADCUSBCC2);
+  float raw_v2 = (float)adc_read() * ADCVPerCount;
+  if (raw_v1 > raw_v2)
+    return (int32_t)(raw_v1 * 1e3);
+  else
+    return (int32_t)(raw_v2 * 1e3);
+#else
+  return 3300;
+#endif
+}
+
+
 // Flash
+
 void write_preset_to_flash()
 {
   uint32_t irq_state = save_and_disable_interrupts();
@@ -179,10 +198,10 @@ void read_preset_from_flash()
   // First read of flash memory?
   if (trim[4] == -1)
   {
-    trim[0] = 0;
-    trim[1] = 0;
-    trim[2] = 0;
-    trim[3] = 0;
+    trim[0] = DefaultTrimR;
+    trim[1] = DefaultTrimG;
+    trim[2] = DefaultTrimB;
+    trim[3] = DefaultTrimW;
     trim[4] = 0;
   }
 }
@@ -200,6 +219,13 @@ void on_button_change(button_t *button_p)
     case PinButton1:
       // LED on/off toggle
       led_enable = !led_enable;
+      // Check if turning on with no color set
+      if (led_enable && color[0] == 0 && color[1] == 0 && color[2] == 0 && color[3] == 0 && color[4] == 0)
+      {
+        color[0] = rgb_preset[0];
+        color[1] = rgb_preset[1];
+        color[2] = rgb_preset[2];
+      }
       update_pwm();
       break;
     case PinButton2:
@@ -249,7 +275,7 @@ void tick(uint32_t millis, uint32_t dt_micros)
         protocol_send_packet(PKT_D2H_DEFAULT_RGB, rgb_preset, 3);
         break;
       case PKT_H2D_GET_FW_VERSION:
-        protocol_send_packet_int32(PKT_D2H_FW_VERSION, FirmwareVersionID);
+        protocol_send_packet_uint32(PKT_D2H_FW_VERSION, FW_VERSION_ID + (HW_VERSION_ID << 16));
         break;
       case PKT_H2D_SHUTTER_PULSE:
         shutter_pulse_timer = millis + protocol_data.incoming_packet_data[0] * 10; // stored as 10s of ms
@@ -259,6 +285,7 @@ void tick(uint32_t millis, uint32_t dt_micros)
         // enter DFU mode by resetting into USB mass storage bootloader
         reset_usb_boot(0, 0);
         break;
+#ifdef HW_VERSION_BSL1
       case PKT_H2D_GET_TRIM:
         protocol_send_packet(PKT_D2H_TRIM, (char *)trim, 4);
         break;
@@ -267,6 +294,7 @@ void tick(uint32_t millis, uint32_t dt_micros)
         write_preset_to_flash();
         update_pwm();
         break;
+#endif
     }
   }
 
@@ -280,22 +308,30 @@ void tick(uint32_t millis, uint32_t dt_micros)
   {
     led_temp_mdegc = adc_get_led_temp_mdegc();
     vbus_mv = adc_get_vbus_mv();
+    cc_mv = adc_get_cc_mv();
 
-    OperatingMode new_operating_mode;
+    OperatingMode prev_operating_mode = operating_mode;
+
+    if (led_temp_mdegc > OverTemperatureThresholdMdegc)
+      operating_mode = OperatingModeOff;
 
     if (vbus_mv < USBVBUSThreshold5V)
-      new_operating_mode = OperatingModeOff;
+      operating_mode = OperatingModeOff;
     else if (vbus_mv > USBVBUSThreshold9V)
-      new_operating_mode = OperatingModeFullPower;
-    else
-      new_operating_mode = OperatingModeReducedPower;
+      operating_mode = OperatingMode9V;
+    else // 5V range
+      if (cc_mv > USBCCThresholdRd3p0)
+        operating_mode = OperatingMode5V3A;
+      else if (cc_mv > USBCCThresholdRd1p5)
+        operating_mode = OperatingMode5V1P5A;
+      else
+        operating_mode = OperatingMode5V0P5A;
 
-    if (new_operating_mode != operating_mode)
+    if (prev_operating_mode != operating_mode)
     {
-      if (new_operating_mode == OperatingModeOff)
+      if (operating_mode == OperatingModeOff)
       {
         // undervoltage protection - ensure that LED drivers are off before USB is connected
-        new_operating_mode = OperatingModeOff;
         // clear color setting
         for (uint32_t i = 0; i < 5; i++)
         {
@@ -303,7 +339,7 @@ void tick(uint32_t millis, uint32_t dt_micros)
         }
       }
 
-      if (operating_mode == OperatingModeOff)
+      if (prev_operating_mode == OperatingModeOff)
       {
         // visual self test when power is connected
         led_enable = 1;
@@ -336,7 +372,6 @@ void tick(uint32_t millis, uint32_t dt_micros)
         led_enable = 0;
       }
 
-      operating_mode = new_operating_mode;
       update_pwm();
     }
 
@@ -355,6 +390,10 @@ int main()
   adc_init();
   adc_gpio_init(PinADCGPIOOffset + PinADCThermistor);
   adc_gpio_init(PinADCGPIOOffset + PinADCVBUSSense);
+#ifdef HW_VERSION_SL4
+  adc_gpio_init(PinADCGPIOOffset + PinADCUSBCC1);
+  adc_gpio_init(PinADCGPIOOffset + PinADCUSBCC2);
+#endif
 
   gpio_init(PinShutter);
   gpio_set_dir(PinShutter, GPIO_OUT);
