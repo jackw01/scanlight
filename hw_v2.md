@@ -88,13 +88,13 @@ When installed below the main diffuser and a significant distance away from the 
 
 The version 3 PCB is an incremental improvement over version 2 and allows a Raspberry Pi Pico microcontroller to be attached directly to the main board, which enables full control of the light from a computer using the web app here: https://jackw01.github.io/scanlight/automation/app/dist/index.html. This functionality can also be enabled on v2 by connecting an external Raspberry Pi Pico to the header on the PCB.
 
-All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/tree/main/pcb_r3).
+All design files can be downloaded from the [GitHub repository](https://github.com/jackw01/scanlight/tree/main/pcb/sl_v3).
 
 ![](images/pcb_r3.jpg)
 
-[PCB Schematic as PDF (Rev. 3)](pcb_r3/scanlight_schematic_r3_20251023.pdf)
+[PCB Schematic as PDF (Rev. 3)](pcb/sl_v3/scanlight_schematic_v3_20251023.pdf)
 
-[PCB BOM](pcb_r3/scanlight_bom_r3_20251023.csv)
+[PCB BOM](pcb/sl_v3/scanlight_bom_v3_20251023.csv)
 
 [LED datasheet](https://downloads.cree-led.com/files/ds/j/JSeries-2835-Color.pdf)
 

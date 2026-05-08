@@ -18,6 +18,8 @@ Press the diffuser box onto the bezel to fasten it in place, applying pressure s
 
 ![](<images/04.png>)
 
+*The bezel snap-fit is intended to be permanent. It is possible to disassemble by inserting a flexible steel pry tool into the gap between the bezel and diffuser box rim, but the risk of damaging the bezel is relatively high.*
+
 ## 3
 
 Insert the buttons into the rear side of the PCB cover. Snap the driver PCB into the cover.
@@ -36,7 +38,7 @@ Insert the PCB assembly into the recess on the side of the diffuser box, alignin
 
 ## 5
 
-Use compressed air or a handheld blower tool to remove any dust and debris from the inside of the diffuser box. Place the LED PCB into the opening on the rear of the diffuser box, aligning the black connector on the LED PCB with the pins on the driver PCB. Press down on the back of the LED PCB around the connector area to connect the PCBs together.
+Use compressed air or a handheld blower tool to remove any dust or debris from the inside of the diffuser box. Place the LED PCB into the opening on the rear of the diffuser box, aligning the black connector on the LED PCB with the pins on the driver PCB. Press down on the back of the LED PCB around the connector area to connect the PCBs together.
 
 ![](<images/09.png>)
 

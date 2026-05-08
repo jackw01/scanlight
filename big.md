@@ -7,7 +7,7 @@
 * Suitable for use with 35mm, medium format, and 4x5 film
 * 20 each of deep red (665nm), green (525nm), deep blue (455nm), and 5000K 95CRI white, and 16 infrared (850nm) LEDs mounted on aluminum PCB for optimal heat dissipation
 * Up to 15EV brightness<sup>1</sup> in RGB combined mode, 14EV in white mode
-* Better light uniformity over medium format frame sizes than scanlight v2/v3
+* Better light uniformity over medium format frame sizes than scanlight v2/v3/v4
 * Diffuser made from fingerprint- and scratch-resistant textured acrylic
 * 3D printed ABS housing
 * Fully controllable via USB with [web app](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html)
@@ -92,13 +92,15 @@ Adapters are available for improved usability with [toneCarrier](https://tonepho
 
 ### optical design
 
-Big scanlight uses a very simple optical design consisting of a matte white acrylic diffuser panel, an LED array which spans the entire illuminated area of the diffuser, and a housing with diffusely reflective sidewalls perpenicular to the PCB and chamfered corners to reduce brightness falloff. In RGB mode, big scanlight achieves superior lighting uniformity to scanlight v2/v3 over a larger area. In white light mode, lighting uniformity is similar to scanlight v2/v3 over a larger area.
+Big scanlight uses a very simple optical design consisting of a matte white acrylic diffuser panel, an LED array which spans the entire illuminated area of the diffuser, and a housing with diffusely reflective sidewalls perpenicular to the PCB and chamfered corners to reduce brightness falloff. In both RGB and white modes, big scanlight achieves similar lighting uniformity to scanlight v4 (slightly better than scanlight v2/v3) over a larger area.
 
 ![](<data/plots/luminance_plot_big scanlight RGB combined.png>)
 
 ![](<data/plots/luminance_plot_big scanlight white.png>)
 
-![](<data/plots/luminance_plot_scanlight v2.png>)
+![](<data/plots/luminance_plot_scanlight v4 RGB combined.png>)
+
+![](<data/plots/luminance_plot_scanlight v4 white.png>)
 
 ![](<data/plots/luminance_plot_center of 15 inch LCD display.png>)
 
@@ -110,15 +112,15 @@ The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [
 
 ![](images/big_scanlight_pcb_cad.png)
 
-All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/bsl_driver_pcb_r1) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/bsl_array_pcb_r1) can be downloaded from the GitHub repository.
+All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1.1) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/bsl_array_v1.1) can be downloaded from the GitHub repository.
 
-[Driver PCB Schematic as PDF](bsl_driver_pcb_r1/bsl_drv_v1_20251109.pdf)
+[Driver PCB Schematic as PDF](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.pdf)
 
-[Driver PCB BOM](bsl_driver_pcb_r1/bsl_drv_v1_20251109.csv)
+[Driver PCB BOM](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.csv)
 
-[LED PCB Schematic as PDF](bsl_array_pcb_r1/bsl_array_v1_20251109.pdf)
+[LED PCB Schematic as PDF](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.pdf)
 
-[LED PCB BOM](bsl_array_pcb_r1/bsl_array_v1_20251109.csv)
+[LED PCB BOM](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.csv)
 
 ### mechanical design
 
@@ -128,7 +130,7 @@ STEP files for all parts of the light source, film carrier adapters, and film ca
 
 ### firmware and web app
 
-The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
+The [source code for the RP2040 firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
 
 Interested in building your own control software? The USB serial communication interface used by the firmware is fully documented [here](https://github.com/jackw01/scanlight/blob/main/automation/bsl_control_interface.md).
 

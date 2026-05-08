@@ -1,1 +1,0 @@
-- TH net on J101 pin 9 should be renamed TH+
