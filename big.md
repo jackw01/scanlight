@@ -114,13 +114,13 @@ The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [
 
 All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1.1) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_array_v1.1) can be downloaded from the GitHub repository.
 
-[Driver PCB Schematic as PDF](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.pdf)
+[Driver PCB Schematic (PDF)](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.pdf)
 
-[Driver PCB BOM](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.csv)
+[Driver PCB BOM (CSV)](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.csv)
 
-[LED PCB Schematic as PDF](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.pdf)
+[LED PCB Schematic (PDF)](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.pdf)
 
-[LED PCB BOM](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.csv)
+[LED PCB BOM (CSV)](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.csv)
 
 ### mechanical design
 
@@ -130,7 +130,7 @@ STEP files for all parts of the light source, film carrier adapters, and film ca
 
 ### firmware and web app
 
-The [source code for the RP2040 firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
+The [source code for the RP2040 firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify). 
 
 Interested in building your own control software? The USB serial communication interface used by the firmware is fully documented [here](https://github.com/jackw01/scanlight/blob/main/automation/bsl_control_interface.md).
 
