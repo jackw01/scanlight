@@ -1,0 +1,1627 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "8f258c02-e62c-4088-a6ea-a76891e489ff")
+	(paper "USLetter")
+	(title_block
+		(title "scanlight v4 pcb")
+		(date "2026-03-29")
+		(rev "1.0")
+		(company "jackw01")
+	)
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 89.535 118.11) (xy 89.535 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0155a9cc-4984-40f7-a6f2-8b002143bac2")
+	)
+	(wire
+		(pts
+			(xy 89.535 140.97) (xy 89.535 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "046c00af-b942-4732-9389-1e09d50d9738")
+	)
+	(wire
+		(pts
+			(xy 89.535 60.96) (xy 89.535 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1368c736-030b-48a6-9656-ed8b6aa44fd4")
+	)
+	(wire
+		(pts
+			(xy 94.615 106.68) (xy 94.615 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24871e3f-5e7d-46eb-8995-9926dabc8fef")
+	)
+	(wire
+		(pts
+			(xy 97.155 140.97) (xy 97.155 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b65c1d4-c7ca-4aa4-a2f1-ad612474be45")
+	)
+	(wire
+		(pts
+			(xy 97.155 106.68) (xy 97.155 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "307f18de-5c0d-4181-9646-e142704da6ba")
+	)
+	(wire
+		(pts
+			(xy 94.615 60.96) (xy 94.615 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3497a7cb-e058-4c89-9368-09ebf71ab5c0")
+	)
+	(wire
+		(pts
+			(xy 92.075 60.96) (xy 92.075 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37010d1c-675f-4052-bbfe-3dca0bfbb518")
+	)
+	(wire
+		(pts
+			(xy 89.535 129.54) (xy 89.535 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48f11017-ca4e-46f1-8c4c-c1711ec6f8fb")
+	)
+	(wire
+		(pts
+			(xy 94.615 152.4) (xy 94.615 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bfde9ab-3f90-49a7-838d-4e9c8e736614")
+	)
+	(wire
+		(pts
+			(xy 97.155 49.53) (xy 97.155 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e148424-8a39-47dc-9310-5e9e37883f3d")
+	)
+	(wire
+		(pts
+			(xy 97.155 95.25) (xy 97.155 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "521ee2f8-ed5f-4c3e-8909-764d9f5a17db")
+	)
+	(wire
+		(pts
+			(xy 92.075 72.39) (xy 92.075 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52225078-6431-4028-8306-6d3c4a38ffc2")
+	)
+	(wire
+		(pts
+			(xy 94.615 118.11) (xy 94.615 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5840c7f4-d51e-4976-98e5-f84667569fb2")
+	)
+	(wire
+		(pts
+			(xy 89.535 95.25) (xy 89.535 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "590144bd-e305-4493-9a53-535ca8762416")
+	)
+	(wire
+		(pts
+			(xy 97.155 118.11) (xy 97.155 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6253d423-c4f1-453d-82a2-77efb156e497")
+	)
+	(wire
+		(pts
+			(xy 92.075 140.97) (xy 92.075 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d27b62b-f8f9-45b0-b74e-69cb80970bbb")
+	)
+	(wire
+		(pts
+			(xy 94.615 83.82) (xy 94.615 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71f94a44-59ab-49bc-bd9c-0df8fed0d7d1")
+	)
+	(wire
+		(pts
+			(xy 97.155 72.39) (xy 97.155 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75fe798c-a2af-4754-96eb-f6133cbe67c0")
+	)
+	(wire
+		(pts
+			(xy 92.075 83.82) (xy 92.075 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b6ec161-58f7-4531-a4a5-9e0b68eb2027")
+	)
+	(wire
+		(pts
+			(xy 89.535 72.39) (xy 89.535 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81d2358a-32bd-4768-bbd3-ee92d333dfb0")
+	)
+	(wire
+		(pts
+			(xy 92.075 95.25) (xy 92.075 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89e8fcb4-97a5-4d64-99a8-cf348aa9a3f5")
+	)
+	(wire
+		(pts
+			(xy 97.155 83.82) (xy 97.155 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99ab749b-9718-4e65-94c7-b4b01d7cd6b1")
+	)
+	(wire
+		(pts
+			(xy 92.075 49.53) (xy 92.075 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a470c56c-854c-46a5-bc96-2f57e855d492")
+	)
+	(wire
+		(pts
+			(xy 92.075 152.4) (xy 92.075 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1f21744-6887-4aa3-9700-2314c2d6fd07")
+	)
+	(wire
+		(pts
+			(xy 94.615 140.97) (xy 94.615 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b440f6e9-26f8-4e63-9150-df2a06817e26")
+	)
+	(wire
+		(pts
+			(xy 92.075 106.68) (xy 92.075 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca59ab11-cf54-420f-ae95-34267ef3798b")
+	)
+	(wire
+		(pts
+			(xy 92.075 118.11) (xy 92.075 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb1c04c5-5b9c-4f9f-8a0b-c1b2000de3ba")
+	)
+	(wire
+		(pts
+			(xy 89.535 106.68) (xy 89.535 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd09c135-ddda-4961-b6c6-28fec4101fbf")
+	)
+	(wire
+		(pts
+			(xy 97.155 152.4) (xy 97.155 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d608f766-b920-4573-ad17-a51cc8817ab5")
+	)
+	(wire
+		(pts
+			(xy 89.535 49.53) (xy 89.535 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6a4c905-3597-4e2e-8fd2-f0d84508161b")
+	)
+	(wire
+		(pts
+			(xy 94.615 129.54) (xy 94.615 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e016dc01-f8fc-4c1b-9c2e-c977eda0037c")
+	)
+	(wire
+		(pts
+			(xy 94.615 49.53) (xy 94.615 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1334a7c-fa3a-4617-a565-eac425bc82ca")
+	)
+	(wire
+		(pts
+			(xy 94.615 95.25) (xy 94.615 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4c12d63-ac1d-4820-b059-607d44202d50")
+	)
+	(wire
+		(pts
+			(xy 92.075 129.54) (xy 92.075 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7eba67f-654a-4118-af9c-7f98f868b3dd")
+	)
+	(wire
+		(pts
+			(xy 89.535 152.4) (xy 89.535 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec68babb-b52c-4b9e-8e9f-85a8edc942ab")
+	)
+	(wire
+		(pts
+			(xy 89.535 83.82) (xy 89.535 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eccb3c84-0b6e-43ef-bf7c-1c6dbaf37669")
+	)
+	(wire
+		(pts
+			(xy 97.155 129.54) (xy 97.155 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f09308d5-f347-486c-b204-246756674764")
+	)
+	(wire
+		(pts
+			(xy 97.155 60.96) (xy 97.155 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7c8bc3a-e6e8-4bd1-ad6d-c4553c2bc5e2")
+	)
+	(wire
+		(pts
+			(xy 94.615 72.39) (xy 94.615 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcf97026-ff22-4871-afc5-cc4daa6ce092")
+	)
+	(hierarchical_label "R1+"
+		(shape input)
+		(at 89.535 49.53 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "17517bab-f84b-45bd-9838-574a97303f1c")
+	)
+	(hierarchical_label "G1-"
+		(shape input)
+		(at 92.075 153.67 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1ba6f6ed-da39-4a30-bd2d-30288b9ccadb")
+	)
+	(hierarchical_label "B1+"
+		(shape input)
+		(at 94.615 49.53 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2ef216d0-d65b-4e7c-8a9a-fd62a96ad2e8")
+	)
+	(hierarchical_label "G1+"
+		(shape input)
+		(at 92.075 49.53 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4146243a-b249-483b-9884-1808e415bf32")
+	)
+	(hierarchical_label "W1-"
+		(shape input)
+		(at 97.155 153.67 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "67dcbb49-1417-48b2-8f98-7dbc446eedd3")
+	)
+	(hierarchical_label "B1-"
+		(shape input)
+		(at 94.615 153.67 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7c2c626e-2cae-4604-9f72-50ff964b85ef")
+	)
+	(hierarchical_label "W1+"
+		(shape input)
+		(at 97.155 49.53 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a2c8ab45-ee94-4d9c-96a7-6e85e1519e93")
+	)
+	(hierarchical_label "R1-"
+		(shape input)
+		(at 89.535 153.67 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ec23a522-1061-4f2f-b336-0d1e5ad50cc2")
+	)
+	(sheet
+		(at 86.36 50.8)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0a55848c-a446-4733-9e26-69bd6d980b43")
+		(property "Sheetname" "LED Cluster 0"
+			(at 100.33 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 59.055 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 50.8 90)
+			(uuid "a5ecae4a-85cb-4774-b301-364b7139b1a6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 60.96 270)
+			(uuid "9e637c20-3894-4037-b54e-15205935a3b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 50.8 90)
+			(uuid "4c128249-ea6a-4ba8-92ab-e0851b3fa88f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 60.96 270)
+			(uuid "fd3bec80-45c3-427d-9ef0-06ec405e91cc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 50.8 90)
+			(uuid "b0176f3a-1807-44f3-886d-0fc37c558803")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 60.96 270)
+			(uuid "b8517712-d5c7-4a1c-9082-060af86a7e83")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 50.8 90)
+			(uuid "c2a6e4b7-9192-4147-8dc4-c2acb92b6d7e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 60.96 270)
+			(uuid "2ef8f0a0-f874-4483-8499-1e1261d2a40d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 96.52)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0f8870ea-4e2b-4a14-83cb-ed3f5329f10f")
+		(property "Sheetname" "LED Cluster 4"
+			(at 100.33 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 104.775 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 96.52 90)
+			(uuid "7e4b756b-bd0f-4ccb-b2b3-32f5a571dc12")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 106.68 270)
+			(uuid "a8484eff-b1cf-4efe-9776-7ef5ef02b568")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 96.52 90)
+			(uuid "99aa5bb3-af99-482e-9d70-911626c04765")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 106.68 270)
+			(uuid "048c1b16-8543-45fc-a707-c6617ea14f36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 96.52 90)
+			(uuid "e1d5367e-b890-4aa9-8918-9b0763f0163a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 106.68 270)
+			(uuid "c9444a97-6efd-4190-8f20-65b727e4005e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 96.52 90)
+			(uuid "2d1d389a-7044-4439-877d-fdea127e3484")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 106.68 270)
+			(uuid "9592d3bd-00a4-468c-9fce-ba6b7a5b1f78")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 107.95)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "43f6947f-92d5-45d6-abf5-52fd9cb78776")
+		(property "Sheetname" "LED Cluster 5"
+			(at 100.33 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 116.205 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 107.95 90)
+			(uuid "67ee508b-1bb2-4bed-bdce-8afd4739465a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 118.11 270)
+			(uuid "763aaadc-904f-4128-9d7f-03ca2a56f170")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 107.95 90)
+			(uuid "cc53637b-b5b9-4eb6-b999-ef1b1c232063")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 118.11 270)
+			(uuid "da4d45b3-e0a6-4988-a958-19ee0287ecc7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 107.95 90)
+			(uuid "0d4bbfbd-ebab-4f1d-a322-85836925ab15")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 118.11 270)
+			(uuid "66589bbe-5086-49a3-a28b-b5b626480858")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 107.95 90)
+			(uuid "bf807f0d-d406-4fa5-8e13-8c4ea7f2fc8f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 118.11 270)
+			(uuid "b120adca-3e92-499c-95a4-a898ee2776db")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 85.09)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "57107d1d-0e90-4c5c-ac23-d3a3604380b1")
+		(property "Sheetname" "LED Cluster 3"
+			(at 100.33 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 93.345 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 85.09 90)
+			(uuid "ff401def-516d-47a7-9eae-862de0c5df42")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 95.25 270)
+			(uuid "2f6ca103-211b-49e7-86e8-eea18ce72d01")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 85.09 90)
+			(uuid "178a9f54-b628-4a6e-887d-2ca8c19d89a7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 95.25 270)
+			(uuid "edee0ce7-bb58-4d3a-80b0-8119f6ae865e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 85.09 90)
+			(uuid "85c7d805-84c9-4a0c-a0ce-abf87631cf94")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 95.25 270)
+			(uuid "1f4c07e7-9ae5-431b-a08c-e6dd464f0555")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 85.09 90)
+			(uuid "1029663e-a1d5-4015-bee3-3b49bdc06582")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 95.25 270)
+			(uuid "6832e5d8-ea9e-408f-a2e3-b32514b1bc3a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 62.23)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6669c999-562e-48c9-8d86-e71fd189086f")
+		(property "Sheetname" "LED Cluster 1"
+			(at 100.33 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 70.485 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 62.23 90)
+			(uuid "559e5372-2cb5-42e4-a932-632c052fa8f5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 72.39 270)
+			(uuid "06b7885e-7ed8-4691-bf81-ad590c130559")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 62.23 90)
+			(uuid "88c3b44f-574e-4c5f-a3c8-36d3cc6ecaaa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 72.39 270)
+			(uuid "ea45eba8-5972-4806-a425-2105931f8c8d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 62.23 90)
+			(uuid "0f1d78cf-0f5e-4dbf-82bc-24866cd9ef3f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 72.39 270)
+			(uuid "1338e849-2068-40fd-a8ea-8a4d649279cd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 62.23 90)
+			(uuid "273e2053-d985-4de8-9149-b205148a21da")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 72.39 270)
+			(uuid "684cc448-40f6-4edc-a996-9722a02614c8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 73.66)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "92c5ea0b-82de-444d-b6d0-0f5e33798e74")
+		(property "Sheetname" "LED Cluster 2"
+			(at 100.33 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 81.915 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 73.66 90)
+			(uuid "d5614434-c22e-4045-8297-b982cb29bb72")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 83.82 270)
+			(uuid "6fe53d72-2958-4eb2-81e7-09789e3f2b7a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 73.66 90)
+			(uuid "400a6f76-6012-482e-8385-9d6092e6b8d3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 83.82 270)
+			(uuid "20b5f16b-23a2-4323-ad07-ac1000983ac9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 73.66 90)
+			(uuid "cb469527-c84f-44a6-ace1-678a5fa9aad0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 83.82 270)
+			(uuid "368a75ab-ebe4-46fe-ad2d-ffe35d862e8c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 73.66 90)
+			(uuid "b8aa9760-9add-4fa3-8d7f-ccbbfacd3951")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 83.82 270)
+			(uuid "72328020-d414-4242-963f-c722c7716402")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 142.24)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c412cd35-c77e-45d8-901b-99d7c8c1f977")
+		(property "Sheetname" "LED Cluster 8"
+			(at 100.33 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 150.495 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 142.24 90)
+			(uuid "086130e1-2a24-4542-be94-dfafa19fbb04")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 152.4 270)
+			(uuid "33fbb719-893b-4e6d-b419-91d9f063b79e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 142.24 90)
+			(uuid "978d2217-fffa-4275-98c1-0322c95a6734")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 152.4 270)
+			(uuid "107f0690-e0fe-49cf-a1c5-c8e9ad3b0ded")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 142.24 90)
+			(uuid "2d3f50a8-c879-48ac-9244-0caecbac2198")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 152.4 270)
+			(uuid "648ee49d-1196-488f-9106-ea7e6865f586")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 142.24 90)
+			(uuid "b4005c65-2f75-40de-8900-539e0cb0f345")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 152.4 270)
+			(uuid "342d544a-f598-4b5e-9e99-8dfa0dd4830d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 119.38)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cdf3004c-b525-4bfe-8960-d1fc5eaf037f")
+		(property "Sheetname" "LED Cluster 6"
+			(at 100.33 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 127.635 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 119.38 90)
+			(uuid "860d4178-03d1-4fec-9394-478f1fff516d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 129.54 270)
+			(uuid "08313b34-d1a7-468b-8145-79d5b7534aa7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 119.38 90)
+			(uuid "d9f2064d-4c7f-4054-ba08-1df4c2db425f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 129.54 270)
+			(uuid "6624bdbc-129c-4e75-855a-ef6790d65da1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 119.38 90)
+			(uuid "a85092d8-bf83-442a-bea7-36b8b163d406")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 129.54 270)
+			(uuid "cf4b93e7-2bbe-438f-936e-8cf874765f8c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 119.38 90)
+			(uuid "c7b7c60f-ee30-4f14-8a5f-f84a235de1bc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 129.54 270)
+			(uuid "37e8a1c8-7efa-4a82-8402-ca0dc088644f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 130.81)
+		(size 13.335 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ee5493fa-fb64-45c0-a13c-9d4d64282934")
+		(property "Sheetname" "LED Cluster 7"
+			(at 100.33 138.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "led_cluster.kicad_sch"
+			(at 100.33 139.065 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "B+" input
+			(at 94.615 130.81 90)
+			(uuid "b2c660f3-f520-4002-9521-77f9b819d056")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B-" input
+			(at 94.615 140.97 270)
+			(uuid "f09712ce-8cd9-4664-938f-2f3acaa0beb8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "G+" input
+			(at 92.075 130.81 90)
+			(uuid "3564434c-3344-4fea-87a4-1adadcdd5900")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "G-" input
+			(at 92.075 140.97 270)
+			(uuid "08dff428-0658-4d76-a7a4-c4d6842c6f6e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R+" input
+			(at 89.535 130.81 90)
+			(uuid "b4d01335-5a64-4a48-a60a-10ae3b630c40")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "R-" input
+			(at 89.535 140.97 270)
+			(uuid "3d892971-9b4c-49ef-9ffe-2c9fa363e6f4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "W+" input
+			(at 97.155 130.81 90)
+			(uuid "93437fed-68de-49e8-985c-8186223c745c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "W-" input
+			(at 97.155 140.97 270)
+			(uuid "407cf63a-ecb6-487b-acc9-982051b8f030")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca"
+					(page "15")
+				)
+			)
+		)
+	)
+)

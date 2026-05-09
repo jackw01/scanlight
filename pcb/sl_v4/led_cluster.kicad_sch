@@ -1,0 +1,1310 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "4c9656aa-91da-4ff3-b8db-e6ee5e4972ab")
+	(paper "USLetter")
+	(title_block
+		(title "scanlight v4 pcb")
+		(date "2026-03-29")
+		(rev "1.0")
+		(company "jackw01")
+	)
+	(lib_symbols
+		(symbol "Device:LED"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "LED_1"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D16"
+				(at -0.3174 -3.81 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "deep red"
+				(at -2.8574 -3.81 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" "LED_SMD:LED_PLCC_2835_Handsoldering"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "67-21S/NDR3C-P5080C1C51827Z15/2T"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Enable" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED_1_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1_1"
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "LED_7"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED_7_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_7_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 132.715 93.345) (xy 132.715 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e60dbf8-3c0c-47c4-9b63-aded813e883e")
+	)
+	(wire
+		(pts
+			(xy 147.955 93.345) (xy 147.955 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28a18ef3-159c-4ce2-acad-2763e4fe2fee")
+	)
+	(wire
+		(pts
+			(xy 147.955 102.235) (xy 147.955 104.775)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f28972e-5810-49c5-9f3d-b905b231a010")
+	)
+	(wire
+		(pts
+			(xy 132.715 102.235) (xy 132.715 104.775)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8003a617-966a-4fea-a280-76994c83442d")
+	)
+	(wire
+		(pts
+			(xy 163.195 102.235) (xy 163.195 104.775)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8140b260-2cde-4823-b7e5-5e597c308b95")
+	)
+	(wire
+		(pts
+			(xy 163.195 93.345) (xy 163.195 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82a2711a-e4e5-4d6c-9e18-88f272d311a0")
+	)
+	(wire
+		(pts
+			(xy 116.205 93.345) (xy 116.205 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9b76d99-1dd3-45e1-95ea-a72f7f06d2dc")
+	)
+	(wire
+		(pts
+			(xy 116.205 102.235) (xy 116.205 104.775)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8120b3b-9512-4b98-a6d3-5f40f27d1b75")
+	)
+	(hierarchical_label "B+"
+		(shape input)
+		(at 147.955 93.345 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2bad5272-4740-4b12-89da-d0a7a9f4de24")
+	)
+	(hierarchical_label "B-"
+		(shape input)
+		(at 147.955 104.775 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "627d25e5-2d2e-4992-9536-ffeb4de76f1c")
+	)
+	(hierarchical_label "G+"
+		(shape input)
+		(at 132.715 93.345 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "70c8fb1e-20fd-4339-8569-2912ddc8d73f")
+	)
+	(hierarchical_label "W-"
+		(shape input)
+		(at 163.195 104.775 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "774234ad-a500-438b-bf18-6a5f15de3858")
+	)
+	(hierarchical_label "R-"
+		(shape input)
+		(at 116.205 104.775 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9b83ff70-0f1d-407b-8b01-26343195022f")
+	)
+	(hierarchical_label "R+"
+		(shape input)
+		(at 116.205 93.345 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b9f9fe39-3a78-499a-a16c-77c2c2af9ba4")
+	)
+	(hierarchical_label "W+"
+		(shape input)
+		(at 163.195 93.345 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e03eba55-3afa-451b-b06f-c66e0eeaef63")
+	)
+	(hierarchical_label "G-"
+		(shape input)
+		(at 132.715 104.775 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e2c1ce9a-5ecc-4ca7-89d7-3061ac867956")
+	)
+	(symbol
+		(lib_name "LED_7")
+		(lib_id "Device:LED")
+		(at 132.715 98.425 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "088b3f32-58b2-440f-a234-acc3424d1ee3")
+		(property "Reference" "D802"
+			(at 136.271 97.155 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "green"
+			(at 136.271 99.695 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:LED_2835_compact"
+			(at 132.715 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.715 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 132.715 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TJ-S2835UG5W8TLC2G-A5"
+			(at 132.715 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C440451"
+			(at 132.715 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "41cdd35f-df69-488c-ad49-3ad5aa503898")
+		)
+		(pin "1"
+			(uuid "a7adf3d7-6e98-440b-87a1-98e103b6a796")
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0a55848c-a446-4733-9e26-69bd6d980b43"
+					(reference "D802")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0f8870ea-4e2b-4a14-83cb-ed3f5329f10f"
+					(reference "D1202")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/43f6947f-92d5-45d6-abf5-52fd9cb78776"
+					(reference "D1302")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/57107d1d-0e90-4c5c-ac23-d3a3604380b1"
+					(reference "D1102")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/6669c999-562e-48c9-8d86-e71fd189086f"
+					(reference "D902")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/92c5ea0b-82de-444d-b6d0-0f5e33798e74"
+					(reference "D1002")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/c412cd35-c77e-45d8-901b-99d7c8c1f977"
+					(reference "D1602")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/cdf3004c-b525-4bfe-8960-d1fc5eaf037f"
+					(reference "D1402")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/ee5493fa-fb64-45c0-a13c-9d4d64282934"
+					(reference "D1502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 163.195 98.425 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "85ed2164-c7db-4f9a-a859-47bf89bc8819")
+		(property "Reference" "D804"
+			(at 166.751 97.155 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "white"
+			(at 166.751 99.695 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:LED_2835_compact"
+			(at 163.195 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.195 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 163.195 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "HL-AM-2835H421W-S1-08-HR6(SDCM<6)(4750K-5300K)60mA"
+			(at 163.195 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C516133"
+			(at 163.195 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f9b1fce5-7182-466d-9277-d2a17d182ad9")
+		)
+		(pin "1"
+			(uuid "151f59c5-2334-4404-8fc2-770ea1171f8e")
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0a55848c-a446-4733-9e26-69bd6d980b43"
+					(reference "D804")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0f8870ea-4e2b-4a14-83cb-ed3f5329f10f"
+					(reference "D1204")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/43f6947f-92d5-45d6-abf5-52fd9cb78776"
+					(reference "D1304")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/57107d1d-0e90-4c5c-ac23-d3a3604380b1"
+					(reference "D1104")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/6669c999-562e-48c9-8d86-e71fd189086f"
+					(reference "D904")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/92c5ea0b-82de-444d-b6d0-0f5e33798e74"
+					(reference "D1004")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/c412cd35-c77e-45d8-901b-99d7c8c1f977"
+					(reference "D1604")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/cdf3004c-b525-4bfe-8960-d1fc5eaf037f"
+					(reference "D1404")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/ee5493fa-fb64-45c0-a13c-9d4d64282934"
+					(reference "D1504")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 147.955 98.425 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f06a2049-5839-42ea-906d-9dd0fcc98ab3")
+		(property "Reference" "D803"
+			(at 151.511 97.155 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "blue"
+			(at 151.511 99.695 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:LED_2835_compact"
+			(at 147.955 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.955 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 147.955 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TJ-S2835UG5W8TLC6B-A5"
+			(at 147.955 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C440452"
+			(at 147.955 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a8cd0500-256a-4dab-9699-b85ce9a3721d")
+		)
+		(pin "1"
+			(uuid "3b067b9e-976f-4523-9d9f-7d8b8472aa0d")
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0a55848c-a446-4733-9e26-69bd6d980b43"
+					(reference "D803")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0f8870ea-4e2b-4a14-83cb-ed3f5329f10f"
+					(reference "D1203")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/43f6947f-92d5-45d6-abf5-52fd9cb78776"
+					(reference "D1303")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/57107d1d-0e90-4c5c-ac23-d3a3604380b1"
+					(reference "D1103")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/6669c999-562e-48c9-8d86-e71fd189086f"
+					(reference "D903")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/92c5ea0b-82de-444d-b6d0-0f5e33798e74"
+					(reference "D1003")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/c412cd35-c77e-45d8-901b-99d7c8c1f977"
+					(reference "D1603")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/cdf3004c-b525-4bfe-8960-d1fc5eaf037f"
+					(reference "D1403")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/ee5493fa-fb64-45c0-a13c-9d4d64282934"
+					(reference "D1503")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "LED_1")
+		(lib_id "Device:LED")
+		(at 116.205 98.425 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f30ca559-aa73-41b0-8516-ee4dbd968c60")
+		(property "Reference" "D801"
+			(at 119.761 97.155 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "red"
+			(at 119.761 99.695 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:LED_2835_Reversed_Red_compact"
+			(at 116.205 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.205 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 116.205 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "HL-AS-2835D15FC-S1-08-PCT-ZW-P6"
+			(at 116.205 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49435764"
+			(at 116.205 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "461f450c-6b80-43ab-8639-b57298af9ffd")
+		)
+		(pin "1"
+			(uuid "44f4b0d6-ab00-4e92-bccd-95e4f05eba27")
+		)
+		(instances
+			(project "sl_v4"
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0a55848c-a446-4733-9e26-69bd6d980b43"
+					(reference "D801")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/0f8870ea-4e2b-4a14-83cb-ed3f5329f10f"
+					(reference "D1201")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/43f6947f-92d5-45d6-abf5-52fd9cb78776"
+					(reference "D1301")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/57107d1d-0e90-4c5c-ac23-d3a3604380b1"
+					(reference "D1101")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/6669c999-562e-48c9-8d86-e71fd189086f"
+					(reference "D901")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/92c5ea0b-82de-444d-b6d0-0f5e33798e74"
+					(reference "D1001")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/c412cd35-c77e-45d8-901b-99d7c8c1f977"
+					(reference "D1601")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/cdf3004c-b525-4bfe-8960-d1fc5eaf037f"
+					(reference "D1401")
+					(unit 1)
+				)
+				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3/346002c6-1daf-440b-a235-0952bade8fca/ee5493fa-fb64-45c0-a13c-9d4d64282934"
+					(reference "D1501")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
