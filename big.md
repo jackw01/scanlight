@@ -14,7 +14,7 @@
 * On/off and mode toggle buttons on light source for standalone usage
 * Compatible with accessories made for Negative Supply 4x5" light sources<sup>2</sup>
 * Adapters available for compatibility with [ToneCarrier](#tonecarrier-adapter) and [Valoi 360 Advancer](https://cinestillfilm.com/products/valoi360-advancer)
-* Simple 35mm and medium format film carriers available
+* Minimalist 35mm and medium format film carriers available
 * Automated camera shutter control for capturing separate red/green/blue images
 * Powered using any USB-C power source (at least 9V at 18W required for full brightness)
 * Open source hardware and software
@@ -112,7 +112,7 @@ The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [
 
 ![](images/big_scanlight_pcb_cad.png)
 
-All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1.1) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/bsl_array_v1.1) can be downloaded from the GitHub repository.
+All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1.1) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_array_v1.1) can be downloaded from the GitHub repository.
 
 [Driver PCB Schematic as PDF](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.pdf)
 

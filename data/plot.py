@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
 target_size = (100, 72)  # width x height
-crop_size_1 = (75, 56)
+crop_size_1 = (67, 56)
 crop_size_2 = (36, 24)
 
 luma_limit_upper = 1.0
@@ -99,7 +99,7 @@ def process_images_in_directory():
         ax.set_title('RGB Image')
         ax.axis('off')
 
-        for size, color, label in zip([crop_size_1, crop_size_2], colors, ['75x56mm', '36x24mm']):
+        for size, color, label in zip([crop_size_1, crop_size_2], colors, ['67x56mm (120 6x7)', '36x24mm (35mm)']):
             rect_w, rect_h = size
             start_x = (target_size[0] - rect_w) // 2
             start_y = (target_size[1] - rect_h) // 2
@@ -110,7 +110,7 @@ def process_images_in_directory():
 
         # 2. Luminance (75x56)
         im1 = axs[1].imshow(lum_crop1, cmap='viridis', vmin=luma_limit_lower, vmax=luma_limit_upper)
-        axs[1].set_title('Normalized Luminance (75x56mm)')
+        axs[1].set_title('Normalized Luminance (67x56mm)')
         axs[1].axis('off')
         fig.colorbar(im1, ax=axs[1], shrink=0.7)
 

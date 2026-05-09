@@ -2,9 +2,9 @@
 
 ![](images/scanlight_header.jpg)
 
-Left: [scanlight v3](./hw_v2.md), right: [big scanlight](./big.md)
+Left: [scanlight v4](./v4.md), right: [big scanlight](./big.md)
 
-<small>Originally published 2024-08-05, last updated 2025-12-11 (big scanlight)</small>
+<small>Originally published 2024-08-05, last updated 2026-05-11 (scanlight v4)</small>
 
 ## tl;dr
 
