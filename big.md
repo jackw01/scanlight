@@ -13,7 +13,7 @@
 * Fully controllable via USB with [web app](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html)
 * On/off and mode toggle buttons on light source for standalone usage
 * Compatible with accessories made for Negative Supply 4x5" light sources<sup>2</sup>
-* Adapters available for compatibility with [ToneCarrier](#tonecarrier-adapter) and [Valoi 360 Advancer](https://cinestillfilm.com/products/valoi360-advancer)
+* Adapters available for compatibility with ToneCarrier and Valoi 360 Advancer
 * Minimalist 35mm and medium format film carriers available
 * Automated camera shutter control for capturing separate red/green/blue images
 * Powered using any USB-C power source (at least 9V at 18W required for full brightness)
@@ -130,7 +130,7 @@ STEP files for all parts of the light source, film carrier adapters, and film ca
 
 ### firmware and web app
 
-The [source code for the RP2040 firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify). 
+The [source code for the RP2040 firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
 
 Interested in building your own control software? The USB serial communication interface used by the firmware is fully documented [here](https://github.com/jackw01/scanlight/blob/main/automation/bsl_control_interface.md).
 
