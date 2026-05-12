@@ -83,7 +83,7 @@ Adapters are available for improved usability with [toneCarrier](https://tonepho
 #### toneCarrier 35mm/120 adapter
 
 ![](<images/big_scanlight_tonecarrier_adapter.svg>)
-<small>All dimensions in millimeters.</small>
+<small>All dimensions in millimeters. This adapter is NOT compatible with the old 35mm toneCarrier design found on Printables.com.</small>
 
 #### Valoi 360 Advancer adapter
 
