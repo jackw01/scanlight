@@ -341,10 +341,12 @@ export default {
         setTimeout(() => {
           if (this.connected == false) {
             this.connectionError = true;
+            console.log("connection timeout");
           }
-        }, 500);
+        }, 1500);
       } catch (e) {
         this.connectionError = true;
+        console.log("connection error", e);
       }
     },
     checkFWVersion(header, rawData, dataView) {
