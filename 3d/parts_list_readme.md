@@ -4,7 +4,7 @@
 Print all parts in black ABS or ASA, using a 0.4mm or 0.6mm nozzle with 4 or 3 perimeters, respectively, 0.2mm layer height, and 30% infill. Fuzzy skin may be used on external contours only (**NOT** the painted interior surfaces of the diffuser box.) Printing orientation for all parts should be obvious based on the design. The "Support on Build Plate Only" or equivalent option should be used since several parts have counterbore holes.
 
 ## painting notes
-The interior surfaces of the diffuser box housing must be painted with 2-3 coats of paint containing only extra fine leafing aluminum flake pigment, such as Dupli-Color CS101 or Rust-Oleum 7718830). The surface of the 3D printed part does not need to be meticulously prepared before painting; lightly scuffing the surface with Scotch-Brite or a brass wire brush is enough. Spray paints containing acetone or toluene can be used on ABS or ASA without primer. Painting this way will make any imperfections in the 3D print extremely visible; don't worry about it.
+The interior surfaces of the diffuser box housing must be painted with 2-3 coats of paint containing only extra fine leafing aluminum flake pigment, such as Dupli-Color CS101 or Rust-Oleum 7718830. The surface of the 3D printed part does not need to be meticulously prepared before painting; lightly scuffing the surface with Scotch-Brite or a brass wire brush is enough. Spray paints containing acetone or toluene can be used on ABS or ASA without primer. Painting this way will make any imperfections in the 3D print extremely visible; don't worry about it.
 
 ![](../images/v4_housing.jpg)
 
@@ -17,7 +17,7 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 ### scanlight v4 only
 * assembled PCB
 * front diffuser (4x3.25x0.118" ACRYLITE® Satinice WD008 DF light-diffusing acrylic, or standard white acrylic with <50% light transmittance)
-* 26A101D 3D printed diffuser box housing
+* 26A101D 3D printed diffuser box housing (use variant E for horizontal mounting option)
 * 26A103B 3D printed diffuser bezel
 * 26A104 3D printed button (may be printed in other materials than ABS)
 * 26A105 3D printed PCB cover
