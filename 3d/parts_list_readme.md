@@ -25,7 +25,7 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * 4x 8mm diameter adhesive-backed rubber bumper (3M SJ5370 or equivalent)
 
 ### optional
-* 26A110 3D printed tonecarrier compatibility plate
+* 26A110B 3D printed tonecarrier compatibility plate
 * 26A111 3D printed valoi 360 advancer compatibility plate
 
 *Note: if printing ToneCarrier/Valoi compatibility parts, double-check that the dimensions of the STEP file match the accessory you are using it with. Dimensions of these third-party products may change without notice.*
