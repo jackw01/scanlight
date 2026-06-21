@@ -26,7 +26,9 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 
 ### optional
 * 26A110B 3D printed tonecarrier compatibility plate
-* 26A111 3D printed valoi 360 advancer compatibility plate
+* 26A111 3D printed valoi 360 advancer compatibility plate (deprecated; for 360 advancer only)
+* 26A112 3D printed valoi 360 holder compatibility plate (deprecated; for 360 film holders only)
+* 26A113 3D printed valoi 360 combined compatibility plate (supports both 360 film holders and 360 advancer)
 
 *Note: if printing ToneCarrier/Valoi compatibility parts, double-check that the dimensions of the STEP file match the accessory you are using it with. Dimensions of these third-party products may change without notice.*
 

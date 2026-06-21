@@ -1,0 +1,1 @@
+- focus terminal on camera control jack should be utilized for Nikon Z5/Z6
