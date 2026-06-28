@@ -224,6 +224,15 @@
           <v-card-title>Automation</v-card-title>
           <v-card-text class="pb-2">
             <v-number-input
+              label="Pre-shutter Delay (s)"
+              v-model="preShutterDelay"
+              :min="0.01"
+              :max="0.5"
+              :step="0.01"
+              :precision="2"
+              variant="outlined"
+            ></v-number-input>
+            <v-number-input
               label="Shutter Pulse Length (s)"
               v-model="shutterPulseLength"
               :min="0.01"
@@ -240,7 +249,9 @@
               :step="0.05"
               :precision="2"
               variant="outlined"
+              hide-details
             ></v-number-input>
+            <v-checkbox hide-details label="Keep light on" v-model="keepLightOn"></v-checkbox>
             <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGB')">Auto R,G,B</v-btn>
             <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGBIR')" v-if="!isSmallHW">Auto R,G,B,IR</v-btn>
             <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceNWIR')" v-if="!isSmallHW">Auto RGB,IR</v-btn>
@@ -287,8 +298,10 @@ export default {
       enabledChannels: [0, 0, 0, 0, 0],
       presets: [],
       selectedPresetName: null,
+      preShutterDelay: 0.1,
       shutterPulseLength: 0.1,
       postShutterDelay: 1.0,
+      keepLightOn: false,
       inputVoltageMv: 5000,
       ledTemperatureMdegc: 0,
       fwUpdateAvailable: false,
@@ -396,6 +409,7 @@ export default {
         255 * this.enabledChannels[4],
         0, // save preset flag
       ];
+      console.log("debug_update", Date.now(), new_color.map(x => parseInt(x) & 0xff));
       protocol.sendPacket(protocol.PKT_H2D_SET_COLOR, new_color.map(x => parseInt(x) & 0xff));
     },
     async runSequence(sequence) {
@@ -403,12 +417,24 @@ export default {
       for (let i = 0; i < config[sequence].length; i++) {
         this.enabledChannels = config[sequence][i];
         this.update();
+        console.log("debug_sequence", Date.now(), this.enabledChannels, i);
+        await new Promise(resolve => setTimeout(resolve, this.preShutterDelay * 1000));
         const pulseLength10ms = Math.min(Math.max(Math.round(this.shutterPulseLength * 100), 1), 255);
         protocol.sendPacket(protocol.PKT_H2D_SHUTTER_PULSE, [pulseLength10ms]);
+        console.log("debug_sequence", Date.now(), pulseLength10ms);
         await new Promise(resolve => setTimeout(resolve, (this.shutterPulseLength + this.postShutterDelay) * 1000));
       }
-      this.enabledChannels = [0, 0, 0, 0, 0];
+      if (this.keepLightOn) {
+        if (sequence === "SequenceBWIR") {
+          this.enabledChannels = [0, 0, 0, 1, 0];
+        } else {
+          this.enabledChannels = [1, 1, 1, 0, 0];
+        }
+      } else {
+        this.enabledChannels = [0, 0, 0, 0, 0];
+      }
       this.update();
+      console.log("debug_sequence", Date.now());
     },
     shutterTest() {
       if (!this.connected) return;

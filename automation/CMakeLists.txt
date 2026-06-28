@@ -3,11 +3,11 @@ cmake_minimum_required(VERSION 3.12)
 set(CMAKE_C_COMPILER_FORCED TRUE)
 set(CMAKE_CXX_COMPILER_FORCED TRUE)
 
-# Pull in SDK (must be before project)
-include(pico_sdk_import.cmake)
-
 set(PICO_PLATFORM "rp2040")
 set(PICO_BOARD "pico")
+
+# Pull in SDK (must be before project)
+include(pico_sdk_import.cmake)
 
 project(scanlight_firmware C CXX ASM)
 set(CMAKE_C_STANDARD 11)

@@ -103,7 +103,6 @@ class Protocol {
     for (let i = 3; i < packetData.length + 3; i++) {
       data[i] = packetData[i - 3];
     }
-    console.log("writing bytes: ", data);
     await this.writer.write(data);
   }
 
