@@ -56,6 +56,10 @@ A cable with a male 3.5mm plug (otherwise known as a headphone connector) on one
 
 Because the 3.5mm jack is not electrically isolated from the USB ports, it is recommended out of an abundance of caution that the camera should not be connected to the same USB power supply or computer as the light source when using the remote shutter control function. For most cameras, doing so will not cause any issues, but because there is no formal standard for how remote shutter cables or connectors are wired, some cameras may exist that could be damaged by such a setup.
 
+### frequently asked questions
+
+See [here](https://jackw01.github.io/scanlight/#part-3-responses-to-frequent-questions-and-comments)
+
 ### firmware updates
 
 The web app will automatically notify if a firmware update is available and show a button to put the device into firmware update mode. To manually enter firmware update mode, press and hold down the **DFU mode button** while connecting the **right USB-C port** to a computer. The light source will show up as a USB storage device, and a firmware binary file can be copied to this device to update the firmware.

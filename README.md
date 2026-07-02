@@ -48,7 +48,7 @@ To avoid these issues, (almost?) all commercial negative film scanners use a tri
 
 <img src="images/white_vs_rgb_scan.png">
 
-### so what LEDs should I use?
+### what LEDs work the best?
 
 When considering the limitations of digital camera sensors, the ideal wavelengths are >650nm for red, 520-550nm for green, and <450nm for blue, as shown in the diagram above. However, to the best of my knowledge, there aren't any commercially available light sources combining LEDs of these wavelengths, so the only way (for now) to get an ideal light source is to build one yourself, which is discussed in the next section of this article.
 
@@ -150,6 +150,12 @@ Some people have had success using an adjustable RGB light source for recovering
 
 #### does light source / color matter for scanning black and white film?
 No. White and narrowband light sources work equally well for scanning B&W film.
+
+#### what are your thoughts on film carriers?
+I have received quite a few emails echoing the sentiment that film carriers are generally overpriced for what they are, and there seems to be little correlation between price and user experience. Most film carriers made for DSLR scanning guide the film through a narrow slot with an s-shaped curve on each end to keep it flat. For 35mm film, this seems to generally work well, and based on the reviews and comments I have seen I am not convinced that out of the many film carriers using this design, any perform significantly better than the others. For 120 film, the s-curve design struggles with film flatness when scanning the end frames on cut pieces of film, or if the film is curled across its width. There are a few alternative designs out there that should be able to provide superior film flatness in this case, but I haven't yet seen a thorough quantitative comparison of these. Some of these also involve rough 3D-printed parts coming into direct contact with the film emulsion, which doesn't seem ideal.
+
+##### what about full-border scanning?
+Film carriers that allow full-border scanning tend to be significantly worse at keeping the film flat and handling curled film, except for ones that hold the film against glass or acrylic, but those come with other issues (high cost, difficulty keeping the glass clean, Newton's rings, etc.)
 
 #### what lens should i use?
 [This list](https://www.pixl-latr.com/how-good-a-macro-lens-do-you-really-need-for-dslr-mirrorless-camera-scanning/) is generally a good starting point. The Micro-Nikkor 55mm f/2.8 AI and Canon FD 50mm f/3.5 Macro are my personal favorites as they are affordable and widely available.
