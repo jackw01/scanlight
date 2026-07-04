@@ -4,7 +4,7 @@
 
 Left: [scanlight v4](./v4.md), right: [big scanlight](./big.md)
 
-<small>Originally published 2024-08-05, last updated 2026-06-30 (added FAQ)</small>
+<small>Originally published 2024-08-05, last updated 2026-07-04 (added FAQ, NegPy recommendation)</small>
 
 ## tl;dr
 
@@ -62,25 +62,9 @@ OLED displays do contain separate red, green, and blue emitters, but they typica
 
 LCD displays emit white light that has been filtered through red, green, and blue filters and recombined. The results will depend on the emission spectrum of the exact display used and should be better than a white light source and worse than RGB LEDs. Newer high-gamut LCDs use special backlight LEDs designed to emit in narrower bands than typical white LEDs, so they should in theory work significantly better than older ones.
 
-### scanning film with RGB
-
-When scanning film with a narrowband light source, it's easy to get good results without using any specialized software. Using software designed for processing white light scans to process RGB scans may give suboptimal results.
-
-#### my scanning and processing workflow
-##### 1. scan
-Scan all frames as RAW using fixed white balance and exposure. Exposure should be set such that none of the color channels are clipping.
-##### 2. import
-Import scans into image editing software. **Use a linear RAW profile.** Apply lens corrections if necessary. Use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source.
-##### 3. d-min balance
-Neutralize the color of the minimum density (unexposed) areas of one negative, either by adjusting the white balance, adjusting the red, green, and blue channel max levels, or both.
-##### 4. inversion
-Invert the black and white points using the Levels or Curves tool and apply an appropriate curve to set the brightness of the output image.
-##### 5. fine tuning
-Apply these adjustments to all scans from the same roll of film. Manually fine-tune the black and white points, and if necessary, white balance or curves for all scans.
-
 ### more sample scans
 
-Each group of four negatives were scanned and processed together in order to demonstrate how the light source affects the overall look of the scans rather than to show a subjectively ideal edit for each photo. Minimal post-processing was done to all scans (import image with linear raw profile, invert, color balance, apply tone curve). The same tone curve was used for all scans.
+Each group of four negatives were scanned and manually processed together in order to demonstrate how the light source affects the overall look of the scans rather than to show a subjectively ideal edit for each photo. Minimal post-processing was done to all scans (import image with linear raw profile, invert, color balance, apply tone curve). The same tone curve was used for all scans.
 
 ![](images/scan_comparison_ektar_1.jpg)
 
@@ -136,6 +120,23 @@ I think it's safe to say that most photographers shooting film in 2024 are looki
 
 #### won't this make all film look the same?
 Scanning film with RGB light does not neutralize the differences in the "look" of different films; actually, it should produce results that are closer to the intended look of the film when printed on RA-4 paper. The differences in look come from differences in the film's sensitivity to light during exposure and chemical reactions that affect how the dyes are formed during development, not the absorption characteristics of the dyes themselves.
+
+#### how should i process my scans?
+As of 2026, good free and open-source software exists ([NegPy](https://github.com/marcinz606/NegPy)) which produces excellent results with little effort when inverting single-exposure narrowband RGB scans. NegPy uses a physically-based processing pipeline which emulates the RA-4 printing process, and supports flat-field correction and automatic merging of trichromatic (separate exposures for red, green, and blue) scans. I would highly recommend this to anyone who is looking to start scanning film at home or is having difficulty with their current processing workflow.
+
+Using software specifically designed for processing white light scans (e.g. Negative Lab Pro) to process RGB scans may give suboptimal results. It's also possible to get good results without using any specialized software, by manually inverting your scans in photo editing software as described below. Manual inversion is much easier with with RGB scans than with white-light scans due to the significantly reduced color crosstalk.
+
+##### manual scanning and processing workflow
+###### 1. scan
+Scan all frames as RAW using fixed white balance and exposure. Exposure should be set such that none of the color channels are clipping.
+###### 2. import
+Import scans into image editing software. Use a linear RAW profile. Apply lens corrections and use Lens Cast Calibration in Capture One or Flat-Field Correction in Lightroom to compensate for any unevenness in the light source if necessary.
+###### 3. d-min balance
+Neutralize the color of the minimum density (unexposed) areas of one negative by adjusting the red, green, and blue channel max levels.
+###### 4. inversion
+Invert the black and white points using the Levels or Curves tool and apply an s-shaped tone curve to adjust contrast. Use the brightness/gamma/Levels tool midpoint controls to adjust the overall scene brightness without affecting the black and white points.
+###### 5. fine tuning
+Apply the same adjustments to all scans from the same roll of film. Manually fine-tune the black and white points and brightness/gamma for all scans.
 
 #### should i capture three separate exposures for each color channel?
 You can either capture a single image with the red, green, and blue channels on at the same time or capture separate images for each color and merge them later. Both methods can produce satisfactory results. The latter approach has the potential for more technically accurate colors as it eliminates any chance of crosstalk between color channels, but takes significantly more work than capturing a single RGB image which can be processed directly.
