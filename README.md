@@ -8,7 +8,7 @@ Left: [scanlight v4](./v4.md), right: [big scanlight](./big.md)
 
 ## tl;dr
 
-Narrowband trichromatic (RGB) light sources are superior to broadband (white) light for scanning color negative film; there are very good reasons why all commercial film scanners use RGB. ([film scanners were using blue LEDs at least a decade before they would be widely used in consumer products!](https://patents.google.com/?q=(film+scanner+LED)&oq=film+scanner+LED)) Scanning film with an RGB light source produces high quality results with minimal post-processing, without the need for specialized software.
+Narrowband trichromatic (RGB) light sources are superior to broadband (white) light for scanning color negative film; there are very good reasons why all commercial film scanners use RGB. ([film scanners were using blue LEDs at least a decade before they would be widely used in consumer products!](https://patents.google.com/patent/JPH09130546A/en?q=(film+scanner+LED)&oq=film+scanner+LED&sort=old)) Scanning film with an RGB light source produces high quality results with minimal post-processing, without the need for specialized software.
 
 ### the results
 
