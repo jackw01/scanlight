@@ -8,13 +8,13 @@ Remove the protective film from the acrylic sheet and insert it into the diffuse
 
 ## 2
 
-With the diffuser bezel sitting face down on a flat surface, engage the rim of the diffuser box (on the side with the two protruding flanges) with the hooks on the matching side of the diffuser bezel. Fit the alignment posts on the bezel into the matching holes on the rim of the diffuser box.
+Engage the rim of the diffuser box (on the side with the two protruding flanges) with the hooks on the matching side of the diffuser bezel as shown. Fit the alignment posts on the bezel into the matching holes on the rim of the diffuser box. The angle between the parts is exaggerated in the images; they will want to sit flat with each other in real life.
 
 ![](<images/02.png>)
 
 ![](<images/03.png>)
 
-Press the diffuser box onto the bezel to fasten it in place, applying pressure straight downwards in the locations and order shown.
+Press the diffuser box onto the bezel to fasten it in place, squeezing the parts together in the locations and order shown.
 
 ![](<images/04.png>)
 

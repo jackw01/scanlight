@@ -6,9 +6,11 @@ Remove the protective film from the acrylic sheet and insert it into the diffuse
 
 ![](<images/01.png>)
 
+If desired, press four 6x3mm neodynium magnets into the circular holes on the bezel. If you already have film carriers with magnets inserted, ensure that the magnet polarities match and the film carrier attaches firmly to the bezel.
+
 ## 2
 
-With the diffuser bezel sitting face down on a flat surface, engage the rim of the diffuser box housing with the hooks on the diffuser bezel. Fit the alignment posts on the bezel into the matching holes on the rim of the diffuser box, fit the edges of the diffuser box under the two long flanges on either side of the bezel, and press the diffuser box onto the bezel to fasten it in place, one end at a time.
+Engage the rim of the diffuser box housing with the hooks on the diffuser bezel. Fit the alignment posts on the bezel into the matching holes on the rim of the diffuser box, fit the edges of the diffuser box under the two long flanges on either side of the bezel, and press the diffuser box onto the bezel to fasten it in place, one end at a time. The angle between the parts is exaggerated in the images; they will want to sit flat with each other in real life.
 
 ![](<images/02.png>)
 

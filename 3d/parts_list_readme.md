@@ -40,7 +40,7 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * assembled driver PCB
 * assembled LED PCB
 * front diffuser (4.5x5.5x0.118" ACRYLITE® Satinice WD008 DF light-diffusing acrylic, or standard white acrylic with <50% light transmittance)
-* 25D101 3D printed diffuser box housing (**use variant B for r1 LED PCB, variant C for r2 LED PCB**)
+* 25D101C 3D printed diffuser box housing
 * 25D103A 3D printed diffuser bezel
 * 25D104 3D printed backplate
 * 25D105B 3D printed PCB cover
