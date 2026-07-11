@@ -10,6 +10,7 @@ static const char PKT_H2D_SHUTTER_PULSE = 3;
 static const char PKT_H2D_DFU_MODE = 4;
 static const char PKT_H2D_SET_TRIM = 5;
 static const char PKT_H2D_GET_TRIM = 6;
+static const char PKT_H2D_SET_FOCUS = 7;
 
 // Device-to-host packets
 static const char PKT_D2H_ACK = 0;

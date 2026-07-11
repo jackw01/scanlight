@@ -11,6 +11,7 @@ class Protocol {
     this.PKT_H2D_DFU_MODE = 4;
     this.PKT_H2D_SET_TRIM = 5;
     this.PKT_H2D_GET_TRIM = 6;
+    this.PKT_H2D_SET_FOCUS = 7;
 
     // Device-to-host packets
     this.PKT_D2H_ACK = 0;

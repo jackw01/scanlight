@@ -2,9 +2,9 @@
 
 #include "hardware/flash.h"
 
-#define FW_VERSION_ID 1
+#define FW_VERSION_ID 2
 
-#if !defined(HW_VERSION_BSL1) && !defined(HW_VERSION_SL4)
+#if !defined(HW_VERSION_BSL1) && !defined(HW_VERSION_SL4) && !defined(HW_VERSION_SL2)
 #define HW_VERSION_BSL1
 #endif
 
@@ -59,6 +59,7 @@ static const uint32_t PinIR = 11;
 static const uint32_t PinButton1 = 16; // top button
 static const uint32_t PinButton2 = 17; // bottom button
 static const uint32_t PinShutter = 25;
+static const uint32_t PinFocus = 24; // UNUSED
 static const uint32_t PinADCGPIOOffset = 26;
 static const uint32_t PinADCVBUSSense = 0;
 static const uint32_t PinADCThermistor = 1;
@@ -81,7 +82,11 @@ static const float ADCVBUSSenseScale = (5.1 + 20.0) / 5.1;
 
 #ifdef HW_VERSION_SL4
 
+#ifdef HW_SUPPORTS_FOCUS
+#define HW_VERSION_ID 3
+#else
 #define HW_VERSION_ID 1
+#endif
 
 static const uint32_t PinR1 = 2;
 static const uint32_t PinG1 = 3;
@@ -90,6 +95,7 @@ static const uint32_t PinW1 = 1;
 static const uint32_t PinButton1 = 16; // top button
 static const uint32_t PinButton2 = 17; // bottom button
 static const uint32_t PinShutter = 25;
+static const uint32_t PinFocus = 24;
 static const uint32_t PinADCGPIOOffset = 26;
 static const uint32_t PinADCVBUSSense = 0;
 static const uint32_t PinADCThermistor = 1;
@@ -112,5 +118,40 @@ static const uint8_t PowerLimitSingleChannel[5] = {0, 255, 255, 255, 255};
 //static const uint8_t PowerLimitSingleChannel[5] = {0, 170, 255, 255, 255};
 
 static const float ADCVBUSSenseScale = 2.0;
+
+#endif
+
+#ifdef HW_VERSION_SL2
+
+#define HW_VERSION_ID 2
+
+static const uint32_t PinR1 = 7;
+static const uint32_t PinG1 = 8;
+static const uint32_t PinB1 = 9;
+static const uint32_t PinW1 = 10; // UNUSED
+static const uint32_t PinButton1 = 16; // UNUSED
+static const uint32_t PinButton2 = 17; // UNUSED
+static const uint32_t PinShutter = 14; // UNUSED
+static const uint32_t PinFocus = 15; // UNUSED
+static const uint32_t PinADCGPIOOffset = 26;
+static const uint32_t PinADCVBUSSense = 0; // UNUSED
+static const uint32_t PinADCThermistor = 1; // UNUSED
+
+#define PWM_PIN_COUNT 3
+static const uint32_t PWMPins[PWM_PIN_COUNT] = {PinR1, PinG1, PinB1};
+
+static const int8_t DefaultTrimR = 0;
+static const int8_t DefaultTrimG = 0;
+static const int8_t DefaultTrimB = 0;
+static const int8_t DefaultTrimW = 0; // UNUSED
+
+// LED driver power limits - lookup by operating mode
+// Decided not to limit power for 500mA/1.5A USB modes, since it may be too confusing for users
+static const uint8_t PowerLimitRGB[5] = {0, 255, 255, 255, 255};
+static const uint8_t PowerLimitSingleChannel[5] = {0, 255, 255, 255, 255};
+// static const uint8_t PowerLimitRGB[5] = {0, 82, 234, 255, 255};
+// static const uint8_t PowerLimitSingleChannel[5] = {0, 170, 255, 255, 255};
+
+static const float ADCVBUSSenseScale = 2.0; // UNUSED
 
 #endif

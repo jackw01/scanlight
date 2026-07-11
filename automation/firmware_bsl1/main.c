@@ -133,16 +133,24 @@ float thermistor_voltage_to_temp(float v, const float lookup_table[][2])
 
 int32_t adc_get_led_temp_mdegc()
 {
+#ifdef HW_VERSION_SL2
+  return 0;
+#else
   adc_select_input(PinADCThermistor);
   float raw_v = (float)adc_read() * ADCVPerCount;
   return (int32_t)(thermistor_voltage_to_temp(raw_v, ThermistorLookUpTable) * 1e3);
+#endif
 }
 
 int32_t adc_get_vbus_mv()
 {
+#ifdef HW_VERSION_SL2
+  return 0;
+#else
   adc_select_input(PinADCVBUSSense);
   float raw_v = (float)adc_read() * ADCVPerCount;
   return (int32_t)(raw_v * ADCVBUSSenseScale * 1e3);
+#endif
 }
 
 
@@ -253,7 +261,9 @@ void on_button_change(button_t *button_p)
 
 void tick(uint32_t millis, uint32_t dt_micros)
 {
+#ifndef HW_VERSION_SL2
   button_poll_events();
+#endif
   protocol_tick();
 
   if (protocol_data.incoming_packet_ready != 0)
@@ -295,6 +305,11 @@ void tick(uint32_t millis, uint32_t dt_micros)
         update_pwm();
         break;
 #endif
+#ifdef HW_SUPPORTS_FOCUS
+      case PKT_H2D_SET_FOCUS:
+        gpio_put(PinFocus, protocol_data.incoming_packet_data[0] != 0 ? 1 : 0);
+        break;
+#endif
     }
   }
 
@@ -326,6 +341,10 @@ void tick(uint32_t millis, uint32_t dt_micros)
         operating_mode = OperatingMode5V1P5A;
       else
         operating_mode = OperatingMode5V0P5A;
+
+#ifdef HW_VERSION_SL2
+    operating_mode = OperatingMode5V3A;
+#endif
 
     if (prev_operating_mode != operating_mode)
     {
@@ -388,8 +407,10 @@ int main()
   read_preset_from_flash();
 
   adc_init();
+#ifndef HW_VERSION_SL2
   adc_gpio_init(PinADCGPIOOffset + PinADCThermistor);
   adc_gpio_init(PinADCGPIOOffset + PinADCVBUSSense);
+#endif
 #ifdef HW_VERSION_SL4
   adc_gpio_init(PinADCGPIOOffset + PinADCUSBCC1);
   adc_gpio_init(PinADCGPIOOffset + PinADCUSBCC2);
@@ -398,11 +419,16 @@ int main()
   gpio_init(PinShutter);
   gpio_set_dir(PinShutter, GPIO_OUT);
   gpio_put(PinShutter, 0);
+  gpio_init(PinFocus);
+  gpio_set_dir(PinFocus, GPIO_OUT);
+  gpio_put(PinFocus, 0);
 
+#ifndef HW_VERSION_SL2
   button_system_init();
 
   button_t *button_1 = create_button(PinButton1, on_button_change);
   button_t *button_2 = create_button(PinButton2, on_button_change);
+#endif
 
   // setup PWM pins
   uint32_t f_sys = clock_get_hz(clk_sys);

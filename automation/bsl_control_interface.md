@@ -1,16 +1,22 @@
 # big scanlight / scanlight v4 control interface documentation
 
+## firmware releases
+
+All scanlight hardware revisions now run the same firmware, with hardware support defined by compile-time flags. The old scanlight v2 firmware (`firmware_sl2` folder) and web app (`app_sl2` folder) are deprecated.
+
+| version | commit  | FW_VERSION_ID | note                                  |
+| ------- | ------- | ------------- | ------------------------------------- |
+| 1.0     | 43c5425 | 0             | initial release for big scanlight v1  |
+| 1.1     | 07a1f8f | 1             | add compatibility for scanlight v4    |
+| 1.2     | -       | 2             | add compatibility for scanlight v2/v3 |
+
+The information in this document is current as of firmware version 1.2.
+
 ## USB connection
 
 Scanlight enumerates as a USB Serial CDC device, which can be accessed by, for example, the WebSerial API or PySerial.
 
 ## communication protocol overview
-
-This information is current as of firmware version 1.1.0 (ID 0 as reported by `PKT_D2H_FW_VERSION`.)
-
-| firmware ID | version number | notes |
-| 1 | 1.1.0 | scanlight v4 hardware support |
-| 0 | 1.0.0 | initial release |
 
 Both host-to-device and device-to-host communications use the same packet format. The data length byte may be zero, in which case it is the last byte in the packet.
 
@@ -33,6 +39,7 @@ PKT_H2D_SHUTTER_PULSE = 3
 PKT_H2D_DFU_MODE = 4
 PKT_H2D_SET_TRIM = 5
 PKT_H2D_GET_TRIM = 6
+PKT_H2D_SET_FOCUS = 7
 ```
 
 #### device-to-host
@@ -47,7 +54,7 @@ PKT_D2H_TRIM = 5
 
 ### web app initial communication flow
 
-1. Host sends `PKT_H2D_GET_FW_VERSION` and waits for response. If device firmware version ID is less than the latest available version ID, notify user.
+1. Host sends `PKT_H2D_GET_FW_VERSION` and waits for response. If device firmware version ID is less than `LatestFWVersionID` (defined in `config.js`), notify user. `LatestFWVersionID` is only updated when API-breaking changes are made or significant new firmware features are added.
 2. Host sends `PKT_H2D_GET_DEFAULT_RGB` and `PKT_H2D_GET_TRIM` and waits for response. Response values are used to populate GUI.
 
 ## packet reference
@@ -137,6 +144,19 @@ Requests the device to set the red, green, blue, and white channel trimming sett
 | data length | 0 |
 
 Requests the device to respond with `PKT_D2H_TRIM`. *Note: this packet is ignored by the scanlight v4 firmware variant.*
+
+#### PKT_H2D_SET_FOCUS
+
+|properties||
+|---|---|
+| header | 7 |
+| data length | 1 |
+
+| data byte index | description |
+|---|---|
+| 0 | focus signal state |
+
+Requests the device to set the state of the camera focus control signal (equivalent to half-pressing the shutter button). Setting this signal may be necessary for some cameras to actuate the shutter. On some cameras it may cause the shutter to respond more quickly (good), and on some cameras it may cause undesired autofocusing even when the camera is in manual focus mode (bad), therefore it should be independently controllable from the shutter. *Note: this packet is ignored if the hardware does not support controlling the camera focus signal. Currently, only scanlight v4 with the 26a902b PCB revision supports this.*
 
 ### device-to-host
 

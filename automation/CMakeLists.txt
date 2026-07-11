@@ -20,5 +20,4 @@ endif()
 # Initialize the SDK
 pico_sdk_init()
 
-add_subdirectory(firmware_sl2)
 add_subdirectory(firmware_bsl1)

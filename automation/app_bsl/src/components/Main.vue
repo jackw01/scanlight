@@ -80,7 +80,8 @@
                   color="amber-lighten-3"
                   elevation="2"
                   x-large
-                  @click="setEnabledChannels([0, 0, 0, 1, 0])">WHITE</v-btn>
+                  @click="setEnabledChannels([0, 0, 0, 1, 0])"
+                  v-if="hwSupportsWhite">WHITE</v-btn>
               </v-col>
               <v-col>
                 <v-btn
@@ -123,7 +124,7 @@
                   elevation="2"
                   x-large
                   @click="setEnabledChannels([0, 0, 0, 0, 1])"
-                  v-if="!isSmallHW">IR</v-btn>
+                  v-if="hwSupportsIR">IR</v-btn>
               </v-col>
             </v-row>
             <v-alert v-if="showReducedPowerWarning" class="mt-4" text="Operating at reduced brightness. Use a USB-C power source with 9V 18W or higher output for full brightness." type="info" variant="tonal"></v-alert>
@@ -168,7 +169,7 @@
             <v-btn :disabled="controlsDisabled" class="mr-2 mb-2" color="primary" @click="loadDefault">Load default</v-btn>
             <v-dialog v-model="trimDialog" max-width="400" persistent>
               <template v-slot:activator="{ props: activatorProps }">
-                <v-btn :disabled="controlsDisabled" class="mr-2 mb-2" color="primary" v-bind="activatorProps" v-if="!isSmallHW">Brightness Trimming</v-btn>
+                <v-btn :disabled="controlsDisabled" class="mr-2 mb-2" color="primary" v-bind="activatorProps" v-if="hwSupportsTrimming">Brightness Trimming</v-btn>
               </template>
               <v-card
                 title="Brightness Trimming"
@@ -220,14 +221,14 @@
           </v-card-text>
         </v-card>
         <br />
-        <v-card :disabled="controlsDisabled">
+        <v-card :disabled="controlsDisabled" v-if="hwSupportsShutter">
           <v-card-title>Automation</v-card-title>
           <v-card-text class="pb-2">
             <v-number-input
               label="Pre-shutter Delay (s)"
               v-model="preShutterDelay"
               :min="0.01"
-              :max="0.5"
+              :max="1.0"
               :step="0.01"
               :precision="2"
               variant="outlined"
@@ -251,12 +252,20 @@
               variant="outlined"
               hide-details
             ></v-number-input>
-            <v-checkbox hide-details label="Keep light on" v-model="keepLightOn"></v-checkbox>
+            <v-row>
+              <v-col cols="6">
+                 <v-checkbox hide-details label="Keep light on" v-model="keepLightOn"></v-checkbox>
+              </v-col>
+              <v-col cols="6" v-if="hwSupportsFocus">
+                 <v-checkbox hide-details label="Send focus signal" v-model="focus"></v-checkbox>
+              </v-col>
+            </v-row>
             <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGB')">Auto R,G,B</v-btn>
-            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGBIR')" v-if="!isSmallHW">Auto R,G,B,IR</v-btn>
-            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceNWIR')" v-if="!isSmallHW">Auto RGB,IR</v-btn>
-            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceBWIR')" v-if="!isSmallHW">Auto W,IR</v-btn>
-            <v-btn class="mr-2 mb-2" color="primary" @click="shutterTest">Test Shutter</v-btn>
+            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceRGBIR')" v-if="hwSupportsIR">Auto R,G,B,IR</v-btn>
+            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceNWIR')" v-if="hwSupportsIR">Auto RGB,IR</v-btn>
+            <v-btn class="mr-2 mb-2" color="primary" @click="runSequence('SequenceBWIR')" v-if="hwSupportsIR">Auto W,IR</v-btn>
+            <v-btn class="mr-2 mb-2" color="primary" @click="testShutter">Test Shutter</v-btn>
+            <v-btn v-if="hwSupportsFocus" class="mr-2 mb-2" color="primary" @mousedown="testFocus" @mouseup="releaseFocus">Test Focus</v-btn>
           </v-card-text>
         </v-card>
         <br />
@@ -264,11 +273,11 @@
           <v-card-title>Info</v-card-title>
           <v-card-text>
             <div class="text-grey-darken-1 text-caption">
-             <span class="mr-4">Input voltage: {{ inputVoltageV }}V</span><span v-if="ledTemperatureC > 5" class="mr-4">LED temperature: {{ ledTemperatureC }}C</span><span>{{ hwVersionString }}</span><span> firmware {{ fwVersionString }}</span>
+             <span v-if="hwSupportsADC" class="mr-4">Input voltage: {{ inputVoltageV }}V</span><span v-if="ledTemperatureC > 5" class="mr-4">LED temperature: {{ ledTemperatureC }}C</span><span>{{ hwVersionString }}</span><span> firmware {{ fwVersionString }}</span>
               <br />
               <a class="text-accent" href="https://jackw01.github.io/scanlight/big">big scanlight info & instructions</a>
               <br />
-              scanlight control app v2.0 by jackw01
+              scanlight control app v2.1 by jackw01
             </div>
           </v-card-text>
         </v-card>
@@ -302,6 +311,7 @@ export default {
       shutterPulseLength: 0.1,
       postShutterDelay: 1.0,
       keepLightOn: false,
+      focus: false,
       inputVoltageMv: 5000,
       ledTemperatureMdegc: 0,
       fwUpdateAvailable: false,
@@ -313,7 +323,8 @@ export default {
   },
   computed: {
     controlsDisabled: function() {
-      return !(this.connected && this.inputVoltageMv > config.USBVBUSThreshold5V);
+      if (!this.hwSupportsADC) return !this.connected;
+      else return !(this.connected && this.inputVoltageMv > config.USBVBUSThreshold5V);
     },
     inputVoltageV: function() {
       return (this.inputVoltageMv / 1000).toFixed(2);
@@ -322,9 +333,9 @@ export default {
       return (this.ledTemperatureMdegc / 1000).toFixed(1);
     },
     showReducedPowerWarning: function() {
-      if (this.hwVersionString === "big scanlight") {
+      if (this.hwVersionString === "big scanlight v1") {
         return (this.inputVoltageMv > config.USBVBUSThreshold5V && this.inputVoltageMv < config.USBVBUSThreshold9V);
-      } else if (this.hwVersionString === "scanlight v4") {
+      } else if (this.hwVersionString === "scanlight v4a" || this.hwVersionString === "scanlight v4b") {
         // Decided not to limit power for 500mA/1.5A USB modes, since it may be too confusing for users
         return false;
       } else {
@@ -334,8 +345,23 @@ export default {
     showTemperatureWarning: function() {
       return this.ledTemperatureMdegc > config.OverTemperatureThresholdMdegc;
     },
-    isSmallHW: function() {
-      return this.hwVersionString === "scanlight v4";
+    hwSupportsADC: function() {
+      return (this.hwVersionString !== "scanlight v2/v3");
+    },
+    hwSupportsWhite: function() {
+      return (this.hwVersionString !== "scanlight v2/v3");
+    },
+    hwSupportsShutter: function() {
+      return (this.hwVersionString !== "scanlight v2/v3");
+    },
+    hwSupportsFocus: function() {
+      return (this.hwVersionString === "scanlight v4b");
+    },
+    hwSupportsIR: function() {
+      return (this.hwVersionString === "big scanlight v1");
+    },
+    hwSupportsTrimming: function() {
+      return (this.hwVersionString === "big scanlight v1");
     },
   },
   mounted() {
@@ -364,6 +390,7 @@ export default {
     },
     checkFWVersion(header, rawData, dataView) {
       const versionIdWord = dataView.getUint32(0);
+      console.log("FW version ID word", versionIdWord);
       const fwVersion = versionIdWord & 0xFFFF;
       const hwVersion = (versionIdWord >> 16) & 0xFFFF;
       this.fwVersionString = config.FWVersionStrings[fwVersion] || "Unknown firmware version";
@@ -417,6 +444,9 @@ export default {
       for (let i = 0; i < config[sequence].length; i++) {
         this.enabledChannels = config[sequence][i];
         this.update();
+        if (this.focus) {
+          protocol.sendPacket(protocol.PKT_H2D_SET_FOCUS, [1]);
+        }
         console.log("debug_sequence", Date.now(), this.enabledChannels, i);
         await new Promise(resolve => setTimeout(resolve, this.preShutterDelay * 1000));
         const pulseLength10ms = Math.min(Math.max(Math.round(this.shutterPulseLength * 100), 1), 255);
@@ -434,12 +464,21 @@ export default {
         this.enabledChannels = [0, 0, 0, 0, 0];
       }
       this.update();
+      protocol.sendPacket(protocol.PKT_H2D_SET_FOCUS, [0]);
       console.log("debug_sequence", Date.now());
     },
-    shutterTest() {
+    testShutter() {
       if (!this.connected) return;
       const pulseLength10ms = Math.min(Math.max(Math.round(this.shutterPulseLength * 100), 1), 255);
       protocol.sendPacket(protocol.PKT_H2D_SHUTTER_PULSE, [pulseLength10ms]);
+    },
+    testFocus() {
+      if (!this.connected) return;
+      protocol.sendPacket(protocol.PKT_H2D_SET_FOCUS, [1]);
+    },
+    releaseFocus() {
+      if (!this.connected) return;
+      protocol.sendPacket(protocol.PKT_H2D_SET_FOCUS, [0]);
     },
     setTrim() {
       if (!this.connected) return;
