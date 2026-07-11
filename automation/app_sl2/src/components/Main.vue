@@ -138,6 +138,15 @@
             <v-btn  color="primary" @click="deletePreset" :disabled="!selectedPresetName">Delete</v-btn>
           </v-card-text>
         </v-card>
+        <br />
+        <v-card>
+          <v-card-text>
+            As of July 2026, the new firmware and web app for scanlight v4 and big scanlight has been updated to support scanlight v2/v3. The firmware update can be downloaded <a href="https://github.com/jackw01/scanlight/blob/main/automation/sl2_controller_v1.2.uf2>">here</a>. The new web app can be accessed <a href="https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html">here</a>.
+            <br />
+            <br />
+            To install the new firmware, put the Pi Pico into DFU mode by holding down the BOOTSEL button (located on the dongle, or on the back of scanlight v3) while connecting the USB cable to the computer. The Pi Pico will show up as a USB storage device. Copy the firmware binary file to this device to update the firmware.
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>

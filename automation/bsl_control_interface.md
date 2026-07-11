@@ -8,7 +8,7 @@ All scanlight hardware revisions now run the same firmware, with hardware suppor
 | ------- | ------- | ------------- | ------------------------------------- |
 | 1.0     | 43c5425 | 0             | initial release for big scanlight v1  |
 | 1.1     | 07a1f8f | 1             | add compatibility for scanlight v4    |
-| 1.2     | -       | 2             | add compatibility for scanlight v2/v3 |
+| 1.2     | 5130904 | 2             | add compatibility for scanlight v4 rev. b PCB, scanlight v2/v3 |
 
 The information in this document is current as of firmware version 1.2.
 

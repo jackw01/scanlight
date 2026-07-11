@@ -104,9 +104,11 @@ STEP files for all parts of the light source and film carriers can be downloaded
 
 ### firmware and web app
 
-The web app for controlling scanlight v3 is available [here](https://jackw01.github.io/scanlight/automation/app/dist/index.html). A Chromium-based web browser is required as other browser engines do not support the WebUSB/WebSerial API.
+**As of July 2026, scanlight v2 and v3 are supported by the updated firmware and web app used by scanlight v4 and big scanlight.** The new web app is available [here](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html) and the firmware binary for v2/v3 is [here](https://github.com/jackw01/scanlight/blob/main/automation/sl2_controller_v1.2.uf2). A Chromium-based web browser is required as other browser engines do not support the WebUSB/WebSerial API.
 
-The [source code for the Pi Pico firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/sl2_controller_v1.3.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
+The deprecated web app for controlling scanlight v2/v3 is available [here](https://jackw01.github.io/scanlight/automation/app/dist/index.html).
+
+The [source code for the old Pi Pico firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_sl2), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/sl2_controller_v1.3.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_sl2) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
 
 ### license
 
