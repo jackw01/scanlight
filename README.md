@@ -159,7 +159,7 @@ I have received quite a few emails echoing the sentiment that film carriers are 
 Film carriers that allow full-border scanning tend to be significantly worse at keeping the film flat and handling curled film, except for ones that hold the film against glass or acrylic, but those come with other issues (high cost, difficulty keeping the glass clean, Newton's rings, etc.)
 
 #### what lens should i use?
-[This list](https://www.pixl-latr.com/how-good-a-macro-lens-do-you-really-need-for-dslr-mirrorless-camera-scanning/) is generally a good starting point. The Micro-Nikkor 55mm f/2.8 AI is my personal recommendation; it has exceptional field flatness, corner-to-corner sharpness, and almost no chromatic aberration, outperforming many modern lenses, and is very affordable.
+[This list](https://www.pixl-latr.com/how-good-a-macro-lens-do-you-really-need-for-dslr-mirrorless-camera-scanning/) is generally a good starting point. The Micro-Nikkor 55mm f/2.8 AI is my personal recommendation; it outperforms many modern lenses in field flatness, corner-to-corner sharpness, and chromatic aberration, and it is very affordable.
 
 I would **not** recommend low-cost third-party macro lenses like the TTArtisan 40mm f/2.8 Macro or 7artisans 60mm f/2.8 Macro II. While the build quality of these lenses is excellent and they generally have superior contrast to vintage lenses due to better optical coatings, in my experience they cannot match the top tiers of lenses in the above list in corner-to-corner sharpness and lack of chromatic aberration. I would also recommend against using extension tubes with modern lenses; this tends to result in field curvature and other aberrations which can be quite severe depending on the lens.
 

@@ -38,7 +38,7 @@ The light source is powered via the **left USB-C port**. A USB-C PD power source
 
 Press the **upper button** to toggle the light on and off. Press the **lower button** to toggle between narrowband RGB and 95CRI white modes. The buttons work even when the light is not connected to a computer. The default RGB channel brightnesses in this mode can be configured from the GUI, as explained below.
 
-To adjust color and brightness and automate the process of scanning red, green, and blue channels separately, the light source can be connected to a computer via the **right USB-C port** and controlled with the web app located [here](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html). The web app requires a Chromium-based web browser.
+To adjust color and brightness and automate the process of scanning red, green, and blue channels separately, the light source can be connected to a computer via the **right USB-C port** and controlled with the web app located [here](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html). The web app requires a Chromium-based web browser or Firefox 151 or newer.
 
 In the **Manual Control** panel of the web app, the red, green, and blue channel brightnesses can be adjusted and the color channels can be turned on individually or together. In **RGB** (narrowband trichromatic) mode, the red, green, and blue LEDs are on at the same time. In **White** mode, only the 95CRI white LEDs are on. The red, green, blue, and infrared LEDs can also be turned on individually; the RGB channel brightness adjustments still apply in this case.
 
