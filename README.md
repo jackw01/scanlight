@@ -66,31 +66,31 @@ All design files for the light sources and film carriers, both current and older
 
 ### more sample scans
 
-Each group of four negatives were scanned and manually processed together in order to demonstrate how the light source affects the overall look of the scans rather than to show a subjectively ideal edit for each photo. Minimal post-processing was done to all scans (import image with linear raw profile, invert, color balance, apply tone curve). The same tone curve was used for all scans.
+All scans were processed in [NegPy](https://github.com/marcinz606/NegPy), leaving all settings at the default values. Sensor calibration was used for the RGB scans. The groups of four negatives were scanned and manually processed together in order to demonstrate how the light source affects the overall look of the scans rather than to show a subjectively ideal edit for each photo.
 
-![](images/scan_comparison_ektar_1.jpg)
-
-<p align="center"><small>Kodak Ektar 100 (left: white light, right: narrowband RGB light)</small></p>
-
-![](images/scan_comparison_ektar_3.jpg)
+![](images/scan_comparison_ektar_1_1.jpg)
 
 <p align="center"><small>Kodak Ektar 100 (left: white light, right: narrowband RGB light)</small></p>
 
-![](images/scan_comparison_fuji200_1.jpg)
+![](images/scan_comparison_fuji200_1_1.jpg)
 
 <p align="center"><small>Fuji 200 (left: white light, right: narrowband RGB light)</small></p>
 
-![](images/scan_comparison_fuji200_2.jpg)
+![](images/scan_comparison_ektar_3_1.jpg)
+
+<p align="center"><small>Kodak Ektar 100 (left: white light, right: narrowband RGB light)</small></p>
+
+![](images/scan_comparison_vision3_1_1.jpg)
+
+<p align="center"><small>Kodak Vision3 500T (left: white light, right: narrowband RGB light)</small></p>
+
+![](images/scan_comparison_fuji200_4_1.jpg)
 
 <p align="center"><small>Fuji 200 (left: white light, right: narrowband RGB light)</small></p>
 
-![](images/scan_comparison_aerocolor_1.jpg)
+![](images/scan_comparison_fuji200_3_1.jpg)
 
-<p align="center"><small>Kodak Aerocolor IV 2460 (left: white light, right: narrowband RGB light)</small></p>
-
-![](images/scan_comparison_aerocolor_2.jpg)
-
-<p align="center"><small>Kodak Aerocolor IV 2460 (left: white light, right: narrowband RGB light)</small></p>
+<p align="center"><small>Fuji 200 (left: white light, right: narrowband RGB light)</small></p>
 
 ### recommended reading, if you're curious
 
@@ -111,6 +111,10 @@ You can't get the exact same colors as the RGB scan by adjusting the white balan
 
 #### but i keep seeing/hearing that using RGB light results in oversaturation or hue shifts
 Increasing saturation is often done on purpose to produce a visually striking and not entirely accurate demonstration of why RGB is better (in practice, the differences in color reproduction are more subtle once saturation is equalized), or is the result of processing RGB scans with processing workflows intended to produce normal-looking results with white light scans. No one is saying you can’t adjust saturation in post, or use processing software that produces less-saturated results. Hue shifts are a result of using a processing workflow that doesn't compensate for camera sensor channel crosstalk, and should be a complete non-issue if using the sensor calibration tool in NegPy.
+
+![](images/calibration_comparison.jpg)
+
+<p align="center"><small>From left to right: RGB scan without sensor calibration (note blue-to-cyan and orange-to-magenta shifts); RGB scan with sensor calibration; Noritsu HS-1800 lab scan</small></p>
 
 #### but the colors in the sample scans still don't look good to me / the colors don't look the way i think film should look
 Getting the desired colors from C-41 film, whether by darkroom printing or scanning and editing, has always involved some level of manual adjustment. It is also worth noting that our collective idea of how film is supposed to look is often influenced by highly edited or low-quality scans; old, faded prints; or even software emulations. **Photography is art, and as such it has always involved making subjective decisions about how images should look; all photos are interpretations of raw data and it's up to the photographer to decide what interpretation looks best.** The best starting point for editing is a scan that represents the image data stored in the dye layers of the film with maximum dynamic range and minimal crosstalk.
