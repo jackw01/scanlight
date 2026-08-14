@@ -388,7 +388,11 @@ void tick(uint32_t millis, uint32_t dt_micros)
         color[0] = rgb_preset[0];
         color[1] = rgb_preset[1];
         color[2] = rgb_preset[2];
+#ifdef HW_VERSION_SL2
+        led_enable = 1;
+#else
         led_enable = 0;
+#endif
       }
 
       update_pwm();
