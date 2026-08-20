@@ -92,7 +92,7 @@ Adapters are available for improved usability with [toneCarrier](https://tonepho
 #### Valoi 360 Advancer adapter
 
 ![](<images/big_scanlight_valoi360_adapter.svg>)
-<small>All dimensions in millimeters. Mounting holes are sized for M4 socket head cap screws.</small>
+<small>All dimensions in millimeters. Four M4 screws are required, such as the screws included in Valoi kits for attaching the CS-LITE adapter to the Valoi 360 Advancer.</small>
 
 ### optical design
 
