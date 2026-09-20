@@ -65,6 +65,23 @@
               :max="255"
               @end="update"
             ></v-slider>
+            <v-number-input
+              label="White brightness"
+              v-model="white"
+              :min="0"
+              :max="255"
+              variant="outlined"
+              @update:modelValue="update"
+              v-if="hwSupportsWhite"
+            ></v-number-input>
+            <v-slider
+              v-model="white"
+              color="grey"
+              :min="0"
+              :max="255"
+              @end="update"
+              v-if="hwSupportsWhite"
+            ></v-slider>
             <v-row justify="space-between">
               <v-col>
                 <v-btn
@@ -300,6 +317,7 @@ export default {
       red: 255,
       green: 255,
       blue: 255,
+      white: 255,
       trimR: 0,
       trimG: 0,
       trimB: 0,
@@ -432,7 +450,7 @@ export default {
         this.red * this.enabledChannels[0],
         this.green * this.enabledChannels[1],
         this.blue * this.enabledChannels[2],
-        255 * this.enabledChannels[3],
+        this.white * this.enabledChannels[3],
         255 * this.enabledChannels[4],
         0, // save preset flag
       ];
