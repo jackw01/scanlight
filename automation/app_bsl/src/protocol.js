@@ -110,6 +110,7 @@ class Protocol {
   async connect() {
     this.port = await navigator.serial.requestPort();
     await this.port.open({ baudRate: this.UART_BAUD_RATE });
+    await this.port.setSignals({ dataTerminalReady: true, requestToSend: true });
     console.log(this.port.getInfo());
     this.writer = this.port.writable.getWriter();
     this.readUntilClosed();
