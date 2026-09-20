@@ -23,6 +23,7 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * 26A105 3D printed PCB cover
 * 2x M2x10mm pan head self-tapping screw for plastic (head diameter 4mm or less)
 * 4x 8mm diameter adhesive-backed rubber bumper (3M SJ5370 or equivalent)
+* 4x 6mm diameter x 3mm thick N52 neodynium magnet (optional since May 2026 - 3D printed clips now recommended for horizontal usage)
 
 ### optional
 * 26A110B 3D printed tonecarrier compatibility plate
@@ -53,6 +54,8 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * 25D108 3D printed film carrier compatibility plate (**use variant B for film carriers made starting May 2026, variant A otherwise**)
 * 25D110 3D printed tonecarrier compatibility plate
 * 25D111 3D printed valoi 360 advancer compatibility plate
+* 25D114B 3D printed lobster holder v2.1 compatibility plate
+* 25D115 3D printed essential film holder compatibility plate
 
 ### valoi easy120 integration
 * **replace** 25D103**A** with 25D103**B** 3D printed diffuser bezel (screw mount variant)
@@ -73,8 +76,9 @@ Current film carrier design files are in the [film carriers v1.1 folder](./film%
 * 25C011 3D printed 35mm mask
 * 25C020 3D printed 35mm half frame mask (optional)
 * 25C018A 3D printed 35mm film carrier hood
+* 2x 26A114 3D printed 35mm film carrier clip
 * 2x M2x10mm pan head self-tapping screw for plastic
-* 4x 4mm diameter x 2mm thick N52 neodynium magnet (optional since May 2026)
+* 4x 4mm diameter x 2mm thick N52 neodynium magnet (optional since May 2026 - 3D printed clips now recommended for horizontal usage)
 
 ### medium format film carrier
 
@@ -83,8 +87,9 @@ Current film carrier design files are in the [film carriers v1.1 folder](./film%
 * 25C015 3D printed 6x7 mask (optional)
 * 25C016 3D printed 6x6 mask (optional)
 * 25C017 3D printed 6x4.5 mask (optional)
+* 2x 26A115 3D printed medium format film carrier clip
 * 2x M2x10mm pan head self-tapping screw for plastic (head diameter 4mm or less)
-* 4x 4mm diameter x 2mm thick N52 neodynium magnet (optional since May 2026)
+* 4x 4mm diameter x 2mm thick N52 neodynium magnet (optional since May 2026 - 3D printed clips now recommended for horizontal usage)
 
 ### scanlight v2/v3/v4 horizontal mount
 
