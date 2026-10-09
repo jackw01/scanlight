@@ -58,7 +58,7 @@ When considering the limitations of digital camera sensors, the ideal wavelength
 
 The next best alternative is to use general purpose RGB LEDs, which typically use 620-630nm for red and 460-480nm for blue. The results will not be the absolute best possible, but will still be far better than with white light. The Fuji Frontier SP3000, a popular professional scanner, uses 630nm for red and 465nm for blue ([source](https://discuss.pixls.us/t/input-color-profile-to-use-for-negatives/20271/13)), but it does not have to contend with the color channel sensitivity of a typical digital camera - it has a monochrome image sensor and combines three exposures taken with red, green, and blue light.
 
-To get the best possible results, I designed my own custom RGB light sources using 665nm red and 455nm blue LEDs. More information on the designs can be found [here (scanlight v4)](./v4.md) and [here (big scanlight)](./big.md).
+To get the best possible results, I designed my own custom RGB light sources using 665nm red and 455nm blue LEDs. More information on the designs can be found [here (scanlight v4)](./v4.md) and [here (big scanlight)](./big.md). Both light sources allow for individual control of the red, green, and blue channels via a web app. Color balance can be adjusted for single-exposure scanning, and the light can automatically switch colors and trigger a camera to simplify the process of capturing separate exposures for each channel.
 
 ![](<images/scanlight_header.jpg>)
 
@@ -66,7 +66,7 @@ All design files for the light sources and film carriers, both current and older
 
 ### more sample scans
 
-All scans were processed in [NegPy](https://github.com/marcinz606/NegPy), leaving all settings at the default values. Sensor calibration was used for the RGB scans. The groups of four negatives were scanned and manually processed together in order to demonstrate how the light source affects the overall look of the scans rather than to show a subjectively ideal edit for each photo.
+All scans were processed in [NegPy](https://github.com/marcinz606/NegPy), leaving all settings at the default values. The RGB scans were scanned as **single exposures with all color channels** and sensor crosstalk calibration was applied. The groups of four negatives were scanned and manually processed together in order to demonstrate how the light source affects the overall look of the scans rather than to show a subjectively ideal edit for each photo.
 
 ![](images/scan_comparison_ektar_1_1.jpg)
 
