@@ -28,7 +28,6 @@ static const float ThermistorLookUpTable[][2] = {
     {0.41, 111.0},
     {0.21, 150.0}};
 
-static const uint32_t PWMFreqHz = 40000;
 static const uint32_t USBVBUSThreshold5V = 4400;
 static const uint32_t USBVBUSThreshold9V = 7800;
 static const uint32_t USBCCThresholdRdUSB = 200;
@@ -46,7 +45,7 @@ static const uint32_t ADCReportingIntervalMs = 200;
 #ifdef HW_VERSION_BSL1
 
 #define HW_VERSION_ID 0
-
+static const uint32_t PWMFreqHz = 40000; // TPS61169 Driver
 static const uint32_t PinR1 = 2;
 static const uint32_t PinG1 = 3;
 static const uint32_t PinB1 = 4;
@@ -87,7 +86,7 @@ static const float ADCVBUSSenseScale = (5.1 + 20.0) / 5.1;
 #else
 #define HW_VERSION_ID 1
 #endif
-
+static const uint32_t PWMFreqHz = 40000; // TPS61169 Driver
 static const uint32_t PinR1 = 2;
 static const uint32_t PinG1 = 3;
 static const uint32_t PinB1 = 4;
@@ -124,7 +123,7 @@ static const float ADCVBUSSenseScale = 2.0;
 #ifdef HW_VERSION_SL2
 
 #define HW_VERSION_ID 2
-
+static const uint32_t PWMFreqHz = 400; // AL8860WT Driver
 static const uint32_t PinR1 = 7;
 static const uint32_t PinG1 = 8;
 static const uint32_t PinB1 = 9;
