@@ -437,7 +437,7 @@ int main()
   // setup PWM pins
   uint32_t f_sys = clock_get_hz(clk_sys);
   #ifdef HW_VERSION_SL2
-  uint32_t clk_div = 8; // Otherwise the 16-bit counter overflows
+  uint32_t clk_div = 6; // Otherwise the 16-bit counter overflows
   #else
   uint32_t clk_div = 4;
   #endif

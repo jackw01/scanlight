@@ -123,7 +123,7 @@ static const float ADCVBUSSenseScale = 2.0;
 #ifdef HW_VERSION_SL2
 
 #define HW_VERSION_ID 2
-static const uint32_t PWMFreqHz = 400; // AL8860WT Driver
+static const uint32_t PWMFreqHz = 4000; // AL8860WT Driver
 static const uint32_t PinR1 = 7;
 static const uint32_t PinG1 = 8;
 static const uint32_t PinB1 = 9;
