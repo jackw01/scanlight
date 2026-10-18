@@ -23,7 +23,7 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * 26A105 3D printed PCB cover
 * 2x M2x10mm pan head self-tapping screw for plastic (head diameter 4mm or less)
 * 4x 8mm diameter adhesive-backed rubber bumper (3M SJ5370 or equivalent)
-* 4x 6mm diameter x 3mm thick N52 neodynium magnet (optional since May 2026 - 3D printed clips now recommended for horizontal usage)
+* 4x 6mm diameter x 3mm thick N52 neodymium magnet (optional since May 2026 - 3D printed clips now strongly recommended for horizontal usage)
 
 ### optional
 * 26A110B 3D printed tonecarrier compatibility plate
@@ -51,10 +51,10 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * 4x 12mm diameter, 4mm tall adhesive-backed rubber bumper
 
 ### optional
-* 25D108 3D printed film carrier compatibility plate (**use variant B for film carriers made starting May 2026, variant A otherwise**)
+* 25D108 3D printed film carrier compatibility plate (**use variant B for film carriers made starting May 2026, variant A otherwise. For variant A, 4x 4mm diameter x 2mm thick neodymium magnets are required for the compatibility plate and each film carrier.**)
 * 25D110 3D printed tonecarrier compatibility plate
 * 25D111 3D printed valoi 360 advancer compatibility plate
-* 25D114B 3D printed lobster holder v2.1 compatibility plate
+* 25D114B 3D printed lobster holder v2.1 compatibility plate (**WARNING: there are multiple variations of the lobster holder in the wild, and not all are dimensionally compatible with this adapter. Please double-check the STEP file against the dimensions of your lobster holder to verify that it will fit.**)
 * 25D115 3D printed essential film holder compatibility plate
 
 ### valoi easy120 integration
@@ -70,15 +70,18 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 
 Current film carrier design files are in the [film carriers v1.1 folder](./film%20carriers%20v1.1/).
 
+All film carriers, the scanlight v4, and the film carrier compatibility plate for big scanlight can accomodate magnets for attaching the film carriers as was done in the past, but the 3D printed clips (shown below) are strongly recommended instead for use with scanlight v4. If desired, each film carrier uses 4x 4mm diameter x 2mm thick neodymium magnets.
+
+![](../images/film_carrier_clip.png)
+
 ### 35mm film carrier
 
 * 2x 25C012 3D printed 35mm film carrier half
 * 25C011 3D printed 35mm mask
 * 25C020 3D printed 35mm half frame mask (optional)
 * 25C018A 3D printed 35mm film carrier hood
-* 2x 26A114 3D printed 35mm film carrier clip
+* 2x 26A114 3D printed 35mm film carrier clip (for scanlight v4 only)
 * 2x M2x10mm pan head self-tapping screw for plastic
-* 4x 4mm diameter x 2mm thick N52 neodynium magnet (optional since May 2026 - 3D printed clips now recommended for horizontal usage)
 
 ### medium format film carrier
 
@@ -87,9 +90,17 @@ Current film carrier design files are in the [film carriers v1.1 folder](./film%
 * 25C015 3D printed 6x7 mask (optional)
 * 25C016 3D printed 6x6 mask (optional)
 * 25C017 3D printed 6x4.5 mask (optional)
-* 2x 26A115 3D printed medium format film carrier clip
+* 2x 26A115 3D printed medium format film carrier clip (for scanlight v4 only)
 * 2x M2x10mm pan head self-tapping screw for plastic (head diameter 4mm or less)
-* 4x 4mm diameter x 2mm thick N52 neodynium magnet (optional since May 2026 - 3D printed clips now recommended for horizontal usage)
+
+### APS (24mm) film carrier
+
+* 2x 25C021 3D printed 35mm film carrier half
+* 25C022 3D printed APS-C mask (optional)
+* 25C023 3D printed APS-H mask (optional)
+* 25C018A 3D printed 35mm film carrier hood
+* 2x 26A114 3D printed 35mm film carrier clip (also fits APS carrier; for scanlight v4 only)
+* 2x M2x10mm pan head self-tapping screw for plastic
 
 ### scanlight v2/v3/v4 horizontal mount
 
@@ -118,7 +129,7 @@ Current film carrier design files are in the [film carriers v1.1 folder](./film%
 * 3D printed PCB baseplate
 * 3D printed diffuser box housing
 * 3D printed diffuser bezel
-* 4x 6mm diameter x 3mm thick N52 neodynium magnet (if using magnetically attached film carriers)
+* 4x 6mm diameter x 3mm thick N52 neodymium magnet (if using magnetically attached film carriers)
 * 8x M2x6mm pan head self-tapping screw for plastic (head diameter 4mm or less)
 * 4x 8mm diameter adhesive-backed rubber bumper (3M SJ5370 or equivalent)
 

@@ -6,7 +6,7 @@ Remove the protective film from the acrylic sheet and insert it into the diffuse
 
 ![](<images/01.png>)
 
-If desired, press four 6x3mm neodynium magnets into the circular holes on the bezel. If you already have film carriers with magnets inserted, ensure that the magnet polarities match and the film carrier attaches firmly to the bezel.
+If desired, press four 6x3mm neodymium magnets into the circular holes on the bezel. If you already have film carriers with magnets inserted, ensure that the magnet polarities match and the film carrier attaches firmly to the bezel.
 
 ## 2
 
