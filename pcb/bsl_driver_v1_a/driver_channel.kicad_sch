@@ -1726,7 +1726,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 123.19 116.84 0)
 			(effects
 				(font
@@ -1745,15 +1745,6 @@
 			)
 		)
 		(property "MPN" "0603WAF510KT5E"
-			(at 123.19 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 123.19 116.84 0)
 			(effects
 				(font
@@ -1979,15 +1970,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" ""
-			(at 123.19 71.755 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "e69105e4-755b-43f8-a1f7-71e83934b8a3")
 		)
@@ -2109,15 +2091,6 @@
 			)
 		)
 		(property "LCSC" "C29823"
-			(at 150.495 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 150.495 98.425 0)
 			(effects
 				(font
@@ -2346,15 +2319,6 @@
 			)
 		)
 		(property "LCSC" "C12530"
-			(at 89.535 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 89.535 98.425 0)
 			(effects
 				(font
@@ -2679,15 +2643,6 @@
 			)
 		)
 		(property "LCSC" "C15850"
-			(at 112.395 71.755 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 112.395 71.755 0)
 			(effects
 				(font
@@ -3100,24 +3055,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 144.78 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 144.78 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 144.78 98.425 0)
 			(effects
@@ -3127,25 +3064,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 144.78 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 144.78 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 144.78 98.425 0)
 			(effects
 				(font
@@ -3272,15 +3191,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" ""
-			(at 113.03 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "9d0b740c-2ea1-4a86-8765-8c2c4a5e9c2d")
 		)
@@ -3383,7 +3293,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 133.35 116.84 0)
 			(effects
 				(font
@@ -3402,15 +3312,6 @@
 			)
 		)
 		(property "MPN" "0603WAF510KT5E"
-			(at 133.35 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 133.35 116.84 0)
 			(effects
 				(font
@@ -3512,7 +3413,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 102.87 104.775 0)
 			(effects
 				(font
@@ -3531,15 +3432,6 @@
 			)
 		)
 		(property "MPN" "0402WGF1002TCE"
-			(at 102.87 104.775 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 102.87 104.775 0)
 			(effects
 				(font
@@ -3756,15 +3648,6 @@
 			)
 		)
 		(property "MPN" "SD103AWS"
-			(at 131.445 93.345 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 131.445 93.345 0)
 			(effects
 				(font

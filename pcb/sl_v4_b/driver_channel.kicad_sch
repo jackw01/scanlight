@@ -1869,7 +1869,7 @@
 				)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 123.19 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -1892,17 +1892,6 @@
 			)
 		)
 		(property "MPN" "CRCW04026R80FKED"
-			(at 123.19 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 123.19 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -2085,7 +2074,7 @@
 				)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 143.51 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -2108,17 +2097,6 @@
 			)
 		)
 		(property "MPN" "CRCW04026R80FKED"
-			(at 143.51 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 143.51 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -2235,17 +2213,6 @@
 			)
 		)
 		(property "MPN" "CR6028-270M"
-			(at 123.19 71.755 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 123.19 71.755 0)
 			(hide yes)
 			(show_name no)
@@ -2373,17 +2340,6 @@
 			)
 		)
 		(property "LCSC" "C51205"
-			(at 150.495 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 150.495 98.425 0)
 			(hide yes)
 			(show_name no)
@@ -2602,17 +2558,6 @@
 			)
 		)
 		(property "LCSC" "C12530"
-			(at 89.535 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 89.535 98.425 0)
 			(hide yes)
 			(show_name no)
@@ -2919,17 +2864,6 @@
 			)
 		)
 		(property "LCSC" "C3909351"
-			(at 112.395 71.755 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 112.395 71.755 0)
 			(hide yes)
 			(show_name no)
@@ -3403,28 +3337,6 @@
 				)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 144.78 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 144.78 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 144.78 98.425 0)
 			(hide yes)
@@ -3436,29 +3348,7 @@
 				)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 144.78 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 144.78 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 144.78 98.425 0)
 			(hide yes)
 			(show_name no)
@@ -3583,17 +3473,6 @@
 				)
 			)
 		)
-		(property "JLCPCB Basic" ""
-			(at 113.03 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "71cf1100-25fe-4bf8-9c92-64f1be2afc4e")
 		)
@@ -3686,7 +3565,7 @@
 				)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 133.35 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -3709,17 +3588,6 @@
 			)
 		)
 		(property "MPN" "CRCW04026R80FKED"
-			(at 133.35 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 133.35 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -3813,7 +3681,7 @@
 				)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 102.87 104.775 0)
 			(hide yes)
 			(show_name no)
@@ -3836,17 +3704,6 @@
 			)
 		)
 		(property "MPN" "0402WGF2002TCE"
-			(at 102.87 104.775 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 102.87 104.775 0)
 			(hide yes)
 			(show_name no)
@@ -4051,17 +3908,6 @@
 			)
 		)
 		(property "MPN" "DSL14"
-			(at 131.445 93.345 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 131.445 93.345 0)
 			(hide yes)
 			(show_name no)

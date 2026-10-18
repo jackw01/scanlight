@@ -821,7 +821,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" ""
 			(at 132.715 98.425 0)
 			(hide yes)
 			(show_name no)
@@ -956,7 +956,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" ""
 			(at 163.195 98.425 0)
 			(hide yes)
 			(show_name no)
@@ -1091,7 +1091,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" ""
 			(at 147.955 98.425 0)
 			(hide yes)
 			(show_name no)
@@ -1227,7 +1227,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" ""
 			(at 116.205 98.425 0)
 			(hide yes)
 			(show_name no)

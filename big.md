@@ -116,15 +116,17 @@ The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [
 
 ![](images/big_scanlight_pcb_cad.png)
 
-All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1.1) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_array_v1.1) can be downloaded from the GitHub repository.
+All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1_b) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_array_v1_b) can be downloaded from the GitHub repository.
 
-[Driver PCB Schematic (PDF)](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.pdf)
+*Note: an updated PCB design that adds independent shutter/focus control will be released in late October-early November 2026. The new PCBs will not be mechanically compatible with the old PCBs or 3D printed parts.*
 
-[Driver PCB BOM (CSV)](pcb/bsl_driver_v1.1/bsl_drv_v1.1_20260120.csv)
+[Driver PCB Schematic (PDF)](pcb/bsl_driver_v1_b/bsl_drv_v1_20260120.pdf)
 
-[LED PCB Schematic (PDF)](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.pdf)
+[Driver PCB BOM (CSV)](pcb/bsl_driver_v1_b/bsl_drv_v1_20260120.csv)
 
-[LED PCB BOM (CSV)](pcb/bsl_array_v1.1/bsl_array_v1.1_20260120.csv)
+[LED PCB Schematic (PDF)](pcb/bsl_array_v1_b/bsl_array_v1_20260120.pdf)
+
+[LED PCB BOM (CSV)](pcb/bsl_array_v1_b/bsl_array_v1_20260120.csv)
 
 ### mechanical design
 

@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "big scanlight driver pcb")
-		(date "2026-01-20")
-		(rev "1.1")
+		(date "2025-11-09")
+		(rev "1")
 		(company "jackw01")
 	)
 	(lib_symbols
@@ -6099,7 +6099,7 @@
 		)
 		(uuid "4fd78bc1-f138-419f-a973-01aba0d37023")
 	)
-	(label "TH"
+	(label "TH+"
 		(at 142.875 182.88 0)
 		(effects
 			(font
@@ -6485,7 +6485,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00fd28b7-5838-44c6-b283-52791684d4f9")
@@ -6541,14 +6541,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
-			(at 88.265 196.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(instances
@@ -6624,24 +6616,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 136.525 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 136.525 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 136.525 40.005 0)
 			(effects
@@ -6651,25 +6625,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 136.525 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 136.525 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 136.525 40.005 0)
 			(effects
 				(font
@@ -7016,15 +6972,6 @@
 			)
 		)
 		(property "MPN" "ABM8-272-T3"
-			(at 56.515 132.715 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 56.515 132.715 0)
 			(effects
 				(font
@@ -7573,14 +7520,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" ""
-			(at 88.265 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "bsl_drv_v1"
 				(path "/92dcf209-7a44-4881-9fce-a886e8204ab3"
@@ -7655,15 +7594,6 @@
 			)
 		)
 		(property "MPN" "RP2040"
-			(at 113.03 120.015 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 113.03 120.015 0)
 			(effects
 				(font
@@ -8053,15 +7983,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" "Y"
-			(at 158.75 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "b00b1ba5-9971-4767-b05f-a223405071ea")
 		)
@@ -8141,24 +8062,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 164.465 155.575 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 164.465 155.575 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 164.465 155.575 0)
 			(effects
@@ -8168,25 +8071,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 164.465 155.575 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 164.465 155.575 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 164.465 155.575 0)
 			(effects
 				(font
@@ -8273,24 +8158,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 139.7 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 139.7 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 139.7 186.69 0)
 			(effects
@@ -8300,25 +8167,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 139.7 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 139.7 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 139.7 186.69 0)
 			(effects
 				(font
@@ -8450,7 +8299,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 52.705 31.75 0)
 			(effects
 				(font
@@ -8469,15 +8318,6 @@
 			)
 		)
 		(property "MPN" "0402WGF270JTCE"
-			(at 52.705 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 52.705 31.75 0)
 			(effects
 				(font
@@ -8638,15 +8478,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" "Y"
-			(at 44.45 137.795 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "0961f1f0-0067-4482-a6b4-576c97cfaffc")
 		)
@@ -8709,7 +8540,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 139.7 177.8 0)
 			(effects
 				(font
@@ -8728,15 +8559,6 @@
 			)
 		)
 		(property "MPN" "0402WGF5101TCE"
-			(at 139.7 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 139.7 177.8 0)
 			(effects
 				(font
@@ -8934,7 +8756,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 19.685 50.165 0)
 			(effects
 				(font
@@ -8953,15 +8775,6 @@
 			)
 		)
 		(property "MPN" "0402WGF1001TCE"
-			(at 19.685 50.165 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 19.685 50.165 0)
 			(effects
 				(font
@@ -9049,15 +8862,6 @@
 			)
 		)
 		(property "MPN" "0402CG150J500NT"
-			(at 44.45 127.635 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 44.45 127.635 0)
 			(effects
 				(font
@@ -9195,15 +8999,6 @@
 			(effects
 				(font
 					(size 0.5 0.5)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
-			(at 84.455 81.915 0)
-			(effects
-				(font
-					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -9413,15 +9208,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" ""
-			(at 87.63 147.955 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "414078dc-4f4d-4c2c-9bf4-7f9de4329d95")
 		)
@@ -9480,7 +9266,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 68.58 90.17 0)
 			(effects
 				(font
@@ -9499,15 +9285,6 @@
 			)
 		)
 		(property "MPN" "0402WGF1002TCE"
-			(at 68.58 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 68.58 90.17 0)
 			(effects
 				(font
@@ -9606,15 +9383,6 @@
 			)
 		)
 		(property "LCSC" "C12530"
-			(at 102.235 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 102.235 62.865 0)
 			(effects
 				(font
@@ -10038,15 +9806,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" ""
-			(at 57.15 107.315 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "3"
 			(uuid "9f1cea20-e8c8-4f3a-8df2-144126d4e3f5")
 		)
@@ -10414,15 +10173,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" "Y"
-			(at 38.1 59.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "151e7ae7-9602-44f7-825e-6b699b5bf847")
 		)
@@ -10444,7 +10194,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8b6dffe9-8782-4124-b209-76c5e195232d")
@@ -10500,14 +10250,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
-			(at 88.265 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(instances
@@ -10584,15 +10326,6 @@
 			)
 		)
 		(property "MPN" "TS-1187A-B-A-B"
-			(at 55.88 59.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 55.88 59.055 0)
 			(effects
 				(font
@@ -10678,14 +10411,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
-			(at 88.265 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(instances
@@ -10828,24 +10553,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 93.98 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 93.98 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 93.98 40.005 0)
 			(effects
@@ -10855,25 +10562,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 93.98 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 93.98 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 93.98 40.005 0)
 			(effects
 				(font
@@ -11109,15 +10798,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" "Y"
-			(at 163.83 70.485 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "b13b2480-5662-4970-aaa2-4d6db3defd11")
 		)
@@ -11262,24 +10942,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 182.245 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 182.245 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 182.245 40.005 0)
 			(effects
@@ -11289,25 +10951,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 182.245 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 182.245 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 182.245 40.005 0)
 			(effects
 				(font
@@ -11395,24 +11039,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 105.41 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 105.41 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 105.41 40.005 0)
 			(effects
@@ -11422,25 +11048,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 105.41 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 105.41 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 105.41 40.005 0)
 			(effects
 				(font
@@ -11714,15 +11322,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" ""
-			(at 87.63 150.495 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "4bcad2e6-7ae3-4683-9ded-83a28f6560d9")
 		)
@@ -11799,24 +11398,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 159.385 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 159.385 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 159.385 40.005 0)
 			(effects
@@ -11826,25 +11407,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 159.385 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 159.385 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 159.385 40.005 0)
 			(effects
 				(font
@@ -11917,15 +11480,6 @@
 			(effects
 				(font
 					(size 0.5 0.5)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
-			(at 175.26 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -12053,7 +11607,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 169.545 155.575 0)
 			(effects
 				(font
@@ -12072,15 +11626,6 @@
 			)
 		)
 		(property "MPN" "0402WGF5101TCE"
-			(at 169.545 155.575 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 169.545 155.575 0)
 			(effects
 				(font
@@ -12154,15 +11699,6 @@
 			(effects
 				(font
 					(size 0.5 0.5)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
-			(at 138.43 155.575 0)
-			(effects
-				(font
-					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -12243,24 +11779,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 170.815 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 170.815 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 170.815 40.005 0)
 			(effects
@@ -12270,25 +11788,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 170.815 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 170.815 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 170.815 40.005 0)
 			(effects
 				(font
@@ -12355,7 +11855,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 52.705 24.13 0)
 			(effects
 				(font
@@ -12374,15 +11874,6 @@
 			)
 		)
 		(property "MPN" "0402WGF270JTCE"
-			(at 52.705 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
 			(at 52.705 24.13 0)
 			(effects
 				(font
@@ -12451,7 +11942,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 169.545 145.415 0)
 			(effects
 				(font
@@ -12470,15 +11961,6 @@
 			)
 		)
 		(property "MPN" "0402WGF2002TCE"
-			(at 169.545 145.415 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 169.545 145.415 0)
 			(effects
 				(font
@@ -12566,24 +12048,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 147.955 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 147.955 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 147.955 40.005 0)
 			(effects
@@ -12593,25 +12057,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 147.955 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 147.955 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 147.955 40.005 0)
 			(effects
 				(font
@@ -12744,7 +12190,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 79.375 137.795 0)
 			(effects
 				(font
@@ -12763,15 +12209,6 @@
 			)
 		)
 		(property "MPN" "0402WGF1001TCE"
-			(at 79.375 137.795 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 79.375 137.795 0)
 			(effects
 				(font
@@ -12844,15 +12281,6 @@
 			(effects
 				(font
 					(size 0.5 0.5)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" ""
-			(at 73.66 147.955 0)
-			(effects
-				(font
-					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -13109,15 +12537,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" "Y"
-			(at 128.905 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "db9df4e3-5b4c-459a-bc6f-6b50208e489b")
 		)
@@ -13216,15 +12635,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" "Y"
-			(at 50.8 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "dde86e15-7d3c-4283-8dc9-9406607d9122")
 		)
@@ -13305,15 +12715,6 @@
 			)
 		)
 		(property "MPN" "TS-1187A-B-A-B"
-			(at 19.685 59.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 19.685 59.055 0)
 			(effects
 				(font
@@ -13413,14 +12814,6 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Basic" "Y"
-			(at 34.925 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "6f6a96f6-f6bb-46cf-9ed4-09ff1613f13f")
 		)
@@ -13482,7 +12875,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES THICK FILM 1%"
+		(property "Description" ""
 			(at 84.455 76.2 0)
 			(effects
 				(font
@@ -13501,15 +12894,6 @@
 			)
 		)
 		(property "MPN" "0402WGF1001TCE"
-			(at 84.455 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 84.455 76.2 0)
 			(effects
 				(font
@@ -13662,24 +13046,6 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint Checked" ""
-			(at 125.095 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Non-Critical" "Y"
-			(at 125.095 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 125.095 40.005 0)
 			(effects
@@ -13689,25 +13055,7 @@
 				(hide yes)
 			)
 		)
-		(property "Category" "iND87204 Critical "
-			(at 125.095 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "LCSC" "C307331"
-			(at 125.095 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Basic" "Y"
 			(at 125.095 40.005 0)
 			(effects
 				(font

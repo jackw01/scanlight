@@ -3,8 +3,6 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
-        "apply_defaults_to_fp_barcodes": false,
-        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -76,10 +74,9 @@
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
         "duplicate_footprints": "warning",
-        "extra_footprint": "ignore",
+        "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
-        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
@@ -97,7 +94,6 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
-        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -105,8 +101,8 @@
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_edge_clearance": "ignore",
-        "silk_over_copper": "ignore",
-        "silk_overlap": "ignore",
+        "silk_over_copper": "warning",
+        "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -117,16 +113,13 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
-        "track_not_centered_on_via": "ignore",
-        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
-        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
-        "via_dangling": "error",
-        "zones_intersect": "ignore"
+        "via_dangling": "ignore",
+        "zones_intersect": "error"
       },
       "rules": {
         "max_error": 0.005,
@@ -237,37 +230,22 @@
         {
           "diameter": 0.5,
           "drill": 0.3
-        },
-        {
-          "diameter": 0.8,
-          "drill": 0.5
         }
       ],
       "zones_allow_external_fillets": true
     },
     "ipc2581": {
-      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": "",
-      "sch_revision": "1.0"
+      "mpn": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
-  "component_class_settings": {
-    "assignments": [],
-    "meta": {
-      "version": 0
-    },
-    "sheet_component_classes": {
-      "enabled": false
-    }
-  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -457,14 +435,11 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
-      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
-      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
-      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -479,7 +454,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -487,10 +462,8 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
-      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
-      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -501,7 +474,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "sl_v4.kicad_pro",
+    "filename": "bsl_drv_v1.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -520,7 +493,6 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
-        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -531,14 +503,15 @@
         "name": "USB",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "tuning_profile": ""
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
       }
     ],
     "meta": {
-      "version": 5
+      "version": 4
     },
-    "net_colors": null,
+    "net_colors": {
+      "GND": "rgba(36, 49, 72, 0.502)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": [
       {
@@ -555,7 +528,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "sl_v4.step",
+      "step": "bsl_drv_v1.step",
       "svg": "",
       "vrml": ""
     },
@@ -563,10 +536,6 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "annotation": {
-      "method": 0,
-      "sort_order": 0
-    },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -644,44 +613,20 @@
         },
         {
           "group_by": false,
-          "label": "Footprint Checked",
-          "name": "Footprint Checked",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "Manufacturer",
           "name": "Manufacturer",
           "show": false
         },
         {
           "group_by": false,
-          "label": "Non-Critical",
-          "name": "Non-Critical",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Category",
-          "name": "Category",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "Description",
           "name": "Description",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "JLCPCB Basic",
-          "name": "JLCPCB Basic",
           "show": true
         }
       ],
@@ -692,7 +637,6 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
-    "bus_aliases": {},
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -700,7 +644,6 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
-      "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -724,7 +667,6 @@
     "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
-    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -733,21 +675,12 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0,
-    "top_level_sheets": [
-      {
-        "filename": "sl_v4.kicad_sch",
-        "name": "sl_v4",
-        "uuid": "92dcf209-7a44-4881-9fce-a886e8204ab3"
-      }
-    ],
-    "used_designators": "",
-    "variants": []
+    "subpart_id_separator": 0
   },
   "sheets": [
     [
       "92dcf209-7a44-4881-9fce-a886e8204ab3",
-      "sl_v4"
+      "Root"
     ],
     [
       "5f539a19-0d7a-4ac6-b941-416b8b9ecf70",
@@ -758,63 +691,37 @@
       "driver channel r1"
     ],
     [
+      "7682303d-ea09-4729-92b0-e5cd7fd63d4a",
+      "driver channel r2"
+    ],
+    [
       "39560492-cbe6-452b-b868-17a002a006be",
       "driver channel g1"
+    ],
+    [
+      "acd78a7a-dcfd-4ee0-8880-bf887780056d",
+      "driver channel g2"
     ],
     [
       "e7f3b4a4-22f8-4feb-9d18-68c60411e5a1",
       "driver channel b1"
     ],
     [
-      "8edc5c2e-739c-4c92-98ff-740539030f42",
+      "96d7c7ab-3040-4b13-af37-0c01665cfea0",
+      "driver channel b2"
+    ],
+    [
+      "e5e5896f-7481-4f01-a88d-8ee74f8a7a48",
+      "driver channel ir"
+    ],
+    [
+      "9d2ec521-5228-4a55-8f42-1a74609a1a13",
       "driver channel w1"
     ],
     [
-      "346002c6-1daf-440b-a235-0952bade8fca",
-      "LED array"
-    ],
-    [
-      "0a55848c-a446-4733-9e26-69bd6d980b43",
-      "LED Cluster 0"
-    ],
-    [
-      "6669c999-562e-48c9-8d86-e71fd189086f",
-      "LED Cluster 1"
-    ],
-    [
-      "92c5ea0b-82de-444d-b6d0-0f5e33798e74",
-      "LED Cluster 2"
-    ],
-    [
-      "57107d1d-0e90-4c5c-ac23-d3a3604380b1",
-      "LED Cluster 3"
-    ],
-    [
-      "0f8870ea-4e2b-4a14-83cb-ed3f5329f10f",
-      "LED Cluster 4"
-    ],
-    [
-      "43f6947f-92d5-45d6-abf5-52fd9cb78776",
-      "LED Cluster 5"
-    ],
-    [
-      "cdf3004c-b525-4bfe-8960-d1fc5eaf037f",
-      "LED Cluster 6"
-    ],
-    [
-      "ee5493fa-fb64-45c0-a13c-9d4d64282934",
-      "LED Cluster 7"
-    ],
-    [
-      "c412cd35-c77e-45d8-901b-99d7c8c1f977",
-      "LED Cluster 8"
+      "61f92758-ef38-49bb-b97f-608c9b0b9c1a",
+      "driver channel w2"
     ]
   ],
-  "text_variables": {},
-  "tuning_profiles": {
-    "meta": {
-      "version": 0
-    },
-    "tuning_profiles_impedance_geometric": []
-  }
+  "text_variables": {}
 }
