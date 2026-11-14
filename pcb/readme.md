@@ -2,7 +2,6 @@
 
 Revisions of each PCB are listed below in reverse chronological order. Older revisions may have known issues and should not be built - see the errata.md file in each revision's folder.
 
-*Note: big scanlight v1.1 will be released late October-early November 2026.*
 
 | product name                         | part number | revision date | folder            | status                     |
 | ------------------------------------ | ----------- | ------------- | ----------------- | -------------------------- |

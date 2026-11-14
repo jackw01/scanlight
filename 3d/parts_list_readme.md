@@ -33,7 +33,7 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 
 *Note: if printing ToneCarrier/Valoi compatibility parts, double-check that the dimensions of the STEP file match the accessory you are using it with. Dimensions of these third-party products may change without notice.*
 
-## big scanlight
+## big scanlight v1.1
 
 [assembly instructions](./big%20scanlight%20v1/assembly_instructions.md)
 
@@ -41,11 +41,11 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * assembled driver PCB
 * assembled LED PCB
 * front diffuser (4.5x5.5x0.118" ACRYLITE® Satinice WD008 DF light-diffusing acrylic, or standard white acrylic with <50% light transmittance)
-* 25D101C 3D printed diffuser box housing
-* 25D103A 3D printed diffuser bezel
-* 25D104 3D printed backplate
-* 25D105B 3D printed PCB cover
-* 25D107 3D printed button (may be printed in other materials than ABS)
+* 26B101C 3D printed diffuser box housing
+* 26B103A 3D printed diffuser bezel
+* 26B104 3D printed backplate
+* 26B105B 3D printed PCB cover
+* 26B107 3D printed button (may be printed in other materials than ABS)
 * 2x M2x10mm pan head self-tapping screw for plastic (head diameter 4mm or less)
 * 4x M3x8mm pan head self-tapping screw for plastic (head diameter 6.5mm or less)
 * 4x 12mm diameter, 4mm tall adhesive-backed rubber bumper
@@ -58,7 +58,7 @@ Alternatively, the inside of the diffuser housing can be covered in aluminum foi
 * 25D115 3D printed essential film holder compatibility plate
 
 ### valoi easy120 integration
-* **replace** 25D103**A** with 25D103**B** 3D printed diffuser bezel (screw mount variant)
+* **replace** 26B103**A** with 26B103**B** 3D printed diffuser bezel (screw mount variant)
 * 25D112 3D printed valoi easy120 baseplate
 * 25D113 3D printed valoi easy120 mounting block
 * 4x M3x20mm socket head cap screw

@@ -32,13 +32,13 @@ Original article on scanning film with narrowband light (with sample scans): *[A
 
 ### basic operation
 
-The light source is powered via the **left USB-C port**. A USB-C PD power source that can supply at least 2A at 9V (e.g. most USB-C phone, tablet, and laptop chargers) is required to operate at full brightness; however, the light will still operate at reduced brightness from any USB power source capable of delivering at least 2A at 5V (e.g. almost all USB chargers from the last 10 years.)
+The light source is powered via the **power USB-C port**. A USB-C PD power source that can supply at least 2A at 9V (e.g. most USB-C phone, tablet, and laptop chargers) is required to operate at full brightness; however, the light will still operate at reduced brightness from any USB power source capable of delivering at least 2A at 5V (e.g. almost all USB chargers from the last 10 years.)
 
 *It is not recommended to power the light from a USB port on a computer; a dedicated USB power supply should be used instead.*
 
-Press the **upper button** to toggle the light on and off. Press the **lower button** to toggle between narrowband RGB and 95CRI white modes. The buttons work even when the light is not connected to a computer. The default RGB channel brightnesses in this mode can be configured from the GUI, as explained below.
+Press the **on/off button** to toggle the light on and off. Press the **RGB/white button** to toggle between narrowband RGB and 95CRI white modes. The buttons work even when the light is not connected to a computer. The default RGB channel brightnesses in this mode can be configured from the GUI, as explained below.
 
-To adjust color and brightness and automate the process of scanning red, green, and blue channels separately, the light source can be connected to a computer via the **right USB-C port** and controlled with the web app located [here](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html). The web app requires a Chromium-based web browser or Firefox 151 or newer.
+To adjust color and brightness and automate the process of scanning red, green, and blue channels separately, the light source can be connected to a computer via the **control USB-C port** and controlled with the web app located [here](https://jackw01.github.io/scanlight/automation/app_bsl/dist/index.html). The web app requires a Chromium-based web browser or Firefox 151 or newer.
 
 In the **Manual Control** panel of the web app, the red, green, and blue channel brightnesses can be adjusted and the color channels can be turned on individually or together. In **RGB** (narrowband trichromatic) mode, the red, green, and blue LEDs are on at the same time. In **White** mode, only the 95CRI white LEDs are on. The red, green, blue, and infrared LEDs can also be turned on individually; the RGB channel brightness adjustments still apply in this case.
 
@@ -54,7 +54,9 @@ The **3.5mm jack** can be connected to a camera so that the shutter can be remot
 
 A cable with a male 3.5mm plug (otherwise known as a headphone connector) on one end and a camera-specific connector on the other end is required to use this functionality. A wide variety of these cables are available from online retailers; I cannot vouch for the quality of any of them or verify that a specific cable will work, as wiring diagrams are almost never published by the manufacturers. The design has been tested and works with several Fujifilm and Canon cameras that use the 2.5mm microphone jack as the remote shutter release input, with a 3.5mm to 2.5mm cable as well as a standard 3.5mm audio cable and 3.5mm to 2.5mm adapter.
 
-On the original and current PCB revisions (26a902**a**/**b** marked on label), the 3.5mm jack is not electrically isolated. If planning to tether the camera to a computer while controlling the shutter using a light source with this PCB, test that the camera and cable are wired correctly first. Connect both the shutter control cable and a USB cable to the camera, and touch the tip of the 3.5mm plug to the exposed metal shell of the USB connector. If this *does not* trigger the camera shutter, the internal wiring of the camera or cable is likely reversed from the de facto standard and connecting the camera to both the light source and computer at the same time may cause issues. This PCB also does not connect the ring (focus) terminal on the 3.5mm jack, and requires a hardware modification to connect this terminal for remote shutter release compatibility with Nikon and Sony cameras, and possibly others. Units with the modification can be identified by light gray paint applied to the externally visible part of the 3.5mm jack. Some third-party remote shutter release cables for Nikon and Sony cameras already connect the shutter and focus signals together, so the issue may not occur with all camera/cable combinations. There is a workaround for using unmodified units with Nikon cameras, which is to connect the camera cable to the light through a 3.5mm mono-to-stereo adapter. If doing this, it is important that the male end of the adapter used is a two-terminal (mono) plug, rather than a three-terminal (stereo) plug.
+As of version 1.1 (**26b901a** marked on label), the shutter and focus signals to the camera are independently controllable from the web app. When the **Send focus signal** checkbox is selected, the focus signal will be held (equivalent to half-pressing the shutter button) for the entire duration that the LEDs are on. Some cameras (mainly Nikon) may need the focus signal in order to trigger the shutter, and on a few other cameras, the focus signal may cause the camera to autofocus even when it is set to manual focus mode. The 3.5mm jack is electrically isolated from the USB ports in this revision.
+
+On earlier PCB revisions (26a902**a**/**b** marked on label), the 3.5mm jack is not electrically isolated. If planning to tether the camera to a computer while controlling the shutter using a light source with this PCB, test that the camera and cable are wired correctly first. Connect both the shutter control cable and a USB cable to the camera, and touch the tip of the 3.5mm plug to the exposed metal shell of the USB connector. If this *does not* trigger the camera shutter, the internal wiring of the camera or cable is likely reversed from the de facto standard and connecting the camera to both the light source and computer at the same time may cause issues. This PCB also does not connect the ring (focus) terminal on the 3.5mm jack, and requires a hardware modification to connect this terminal for remote shutter release compatibility with Nikon and Sony cameras, and possibly others. Units with the modification can be identified by light gray paint applied to the externally visible part of the 3.5mm jack. Some third-party remote shutter release cables for Nikon and Sony cameras already connect the shutter and focus signals together, so the issue may not occur with all camera/cable combinations. There is a workaround for using unmodified units with Nikon cameras, which is to connect the camera cable to the light through a 3.5mm mono-to-stereo adapter. If doing this, it is important that the male end of the adapter used is a two-terminal (mono) plug, rather than a three-terminal (stereo) plug.
 
 ### frequently asked questions
 
@@ -112,21 +114,19 @@ Big scanlight uses a very simple optical design consisting of a matte white acry
 
 ![](images/big_scanlight_pcbs.jpg)
 
-The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1764654827638&ref_url=https%253A%252F%252Fwww.google.com%252F) constant-current boost converters configured for 80mA output current at up to 38V, and a [CH221K](https://www.wch.cn/products/CH224.html) USB-PD protocol controller on a 86x34mm four-layer PCB.
+The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1764654827638&ref_url=https%253A%252F%252Fwww.google.com%252F) constant-current boost converters configured for 80mA output current at up to 38V, and a [CH221K](https://www.wch.cn/products/CH224.html) USB-PD protocol controller on a 83x37mm four-layer PCB.
 
-![](images/big_scanlight_pcb_cad.png)
+![](images/big_scanlight_pcb_cad_1.1.png)
 
-All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1_b) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_array_v1_b) can be downloaded from the GitHub repository.
+All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1.1_a) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_array_v1.1_a) can be downloaded from the GitHub repository.
 
-*Note: an updated PCB design that adds independent shutter/focus control will be released in late October-early November 2026. The new PCBs will not be mechanically compatible with the old PCBs or 3D printed parts.*
+[Driver PCB Schematic (PDF)](pcb/bsl_driver_v1.1_a/bsl_drv_v1.1_20261008.pdf)
 
-[Driver PCB Schematic (PDF)](pcb/bsl_driver_v1_b/bsl_drv_v1_20260120.pdf)
+[Driver PCB BOM (CSV)](pcb/bsl_driver_v1.1_a/bsl_drv_v1.1_20261008.csv)
 
-[Driver PCB BOM (CSV)](pcb/bsl_driver_v1_b/bsl_drv_v1_20260120.csv)
+[LED PCB Schematic (PDF)](pcb/bsl_array_v1.1_a/bsl_array_v1.1_20261008.pdf)
 
-[LED PCB Schematic (PDF)](pcb/bsl_array_v1_b/bsl_array_v1_20260120.pdf)
-
-[LED PCB BOM (CSV)](pcb/bsl_array_v1_b/bsl_array_v1_20260120.csv)
+[LED PCB BOM (CSV)](pcb/bsl_array_v1.1_a/bsl_array_v1.1_20261008.csv)
 
 ### mechanical design
 
@@ -136,7 +136,7 @@ STEP files for all parts of the light source, film carrier adapters, and film ca
 
 ### firmware and web app
 
-The [source code for the RP2040 firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1), a [ready-to-flash firmware binary](https://github.com/jackw01/scanlight/blob/main/automation/bsl1_controller_v1.0.uf2), and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
+The [source code for the RP2040 firmware](https://github.com/jackw01/scanlight/tree/main/automation/firmware_bsl1) and the [source code for the remote control web app](https://github.com/jackw01/scanlight/tree/main/automation/app_bsl) can be downloaded from the GitHub repository. The firmware is implemented using the RP2040 SDK and the web app is made with [Vue](https://github.com/vuejs) and [Vuetify](https://github.com/vuetifyjs/vuetify).
 
 Interested in building your own control software? The USB serial communication interface used by the firmware is fully documented [here](https://github.com/jackw01/scanlight/blob/main/automation/bsl_control_interface.md).
 
