@@ -6,6 +6,7 @@ export default {
     0: "v1.0.0",
     1: "v1.1.0",
     2: "v1.2.0",
+    3: "v1.3.0",
   },
   LatestFWVersionID: 0,
   HWVersionStrings: {
@@ -13,6 +14,7 @@ export default {
     1: "scanlight v4a",
     2: "scanlight v2/v3",
     3: "scanlight v4b",
+    4: "big scanlight v1.1"
   },
   SequenceRGB: [
     [1, 0, 0, 0, 0],

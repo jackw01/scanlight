@@ -351,9 +351,11 @@ export default {
       return (this.ledTemperatureMdegc / 1000).toFixed(1);
     },
     showReducedPowerWarning: function() {
-      if (this.hwVersionString === "big scanlight v1") {
+      if (this.hwVersionString === "big scanlight v1" ||
+          this.hwVersionString === "big scanlight v1.1") {
         return (this.inputVoltageMv > config.USBVBUSThreshold5V && this.inputVoltageMv < config.USBVBUSThreshold9V);
-      } else if (this.hwVersionString === "scanlight v4a" || this.hwVersionString === "scanlight v4b") {
+      } else if (this.hwVersionString === "scanlight v4a" ||
+                 this.hwVersionString === "scanlight v4b") {
         // Decided not to limit power for 500mA/1.5A USB modes, since it may be too confusing for users
         return false;
       } else {
@@ -373,13 +375,16 @@ export default {
       return (this.hwVersionString !== "scanlight v2/v3");
     },
     hwSupportsFocus: function() {
-      return (this.hwVersionString === "scanlight v4b");
+      return (this.hwVersionString === "scanlight v4b" ||
+              this.hwVersionString === "big scanlight v1.1");
     },
     hwSupportsIR: function() {
-      return (this.hwVersionString === "big scanlight v1");
+      return (this.hwVersionString === "big scanlight v1" ||
+              this.hwVersionString === "big scanlight v1.1");
     },
     hwSupportsTrimming: function() {
-      return (this.hwVersionString === "big scanlight v1");
+      return (this.hwVersionString === "big scanlight v1" ||
+              this.hwVersionString === "big scanlight v1.1");
     },
   },
   mounted() {

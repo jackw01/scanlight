@@ -2,7 +2,7 @@
 
 #include "hardware/flash.h"
 
-#define FW_VERSION_ID 2
+#define FW_VERSION_ID 3
 
 #if !defined(HW_VERSION_BSL1) && !defined(HW_VERSION_SL4) && !defined(HW_VERSION_SL2)
 #define HW_VERSION_BSL1
@@ -45,7 +45,11 @@ static const uint32_t ADCReportingIntervalMs = 200;
 
 #ifdef HW_VERSION_BSL1
 
+#ifdef HW_SUPPORTS_FOCUS
+#define HW_VERSION_ID 4
+#else
 #define HW_VERSION_ID 0
+#endif
 
 static const uint32_t PinR1 = 2;
 static const uint32_t PinG1 = 3;
@@ -59,7 +63,7 @@ static const uint32_t PinIR = 11;
 static const uint32_t PinButton1 = 16; // top button
 static const uint32_t PinButton2 = 17; // bottom button
 static const uint32_t PinShutter = 25;
-static const uint32_t PinFocus = 24; // UNUSED
+static const uint32_t PinFocus = 24;
 static const uint32_t PinADCGPIOOffset = 26;
 static const uint32_t PinADCVBUSSense = 0;
 static const uint32_t PinADCThermistor = 1;
