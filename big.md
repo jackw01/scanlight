@@ -1,6 +1,6 @@
 # big scanlight info & instructions
 
-![](<images/big_scanlight_lit.jpg>)
+![](<images/big_scanlight_v1.1_lit_2.jpg>)
 
 ## features
 * Illuminated area dimensions: 108x134mm (approx. 4.25x5.25in)
@@ -116,11 +116,11 @@ Big scanlight uses a very simple optical design consisting of a matte white acry
 
 ### PCBs
 
-![](images/big_scanlight_pcbs.jpg)
+![](images/big_scanlight_v1.1_pcbs.jpg)
 
 The driver PCB integrates a RP2040 32-bit ARM Cortex-M0+ microcontroller, nine [TPS61169](https://www.ti.com/lit/ds/symlink/tps61169.pdf?ts=1764654827638&ref_url=https%253A%252F%252Fwww.google.com%252F) constant-current boost converters configured for 80mA output current at up to 38V, and a [CH221K](https://www.wch.cn/products/CH224.html) USB-PD protocol controller on a 83x37mm four-layer PCB.
 
-![](images/big_scanlight_pcb_cad_1.1.png)
+![](images/big_scanlight_v1.1_pcb_cad.png)
 
 All design files for the [driver pcb](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_driver_v1.1_a) and [LED PCB](https://github.com/jackw01/scanlight/tree/main/pcb/bsl_array_v1.1_a) can be downloaded from the GitHub repository.
 
